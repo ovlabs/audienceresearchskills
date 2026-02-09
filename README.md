@@ -2,7 +2,7 @@
 
 **Build with insight, not assumptions.**
 
-AI agent skills that help you instantly research and understand any target audience, and then use those insights to optimize marketing, product, and content decisions.
+AI agent skills that give you instant access to real human perspectives on any audience. Use these insights to create better marketing, build better products, and make better content decisions. Built for Claude, Claude Code, Cursor and other AI tools.
 
 Built by [OV Labs](https://originalvoices.ai). Learn more about Digital Twins and audience research at the [OriginalVoices docs](https://docs.originalvoices.ai).
 
