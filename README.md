@@ -1,6 +1,8 @@
-# Audience Research Skills for Claude Code
+# Audience Research Skills
 
-A collection of AI agent skills for audience research powered by [OriginalVoices](https://originalvoices.ai) Digital Twins. Built for marketers, founders, and product teams who want Claude Code (or similar AI coding assistants) to help with customer research, ICP discovery, creative testing, ad copy generation, and content optimization — all grounded in real audience insight.
+**Build with insight, not assumptions.**
+
+AI agent skills that help you instantly research and understand any target audience, and then use those insights to optimize marketing, product, and content decisions.
 
 Built by [OV Labs](https://originalvoices.ai). Learn more about Digital Twins and audience research at the [OriginalVoices docs](https://docs.originalvoices.ai).
 
