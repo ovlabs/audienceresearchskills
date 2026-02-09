@@ -1,8 +1,8 @@
 # Audience Research Skills
 
-**Build with insight, not assumptions.**
+**Build with audience insight, not assumptions.**
 
-AI agent skills that give you instant access to real human perspectives on any audience. Use these insights to create better marketing, build better products, and make better content decisions. Built for Claude, Claude Code, Cursor and other AI tools.
+AI agent skills that give instant access to real human perspectives on any audience. Use these insights to create better marketing, build better products, and make better content decisions. Built for Claude, Claude Code, Cursor and other AI tools.
 
 Built by [OV Labs](https://originalvoices.ai). Learn more about what we do and how it works at the [OriginalVoices docs](https://docs.originalvoices.ai).
 
