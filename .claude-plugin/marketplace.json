@@ -1,0 +1,32 @@
+{
+  "name": "audienceresearchskills",
+  "owner": {
+    "name": "OV Labs",
+    "url": "https://originalvoices.ai"
+  },
+  "metadata": {
+    "description": "Audience research skills for Claude Code — customer research, ICP discovery, creative testing, ad copy, and content optimization powered by OriginalVoices Digital Twins",
+    "version": "1.0.0",
+    "repository": "https://github.com/ovlabs/audienceresearchskills"
+  },
+  "plugins": [
+    {
+      "name": "audience-research-skills",
+      "description": "10 audience research skills powered by OriginalVoices Digital Twins: deep customer research, ICP discovery, creative testing, ad copy generation, landing page optimization, email campaigns, feature validation, brand messaging, and content optimization",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/deep-customer-research",
+        "./skills/icp-discovery",
+        "./skills/creative-testing",
+        "./skills/facebook-ad-copy",
+        "./skills/google-ad-copy",
+        "./skills/landing-page-optimization",
+        "./skills/email-campaign-copy",
+        "./skills/feature-concept-testing",
+        "./skills/brand-messaging-validation",
+        "./skills/content-generation-optimization"
+      ]
+    }
+  ]
+}
