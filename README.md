@@ -4,7 +4,7 @@
 
 AI agent skills that give you instant access to real human perspectives on any audience. Use these insights to create better marketing, build better products, and make better content decisions. Built for Claude, Claude Code, Cursor and other AI tools.
 
-Built by [OV Labs](https://originalvoices.ai). Learn more about Digital Twins and audience research at the [OriginalVoices docs](https://docs.originalvoices.ai).
+Built by [OV Labs](https://originalvoices.ai). Learn more about what we do and how it works at the [OriginalVoices docs](https://docs.originalvoices.ai).
 
 **Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
 
