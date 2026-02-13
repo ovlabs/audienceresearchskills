@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to generate Facebook and Instagram ad copy grounded in real audience insight. Triggers include: requests to create Facebook or Meta ad campaigns, write primary text and headlines for Facebook ads, refresh stale social ad creative, build ad sets for different audience segments, or generate audience-tested ad variations. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates 10-15 audience-informed ad variations rooted in what real people actually said — not AI guesswork."
 ---
 
-# Facebook Ad Copy Agent
+# Facebook Ad Copy Skill
 
 ## Overview
 

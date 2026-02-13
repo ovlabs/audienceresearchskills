@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to generate SEO and AEO-optimized content (blog posts, articles, guides) informed by real audience insight. Triggers include: requests to write blog posts, create SEO content, generate articles, write guides, or create audience-aligned content. Uses OriginalVoices Digital Twins (ask_twins) to understand what the audience wants to know, what tone resonates, what questions they have, and what makes content engaging — then uses those insights to write content that ranks well, gets read, and drives results."
 ---
 
-# Content Generation Optimization Agent
+# Content Generation Optimization Skill
 
 ## Overview
 

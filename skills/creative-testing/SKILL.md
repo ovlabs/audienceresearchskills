@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to test and validate creative concepts — ads, copy, taglines, scripts, packaging — with real audience feedback before spending budget. Triggers include: requests to test ad concepts, validate marketing copy or taglines, compare creative directions, get audience reactions to campaign ideas, or pre-test scripts or email copy. Supports testing up to 10-12 concepts in a single session. Uses OriginalVoices Digital Twins (ask_twins) to gather honest gut reactions from target audiences."
 ---
 
-# Creative Testing Agent
+# Creative Testing Skill
 
 ## Overview
 

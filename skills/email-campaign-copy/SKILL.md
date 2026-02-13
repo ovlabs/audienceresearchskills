@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to generate email marketing copy grounded in real audience insight. Triggers include: requests to write email campaigns, create newsletter content, improve email open rates, write welcome sequences, launch announcement emails, or re-engagement campaigns. Uses OriginalVoices Digital Twins (ask_twins) to understand what makes the audience open emails, what messaging resonates, what triggers action, and what causes unsubscribes — then generates audience-informed email variations rooted in real subscriber perspectives."
 ---
 
-# Email Campaign Copy Agent
+# Email Campaign Copy Skill
 
 ## Overview
 

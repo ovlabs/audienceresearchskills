@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to optimize landing page messaging, structure, and conversion elements using real audience insight. Triggers include: requests to improve conversion rates, test landing page copy, validate value propositions, optimize hero sections, test different messaging angles, or reduce bounce rates. Uses OriginalVoices Digital Twins (ask_twins) to understand what resonates with visitors, what creates confusion or doubt, and what drives action — then generates optimized landing page variants grounded in real user responses."
 ---
 
-# Landing Page Optimization Agent
+# Landing Page Optimization Skill
 
 ## Overview
 
