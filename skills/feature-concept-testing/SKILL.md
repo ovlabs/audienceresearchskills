@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to test and validate new feature concepts before building them. Triggers include: requests to validate feature ideas, test product concepts, understand if users would use a feature, gauge interest in new functionality, or reduce risk of building unwanted features. Uses OriginalVoices Digital Twins (ask_twins) to understand whether a feature solves a real problem, how users would actually use it, what concerns they have, and whether they'd pay for it — preventing wasted engineering effort on features nobody wants."
 ---
 
-# Feature Concept Testing Agent
+# Feature Concept Testing Skill
 
 ## Overview
 

@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
 ---
 
-# Deep Customer Research Agent
+# Deep Customer Research Skill
 
 ## Overview
 

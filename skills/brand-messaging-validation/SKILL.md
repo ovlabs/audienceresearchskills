@@ -4,7 +4,7 @@ version: 1.0.0
 description: "Use this skill to validate and refine brand messaging, positioning, and taglines using real audience insight. Triggers include: requests to test brand positioning, validate taglines or slogans, understand brand perception, refine mission statements, test brand voice, or differentiate from competitors. Uses OriginalVoices Digital Twins (ask_twins) to understand how target audiences interpret brand messaging, what resonates emotionally, what creates confusion, and what drives brand affinity — ensuring brand statements connect with real people, not just internal stakeholders."
 ---
 
-# Brand Messaging Validation Agent
+# Brand Messaging Validation Skill
 
 ## Overview
 

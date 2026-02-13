@@ -3,7 +3,7 @@ name: product-description-optimization
 description: "Use this skill to optimize existing product descriptions for ecommerce using real audience insight. Triggers include: requests to improve product descriptions, optimize ecommerce copy, increase conversion rates, refine product pages, make product descriptions resonate with target audiences, or test product messaging. Uses OriginalVoices Digital Twins (ask_twins) to understand what matters to buyers, what information they need, what language resonates, and what drives purchase decisions — then optimizes existing descriptions to convert better."
 ---
 
-# Product Description Optimization Agent
+# Product Description Optimization Skill
 
 ## Overview
 

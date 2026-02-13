@@ -3,7 +3,7 @@ name: video-script-generation
 description: "Use this skill to generate video scripts for creators or AI, informed by real audience insight. Triggers include: requests to write video scripts, create content for YouTube/TikTok/Instagram, generate video narration, write video copy, or create scripts for video ads. Uses OriginalVoices Digital Twins (ask_twins) to understand what hooks the audience, what tone resonates, what keeps them watching, and what drives engagement — then writes complete video scripts optimized for that audience."
 ---
 
-# Video Script Generation Agent
+# Video Script Generation Skill
 
 ## Overview
 
