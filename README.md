@@ -2,7 +2,7 @@
 
 **Build with audience insight, not assumptions.**
 
-AI agent skills that give instant access to real human perspectives on any audience. Predict behaviour, validate ideas, shape messaging, and more — powered directly by what your target audience thinks and feels. Built for Claude, Claude Code, Cursor and other AI tools.
+AI agent skills that give instant access to real human perspectives on any audience. Predict behaviour, validate ideas, shape messaging, and more - powered directly by what your target audience thinks and feels. Built for Claude, Claude Code, Cursor and other AI tools.
 
 Built by [OV Labs](https://originalvoices.ai). Learn more about what we do and how it works at the [OriginalVoices docs](https://docs.originalvoices.ai).
 
@@ -10,7 +10,7 @@ Built by [OV Labs](https://originalvoices.ai). Learn more about what we do and h
 
 ## What are Skills?
 
-Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, Claude Code can recognize when you're working on an audience research task and apply the right frameworks and best practices — using OriginalVoices Digital Twins (`ask_twins`) to gather real audience insight.
+Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, Claude Code can recognize when you're working on an audience research task and apply the right frameworks and best practices - using OriginalVoices Digital Twins (`ask_twins`) to gather real audience insight.
 
 ## Available Skills
 
