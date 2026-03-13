@@ -78,7 +78,7 @@ Analyse responses across five validation dimensions:
 
 ### Step 4: Deliver the Validation Verdict
 
-Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a `pie-chart` or `horizontal-bar-chart` code block to visualize the distribution.
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 
@@ -92,7 +92,7 @@ Format the report using proper markdown: `##` for the report title, `###` for ea
 
 **2. Evidence Summary**
 
-Include a horizontal bar chart showing signal strength across validation dimensions.
+Include a chart showing signal strength across validation dimensions.
 
 | Dimension | Signal | Strength (Strong / Mixed / Weak) |
 |-----------|--------|----------------------------------|

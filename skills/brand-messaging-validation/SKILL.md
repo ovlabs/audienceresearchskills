@@ -81,7 +81,7 @@ Review responses and assess:
 
 ### Step 4: Deliver Brand Messaging Report
 
-Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a `pie-chart` or `horizontal-bar-chart` code block to visualize the distribution.
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
 
 ### Report sections:
 
@@ -105,7 +105,7 @@ Format the report using proper markdown: `##` for the report title, `###` for ea
 - Refinement suggestions
 
 **4. Brand Values Validation:**
-- Which values resonate (ranked by importance). Include a horizontal bar chart ranking values by resonance.
+- Which values resonate (ranked by importance). Include a chart ranking values by resonance.
 - Which feel authentic vs. generic
 - Values that drive affinity vs. values that don't matter
 - Supporting quotes
@@ -121,7 +121,7 @@ Format the report using proper markdown: `##` for the report title, `###` for ea
 - Meaningful differentiation vs. superficial claims
 
 **7. Emotional Connection:**
-- Primary feelings the messaging evokes. Include a pie chart of dominant emotional responses.
+- Primary feelings the messaging evokes. Include a chart of dominant emotional responses.
 - Whether brand feels relatable and "gets them"
 - Factors that build (or block) affinity
 

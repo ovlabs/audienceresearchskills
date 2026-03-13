@@ -113,7 +113,7 @@ For the #1 ranked segment, extract detailed messaging guidance:
 
 ### Step 7: Deliver the Full Report
 
-Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a `pie-chart` or `horizontal-bar-chart` code block to visualize the distribution.
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 
@@ -134,7 +134,7 @@ Format the report using proper markdown: `##` for the report title, `###` for ea
 - 3-5 direct quotes from Digital Twins that capture why this segment is the best fit
 - Recommended positioning statement
 - Suggested ad/marketing angles
-- Include a horizontal bar chart comparing segment fit scores across all segments.
+- Include a chart comparing segment fit scores across all segments.
 
 **4. Segment-by-Segment Breakdown**
 For each segment (including lower-ranked ones):

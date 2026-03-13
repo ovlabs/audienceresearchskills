@@ -120,7 +120,7 @@ Update variants based on feedback before finalizing.
 
 ### Step 6: Deliver Optimization Report
 
-Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a `pie-chart` or `horizontal-bar-chart` code block to visualize the distribution.
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 
@@ -130,7 +130,7 @@ Format the report using proper markdown: `##` for the report title, `###` for ea
 
 **2. Key Insights from Research:**
 - What messaging resonates vs. what creates confusion
-- Top objections and concerns to address. Include a horizontal bar chart ranking objections by frequency.
+- Top objections and concerns to address. Include a chart ranking objections by frequency.
 - Trust signals that matter most
 - Optimal CTA and offer structure
 
