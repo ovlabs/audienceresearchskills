@@ -116,6 +116,8 @@ Review audience responses and extract:
 
 ### Step 5: Deliver the Content
 
+Format the report and supporting materials using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 **PRIMARY DELIVERABLE — The Complete Written Blog Post/Article:**
 
 Output the full, publish-ready blog post or article you wrote in Step 4, including:

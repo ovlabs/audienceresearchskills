@@ -112,6 +112,8 @@ Update emails based on feedback before finalizing.
 
 ### Step 6: Deliver Email Campaign Set
 
+Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 **1. Campaign Overview:**
 - Audience insights summary
 - Key findings (what resonates, what to avoid)

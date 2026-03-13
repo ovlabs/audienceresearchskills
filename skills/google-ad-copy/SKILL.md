@@ -74,6 +74,8 @@ Create **15 headlines** and **4 descriptions** using the audience insights. Foll
 
 ### Step 5: Structure for Google Ads
 
+Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 Deliver assets in this format:
 
 **HEADLINES (15 required)**

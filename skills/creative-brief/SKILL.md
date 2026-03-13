@@ -62,6 +62,8 @@ From the research, identify the single most important human truth — the insigh
 
 ### Step 4: Deliver the Creative Brief
 
+Format the brief using proper markdown: `##` for the brief title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 Structure the brief as follows:
 
 **1. Background & Context**

@@ -126,6 +126,8 @@ Review audience responses and extract:
 
 ### Step 5: Deliver Video Script Package
 
+Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 **PRIMARY DELIVERABLE - Complete Video Script:**
 
 Output the full, production-ready video script including:

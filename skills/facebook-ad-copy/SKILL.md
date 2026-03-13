@@ -90,6 +90,8 @@ ask_twins(
 
 ### Step 6: Deliver Final Ad Set
 
+Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 Present the full set of ad variations with:
 - Each ad in full (primary text, headline, description, CTA)
 - The audience insight driving each ad clearly labelled
