@@ -78,6 +78,10 @@ Analyse responses across five validation dimensions:
 
 ### Step 4: Deliver the Validation Verdict
 
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+
+### Report sections:
+
 **1. Verdict: Go / Pivot / Kill**
 
 | Verdict | When to use |
@@ -87,6 +91,8 @@ Analyse responses across five validation dimensions:
 | **Kill** | Problem isn't painful enough, audience is indifferent to the solution, or insurmountable barriers exist |
 
 **2. Evidence Summary**
+
+Include a chart showing signal strength across validation dimensions.
 
 | Dimension | Signal | Strength (Strong / Mixed / Weak) |
 |-----------|--------|----------------------------------|

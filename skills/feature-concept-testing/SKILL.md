@@ -80,6 +80,10 @@ Review responses and assess:
 
 ### Step 4: Deliver Feature Validation Report
 
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+
+### Report sections:
+
 **1. Executive Recommendation:**
 - Build / Iterate / Don't Build
 - Confidence level (high, medium, low)
@@ -97,7 +101,7 @@ Review responses and assess:
 
 **4. Value Analysis:**
 - What value does it create?
-- Must-have vs. nice-to-have sentiment
+- Must-have vs. nice-to-have sentiment. Include a chart showing the distribution of must-have vs. nice-to-have vs. wouldn't-use responses.
 - Willingness to pay (if tested)
 
 **5. Concerns & Objections:**

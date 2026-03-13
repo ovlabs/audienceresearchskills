@@ -99,11 +99,17 @@ For each concept, evaluate:
 
 ### Step 4: Deliver the Creative Testing Report
 
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+
+### Report sections:
+
 **1. Winner & Rationale**
 - The top-performing concept and why
 - Key audience quote that captures why it wins
 
 **2. Concept-by-Concept Breakdown**
+
+Include a chart ranking concepts by overall audience preference.
 
 For each concept tested:
 - **Verdict**: Winner / Strong / Moderate / Weak

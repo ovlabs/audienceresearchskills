@@ -120,6 +120,8 @@ Review audience responses and extract specific insights about the existing descr
 
 ### Step 5: Deliver Optimization Package
 
+Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+
 **PRIMARY DELIVERABLE - Optimized Product Description:**
 
 Output the complete, optimized product description ready to use, including:
