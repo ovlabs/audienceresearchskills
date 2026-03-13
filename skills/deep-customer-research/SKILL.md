@@ -78,12 +78,16 @@ Review all Digital Twin responses and compile findings:
 
 ### Step 5: Deliver the Research Report
 
+Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a `pie-chart` or `horizontal-bar-chart` code block to visualize the distribution.
+
+### Report sections:
+
 1. **Executive Summary** — Top-line findings in 2-3 sentences
-2. **Key Themes** — 3-5 most significant patterns, with supporting quotes from Digital Twins
-3. **Emotional Landscape** — What emotions drive behaviour in this space
+2. **Key Themes** — 3-5 most significant patterns, with supporting quotes from Digital Twins. Include a chart showing theme prevalence.
+3. **Emotional Landscape** — What emotions drive behaviour in this space. Include a pie chart of dominant emotions.
 4. **Current Behaviour & Pain Points** — How the audience deals with the problem today and what's broken
 5. **Unmet Needs & Ideal Outcomes** — Gaps and what "great" looks like to the audience
-6. **Decision Drivers & Trust Signals** — What influences choice and earns confidence
+6. **Decision Drivers & Trust Signals** — What influences choice and earns confidence. Include a horizontal bar chart ranking decision factors.
 7. **Opportunities** — Actionable insights for product, marketing, or strategy
 8. **Recommendations** — Specific next steps based on the research
 
