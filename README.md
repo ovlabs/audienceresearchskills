@@ -27,6 +27,11 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 | [feature-concept-testing](skills/feature-concept-testing/) | Validate feature concepts with real user insight before committing engineering resources — test whether a feature solves a real problem, how users would use it, and whether they'd pay for it. |
 | [brand-messaging-validation](skills/brand-messaging-validation/) | Validate brand messaging with real audience insight — positioning clarity, emotional resonance, authenticity, and differentiation. |
 | [content-generation-optimization](skills/content-generation-optimization/) | Generate SEO and AEO-optimized content informed by real audience insight — blog posts, articles, and guides that rank well and get read. |
+| [creative-brief](skills/creative-brief/) | Generate a creative brief grounded in real audience insight — giving creative teams a validated human foundation to build from, not assumptions. |
+| [idea-validation](skills/idea-validation/) | Validate a business idea, product concept, or value proposition with real audience feedback — delivering a clear Go / Pivot / Kill verdict with evidence. |
+| [product-description-optimization](skills/product-description-optimization/) | Optimize ecommerce product descriptions using real audience insight — what matters to buyers, what language resonates, and what drives purchase decisions. |
+| [video-script-generation](skills/video-script-generation/) | Generate video scripts for creators or AI, informed by real audience insight — hooks, tone, pacing, and engagement drivers optimized for the target audience. |
+| [roundtable-twin-interviews](skills/roundtable-twin-interviews/) | Run adaptive multi-round moderated interviews with Digital Twins — 8 rounds of iterative questioning that goes deeper with each pass, producing a full transcript and analytical research report. |
 <!-- SKILLS:END -->
 
 ## Installation
@@ -138,19 +143,26 @@ You can also invoke skills directly:
 ### Customer Research
 - `deep-customer-research` — Comprehensive qualitative research on any topic
 - `icp-discovery` — Find your ideal customer profile across segments
+- `roundtable-twin-interviews` — Adaptive multi-round moderated interviews
+
+### Validation
+- `idea-validation` — Validate business ideas with a Go / Pivot / Kill verdict
+- `feature-concept-testing` — Validate features before building
 
 ### Creative & Ad Copy
+- `creative-brief` — Audience-informed creative briefs for teams and agencies
 - `creative-testing` — Test creative concepts before spending budget
 - `facebook-ad-copy` — Audience-informed Facebook/Instagram ads
 - `google-ad-copy` — Audience-informed Google RSA assets
+- `video-script-generation` — Video scripts optimized for target audiences
 
 ### Conversion & Messaging
 - `landing-page-optimization` — Optimize pages for conversion
 - `email-campaign-copy` — Subscriber-informed email campaigns
 - `brand-messaging-validation` — Validate positioning and taglines
+- `product-description-optimization` — Optimize ecommerce product descriptions
 
-### Product & Content
-- `feature-concept-testing` — Validate features before building
+### Content
 - `content-generation-optimization` — SEO/AEO content from audience insight
 
 ## Contributing
