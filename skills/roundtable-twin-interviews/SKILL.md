@@ -1,15 +1,23 @@
 ---
 name: roundtable-twin-interviews
-description: "Use this skill to run a multi-round moderated interview with Digital Twins — like a focus group, but adaptive. Each round builds on what emerged before: the AI moderator designs follow-up questions based on themes, tensions, and surprises from previous rounds, creating a natural conversational arc that goes deeper with each pass. Produces a full verbatim transcript and an analytical research report. Triggers include: requests to run a focus group, conduct qualitative interviews, explore a topic in depth with real people, run a roundtable discussion, or do iterative audience research. Uses OriginalVoices Digital Twins (ask_twins) across multiple rounds of moderated discussion."
+description: "Use this skill to run an adaptive moderated interview with Digital Twins. One question is asked to a group of twins, their answers are analysed for themes and tensions, then the next question is designed based on what emerged — repeated across 8 rounds of questions, each one going deeper. Produces a comprehensive research report. Triggers include: requests to run a focus group, conduct qualitative interviews, explore a topic in depth with real people, run a roundtable discussion, or do iterative audience research. Uses OriginalVoices Digital Twins (ask_twins) across multiple rounds of questions."
 ---
 
 # Roundtable Twin Interviews Skill
 
 ## Overview
 
-Run a multi-round moderated interview with Digital Twins. Unlike single-pass research, the Roundtable is adaptive — each round builds on what the audience said in the last. The AI moderator listens for themes, tensions, and surprises, then designs the next question to go deeper. Over 8 rounds with 20+ twins, you get the depth of a real focus group without the scheduling, cost, or groupthink.
+Run an adaptive moderated interview with Digital Twins. Here's how it works:
 
-The result: a full verbatim transcript and a sharp, opinionated research report — both ready to share with clients or stakeholders.
+1. **One question is asked** to a group of Digital Twins
+2. **All twins answer** independently — their full responses are recorded
+3. **The answers are analysed** for themes, tensions, and surprises
+4. **The next question is designed** based on what emerged — probing deeper into the most interesting threads
+5. **Repeat** for 8 rounds of questions, each one sharper than the last
+
+This is iterative research, not a single-pass survey. Each round of questions builds on the last, creating a conversational arc that goes deeper with every pass — like a skilled moderator running a focus group, but faster, cheaper, and without groupthink.
+
+The result: a comprehensive research report — ready to share with clients or stakeholders.
 
 ## Workflow Steps
 
@@ -19,26 +27,26 @@ Ask the user the following questions one at a time, waiting for each answer:
 
 1. **"What's the topic for the roundtable?"** — The subject to explore (e.g. "How people feel about AI-generated content in news media")
 2. **"Who is the audience?"** — (e.g. "UK adults 25-45 who read news daily")
-3. **"How many rounds?"** — Default: 8. Minimum: 3. More rounds = deeper exploration.
+3. **"How many rounds of questions?"** — Default: 8. Minimum: 3. Each round is one question asked to all twins, then analysed before the next. More rounds = deeper exploration.
 4. **"How many twins per round?"** — Default: 20. Minimum: 15. More twins = broader perspective.
 
-Once all four inputs are collected, confirm back with a one-line summary (e.g. *"Got it — 8 rounds with 20 twins exploring how Gen Z feels about homeownership. Running now."*) and then execute the full session autonomously without stopping.
+Once all four inputs are collected, confirm back with a one-line summary (e.g. *"Got it — 8 rounds of questions with 20 twins exploring how Gen Z feels about homeownership. Each round I'll ask one question, analyse the responses, then design the next question based on what emerged. Running now."*) and then execute the full session autonomously without stopping.
 
 ### Step 2: Run the Roundtable (The Loop)
 
-For each round, follow this sequence:
+Each round of questions follows the same cycle: **ask one question → collect all twin responses → analyse → design the next question**. Repeat for all rounds.
 
 #### 2a. Design the Moderator Question
 
 The question strategy adapts based on position in the session:
 
-| Round | Strategy | Example approach |
-|-------|----------|-----------------|
-| Round 1 | **Open & exploratory** — get people talking, no leading | "When you think about [topic], what comes to mind first?" |
-| Rounds 2-7 | **Probe emerging themes** — pick a tension, contradiction, or strong theme from the previous round and dig into it | "Several of you mentioned X but disagreed on Y — tell me more about where you stand on this." |
-| Final round | **Synthesis** — force prioritisation and final takeaways | "If you could tell a brand/product team one thing about [topic] that they're probably getting wrong, what would it be?" |
+| Question | Strategy | Example approach |
+|----------|----------|-----------------|
+| Question 1 | **Open & exploratory** — get people talking, no leading | "When you think about [topic], what comes to mind first?" |
+| Questions 2-7 | **Probe emerging themes** — pick a tension, contradiction, or strong theme from the previous round's answers and dig into it | "Several of you mentioned X but disagreed on Y — tell me more about where you stand on this." |
+| Final question | **Synthesis** — force prioritisation and final takeaways | "If you could tell a brand/product team one thing about [topic] that they're probably getting wrong, what would it be?" |
 
-**Critical:** Middle-round questions must be informed by what twins actually said. Do not use generic follow-ups. Read the previous round's responses, identify the most interesting thread, and pull on it.
+**Critical:** Each question must be shaped by what twins actually said in the previous round. Do not use generic follow-ups. Read the responses, identify the most interesting thread, and pull on it.
 
 #### 2b. Query the Digital Twins
 
@@ -51,13 +59,13 @@ ask_twins(
 
 #### 2c. Record Responses
 
-Store every twin's ID and full verbatim response for the transcript. Never truncate or summarise individual responses.
+Store every twin's ID and full response. Never truncate or summarise individual responses — you'll need the full detail for the final report.
 
 #### 2d. Between-Round Analysis
 
-After each round, output a brief analysis to the conversation:
+After each round of questions, output a brief analysis to the conversation:
 
-**Round [n] Analysis:**
+**Question [n] Analysis:**
 - **Dominant themes** — What most twins agreed on
 - **Tensions** — Where twins disagreed or contradicted each other
 - **Surprises** — Anything unexpected or counterintuitive
@@ -67,102 +75,75 @@ This keeps the user informed of progress and shows the adaptive logic at work. D
 
 #### 2e. Repeat
 
-Move to the next round. Continue until all rounds are complete. Do not pause between rounds or ask the user for direction — run the full session autonomously.
+Move to the next round of questions. Continue until all rounds are complete. Do not pause between rounds or ask the user for direction — run the full session autonomously.
 
 #### 2f. Handling Interruptions
 
 If the session is interrupted (e.g. response length limits), output what you have so far and tell the user to say **"continue"** to resume from the next round. Track which round you're on so you can pick up where you left off.
 
-### Step 3: Deliver the Transcript
+### Step 3: Deliver the Research Report
 
-Once all rounds are complete, output the full transcript directly in the conversation.
-
-Format:
-
-```markdown
-# Roundtable Twin Interview — Transcript
-**Topic:** [topic]
-**Audience:** [audience]
-**Twins per round:** [n] | **Rounds:** [n]
-**Date:** [date]
-
----
-
-## Round 1
-
-**MODERATOR:** [question]
-
----
-
-**[Twin ID]:** [full verbatim response]
-
-**[Twin ID]:** [full verbatim response]
-
-[repeat for all twins in this round]
-
----
-
-## Round 2
-
-**MODERATOR:** [question]
-
----
-
-[repeat structure for all rounds]
-```
-
-### Step 4: Deliver the Research Report
-
-After the transcript, output the research report directly in the conversation.
+Once all rounds are complete, output a comprehensive research report directly in the conversation.
 
 Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
 
 ### Report sections:
 
 **1. Executive Summary**
-2-3 sentences capturing the single most important finding from the entire session.
+Top-line findings in 2-3 sentences. What is the single most important thing this research revealed?
 
 **2. Key Themes**
-3-5 major patterns that emerged across rounds. For each theme:
-- What it is
-- How it evolved across rounds (did it deepen, shift, or get complicated?)
-- Supporting quotes from twins
+3-5 most significant patterns that emerged across the session. For each theme:
+- What it is and why it matters
+- How it evolved across questions (did it deepen, shift, or get complicated?)
+- How prevalent it was (e.g. "mentioned by 15 out of 20 twins")
+- Supporting quotes from Digital Twins
 - Include a chart showing theme prevalence
 
-**3. Tensions & Disagreements**
+**3. Emotional Landscape**
+What emotions drive behaviour and opinion in this space? Map the dominant feelings that came through — frustration, anxiety, hope, excitement, indifference, guilt, pride. Include a chart of dominant emotions and supporting quotes that show the emotional texture behind the data.
+
+**4. Tensions & Disagreements**
 What divided the group. For each tension:
 - The two (or more) sides
 - Who held which view and why
 - Why it matters strategically
+- Whether the tension resolved, deepened, or remained unresolved across questions
 
-**4. The Arc of the Conversation**
-How the discussion evolved from Round 1 to the final round. What shifted? What deepened? What emerged late that wasn't visible early on? This section is unique to the Roundtable format — it captures insight that single-pass research misses.
+**5. The Arc of the Conversation**
+How the discussion evolved from Question 1 to the final question. What shifted? What deepened? What emerged late that wasn't visible early on? This section is unique to the Roundtable format — it captures insight that single-pass research misses.
 
-**5. Standout Quotes**
-5-8 of the most powerful, surprising, or representative quotes from across the session.
+**6. Standout Quotes**
+8-12 of the most powerful, surprising, or representative quotes from across the session. Group by theme or tension where it helps tell the story.
 
 > "[quote]"
-> — [Twin ID], Round [n]
+> — Twin [ID], Question [n]
 
-**6. Strategic Implications**
-3-5 actionable implications for product, brand, or strategy teams.
+**7. Opportunities**
+Actionable insights for product, marketing, or strategy. What gaps exist? What do people want that they're not getting? What would change their behaviour?
 
-**7. Methodology**
-This research was conducted using OriginalVoices Digital Twins — AI representations of real people, trained on data owned by the individuals they represent. [n] twins from the target audience participated across [n] rounds of moderated discussion. Each round's question was designed in response to themes emerging from the previous round, creating an adaptive research arc.
+**8. Strategic Implications & Recommendations**
+5-7 specific recommendations based on the research. Each should include:
+- What to do
+- Why the research supports it
+- What risk or opportunity it addresses
+
+**9. Methodology**
+This research was conducted using OriginalVoices Digital Twins — AI representations of real people, trained on data owned by the individuals they represent. [n] twins from the target audience participated across [n] rounds of questions. Each question was designed in response to themes emerging from the previous round's answers, creating an adaptive research arc that mirrors a moderated focus group.
 
 ## Tips for Best Results
 
-- **Default to 8 rounds**: This gives enough depth for themes to emerge, evolve, and resolve. Fewer than 5 rounds rarely surfaces the tensions that make research valuable
+- **Default to 8 rounds of questions**: This gives enough depth for themes to emerge, evolve, and resolve. Fewer than 5 rounds rarely surfaces the tensions that make research valuable
 - **20 twins is the sweet spot**: Enough for diversity of perspective without becoming noise. Go higher (25-30) for topics where you expect wide variation
-- **Trust the arc**: The best insights often come in rounds 5-7, once surface-level responses have been exhausted and twins start revealing deeper motivations
-- **Look for what changed**: If twins say one thing in Round 2 but something different in Round 6, that shift is often the most valuable finding
-- **Don't lead in Round 1**: The opening question should be genuinely open. If you anchor too early, you'll get confirmation, not discovery
+- **Trust the arc**: The best insights often come in questions 5-7, once surface-level responses have been exhausted and twins start revealing deeper motivations
+- **Look for what changed**: If twins say one thing in Question 2 but something different in Question 6, that shift is often the most valuable finding
+- **Don't lead in Question 1**: The opening question should be genuinely open. If you anchor too early, you'll get confirmation, not discovery
 
 ## Common Pitfalls to Avoid
 
 - **Generic middle-round questions**: "Tell me more about that" is not a good probe. Reference specific things twins said.
 - **Ignoring minority views**: If 3 out of 20 twins said something different, that's often where the insight lives
-- **Summarising instead of analysing**: The report should be opinionated. "Some people liked X and some didn't" is not analysis. "The group split along generational lines, with under-30s seeing X as essential and over-40s seeing it as intrusive — suggesting a segmented approach" is.
+- **Summarising instead of analysing**: The report should be analytical. "Some people liked X and some didn't" is not analysis. "The group split along generational lines, with under-30s seeing X as essential and over-40s seeing it as intrusive — suggesting a segmented approach" is.
 
 ## Related Skills
 
