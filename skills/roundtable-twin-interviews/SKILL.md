@@ -7,17 +7,15 @@ description: "Use this skill to run an adaptive moderated interview with Digital
 
 ## Overview
 
-Run an adaptive moderated interview with Digital Twins. Here's how it works:
+Run an adaptive moderated interview with Digital Twins. One question is asked to a group of twins, all twins answer independently, the answers are analysed for themes, tensions, and surprises, then the next question is designed based on what emerged. This repeats for as many rounds as you want, each one sharper than the last. It is iterative research, not a single-pass survey — like a skilled moderator running a focus group, but faster, cheaper, and without groupthink.
 
-1. **One question is asked** to a group of Digital Twins
-2. **All twins answer** independently — their full responses are recorded
-3. **The answers are analysed** for themes, tensions, and surprises
-4. **The next question is designed** based on what emerged — probing deeper into the most interesting threads
-5. **Repeat** for 8 rounds of questions, each one sharper than the last
+## How It Works
 
-This is iterative research, not a single-pass survey. Each round of questions builds on the last, creating a conversational arc that goes deeper with every pass — like a skilled moderator running a focus group, but faster, cheaper, and without groupthink.
-
-The result: a comprehensive research report — ready to share with clients or stakeholders.
+1. One question is asked to a group of Digital Twins
+2. All twins answer independently — their full responses are recorded
+3. The answers are analysed for themes, tensions, and surprises
+4. The next question is designed based on what emerged — probing deeper into the most interesting threads
+5. Repeat for 8 rounds of questions, each one sharper than the last
 
 ## Workflow Steps
 
