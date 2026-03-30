@@ -126,7 +126,7 @@ Review audience responses and extract:
 
 ### Step 5: Deliver Video Script Package
 
-Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual scripts, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
 
 **PRIMARY DELIVERABLE - Complete Video Script:**
 

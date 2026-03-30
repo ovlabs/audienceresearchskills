@@ -112,7 +112,7 @@ Update emails based on feedback before finalizing.
 
 ### Step 6: Deliver Email Campaign Set
 
-Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual emails, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
 
 **1. Campaign Overview:**
 - Audience insights summary

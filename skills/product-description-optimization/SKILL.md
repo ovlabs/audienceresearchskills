@@ -120,7 +120,7 @@ Review audience responses and extract specific insights about the existing descr
 
 ### Step 5: Deliver Optimization Package
 
-Format the deliverable using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
 
 **PRIMARY DELIVERABLE - Optimized Product Description:**
 

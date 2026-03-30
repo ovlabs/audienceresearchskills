@@ -78,7 +78,7 @@ Review all Digital Twin responses and compile findings:
 
 ### Step 5: Deliver the Research Report
 
-Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
+Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual themes/subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
 
 ### Report sections:
 

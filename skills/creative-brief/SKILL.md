@@ -62,7 +62,7 @@ From the research, identify the single most important human truth — the insigh
 
 ### Step 4: Deliver the Creative Brief
 
-Format the brief using proper markdown: `##` for the brief title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights.
+Format the output using proper markdown headers: use `##` for the brief title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
 
 Structure the brief as follows:
 

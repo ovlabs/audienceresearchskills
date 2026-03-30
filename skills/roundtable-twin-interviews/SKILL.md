@@ -83,7 +83,7 @@ If the session is interrupted (e.g. response length limits), output what you hav
 
 Once all rounds are complete, output a comprehensive research report directly in the conversation.
 
-Format the report using proper markdown: `##` for the report title, `###` for each section, `>` blockquotes for twin quotes, and **bold** for key insights. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
+Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
 
 ### Report sections:
 
