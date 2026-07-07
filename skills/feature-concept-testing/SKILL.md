@@ -1,6 +1,6 @@
 ---
 name: feature-concept-testing
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to test and validate new feature concepts before building them. Triggers include: requests to validate feature ideas, test product concepts, understand if users would use a feature, gauge interest in new functionality, or reduce risk of building unwanted features. Uses OriginalVoices Digital Twins (ask_twins) to understand whether a feature solves a real problem, how users would actually use it, what concerns they have, and whether they'd pay for it — preventing wasted engineering effort on features nobody wants."
 ---
 
@@ -24,22 +24,40 @@ Gather from the user:
 
 One comprehensive research call covering problem validation, feature appeal, usage scenarios, value perception, and concerns.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Testing stimuli without bias.** When showing concepts, ads, taglines, or messaging options:
+- Capture the **unaided gut reaction first** ("what's your first impression?") before asking for reasons.
+- **Don't signal the hoped-for winner** — never reveal which option is the client's, and never ask "isn't this great?".
+- When comparing options, **counterbalance the order** (don't always show A first) and always allow "neither / none of them".
+- **Keep three questions separate:** comprehension ("what message do you take from this? who is it for?") → preference ("which do you prefer, and why?") → persuasion ("does it make you more or less likely to act?"). Never fuse them into one.
+
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "What's your biggest challenge when it comes to [problem area this feature addresses]? How do you handle it today?",
-    "How often do you encounter [problem]? How painful is it when it happens?",
-    "Imagine [product] added a feature that lets you [feature description]. How useful would that be for you?",
-    "Would [feature] solve a real problem for you? What problem would it solve?",
-    "When would you use [feature]? Walk me through a specific scenario where you'd use it.",
-    "How often would you realistically use [feature]? Daily, weekly, monthly, or rarely?",
-    "How would [feature] be different from how you currently solve [problem]? Would it be meaningfully better?",
-    "Would using [feature] feel natural in your workflow, or would it feel like extra steps?",
-    "What concerns or hesitations would you have about [feature]? What could go wrong?",
-    "Is [feature] something you need, something nice to have, or something you probably wouldn't use?",
-    "If a competitor offered [feature] and [current product] didn't, would you switch?",
-    "Would you be willing to pay extra for [feature]? Why or why not?"
+    "Walk me through the last time [problem area this feature addresses] tripped you up — what did you do about it?",
+    "Tell me about the last time [problem] happened — what did it cost you in time or hassle, and how often does it come around?",
+    "Here's an idea: [product] could let you [feature description]. In your own words, what would that actually do for someone like you?",
+    "If that existed, what — if anything — would it change about how you handle [problem] today?",
+    "Picture the next time [problem] comes up — where, if anywhere, would something like this fit into what you're already doing?",
+    "Realistically, how often do you see yourself reaching for something like this — and what would push it up or down?",
+    "How does this compare with the way you deal with [problem] now — where might it win, and where might your current way still be better?",
+    "What would it take for something like this to feel like a natural part of your routine rather than an extra step?",
+    "What would give you pause about relying on something like this — what could go wrong?",
+    "How much would you actually miss something like this if it never existed? What makes you say that?",
+    "Tell me about a time you switched to a different [product type] because of one specific feature — what made it worth it, and how does this compare?",
+    "What's an add-on or upgrade you currently pay extra for in tools like this — and what made it worth paying for? Where would something like this fall?"
   ]
 )
 ```
@@ -49,9 +67,9 @@ ask_twins(
 ask_twins(
   audience: "[same audience]",
   questions: [
-    "Instead of [feature concept], what if [product] did [alternative approach]? Would that be better?",
-    "Would you prefer: A) [Feature as described], or B) [Simpler version]? Why?",
-    "If you could design the perfect solution to [problem], what would it look like?"
+    "Here's a different way to tackle [problem]: [alternative approach]. What do you make of it next to the first idea — and when might one beat the other?",
+    "Some people would want [Feature as described], others a stripped-back version, others neither — where do you land, and why?",
+    "If you could design the perfect fix for [problem] from scratch, what would it look like?"
   ]
 )
 ```

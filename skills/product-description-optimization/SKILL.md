@@ -1,5 +1,6 @@
 ---
 name: product-description-optimization
+version: 1.1.0
 description: "Use this skill to optimize existing product descriptions for ecommerce using real audience insight. Triggers include: requests to improve product descriptions, optimize ecommerce copy, increase conversion rates, refine product pages, make product descriptions resonate with target audiences, or test product messaging. Uses OriginalVoices Digital Twins (ask_twins) to understand what matters to buyers, what information they need, what language resonates, and what drives purchase decisions — then optimizes existing descriptions to convert better."
 ---
 
@@ -26,22 +27,36 @@ Collect from the user:
 
 One comprehensive research call to get specific feedback on the existing product description and understand how to optimize it.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Capturing the audience's own words.** This skill generates copy from what real people say, so the research must surface their *own language*, not abstract opinions — generic questions produce generic copy. Include at least two moment-anchored questions built to elicit verbatim phrasing (e.g. "The last time you looked for [X], what did you actually type or say?", "How would you describe [problem] in your own words, to a friend?"). When you later test copy, replace "would you click / stop scrolling?" (demand effect + inflated intent) with "what would you do next, if anything?" — and ask "what do you take this to be offering?" (comprehension) before whether they like it.
+
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "Here's a product description for [product name]: '[paste full current description]'. What's your initial reaction? Does this make you want to buy it?",
-    "Based on that description, is it clear what this product is and what it does? What's confusing or unclear, if anything?",
-    "What do you like about this product description? What stands out as good or compelling?",
-    "What's missing from this description? What information would you need to see before you'd feel confident buying this product?",
-    "Does this description answer the questions you'd have about [product category] products, or are there things you're still wondering about?",
-    "What concerns or hesitations would you have about buying this product based on this description? What makes you unsure?",
-    "Does the tone and style of this description feel right for [product category], or does it feel off? (too casual, too formal, too salesy, etc.)",
-    "Would you rather this description be: A) Shorter and more to the point, B) Longer with more detail, or C) About right as is?",
-    "What would make this description more convincing or trustworthy? What's missing that would build your confidence?",
-    "If you were comparing this product to similar [product category] options, does this description make it stand out, or does it blend in?",
-    "What would make you click 'Add to Cart' after reading this? What needs to change to make you more likely to buy?",
-    "Is there anything in this description that turns you off or makes you less interested in buying?"
+    "Here's a product description for [product name]: '[paste full current description]'. Read it once — what's your first, gut reaction?",
+    "In your own words, what do you take this product to be, and who do you think it's for? Where did you have to guess or reread?",
+    "What in that description landed for you, and what fell flat or left you cold?",
+    "Think about the last time you bought a [product category] product — what did you need to know before you were comfortable buying, and how much of that is here?",
+    "After reading this, what would you still be wondering about [product name]?",
+    "What, if anything, would give you pause about this product based on this description?",
+    "How would you describe the tone of this writing, and how does that sit with you for a [product category] product?",
+    "If you were skimming this on your phone, what would you want more of, and what would you skip past?",
+    "The last time a product description made you trust it enough to buy, what did it include? How does this one compare?",
+    "If you saw this next to two other [product category] options, what — if anything — would pull you toward this one or push you to the others?",
+    "Think back to the last time you added something like this to your cart — what was the final nudge, and is that nudge anywhere in this description?",
+    "How would you describe this product in your own words to a friend who was thinking about buying it?"
   ]
 )
 ```

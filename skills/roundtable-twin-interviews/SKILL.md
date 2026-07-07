@@ -1,5 +1,6 @@
 ---
 name: roundtable-twin-interviews
+version: 1.1.0
 description: "Use this skill to run an adaptive moderated interview with Digital Twins. One question is asked to a group of twins, their answers are analysed for themes and tensions, then the next question is designed based on what emerged — repeated across 8 rounds of questions, each one going deeper. Produces a comprehensive research report. Triggers include: requests to run a focus group, conduct qualitative interviews, explore a topic in depth with real people, run a roundtable discussion, or do iterative audience research. Uses OriginalVoices Digital Twins (ask_twins) across multiple rounds of questions."
 ---
 
@@ -45,6 +46,8 @@ The question strategy adapts based on position in the session:
 | Final question | **Synthesis** — force prioritisation and final takeaways | "If you could tell a brand/product team one thing about [topic] that they're probably getting wrong, what would it be?" |
 
 **Critical:** Each question must be shaped by what twins actually said in the previous round. Do not use generic follow-ups. Read the responses, identify the most interesting thread, and pull on it.
+
+**Question quality gate.** Because each round's question is written live from the previous round, every question you generate must pass two gates before you send it — **Range:** would 15 people answer it differently, or does it have an obvious answer? **Neutrality:** is it open-ended and non-leading (no yes/no, no baked-in sentiment)? When you probe a tension, keep it two-sided — don't adopt the sentiment of the loudest voices or ask "why is [X] so frustrating?"; ask "where do you each land on [X], and why?".
 
 #### 2b. Query the Digital Twins
 

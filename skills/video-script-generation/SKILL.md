@@ -1,5 +1,6 @@
 ---
 name: video-script-generation
+version: 1.1.0
 description: "Use this skill to generate video scripts for creators or AI, informed by real audience insight. Triggers include: requests to write video scripts, create content for YouTube/TikTok/Instagram, generate video narration, write video copy, or create scripts for video ads. Uses OriginalVoices Digital Twins (ask_twins) to understand what hooks the audience, what tone resonates, what keeps them watching, and what drives engagement — then writes complete video scripts optimized for that audience."
 ---
 
@@ -26,22 +27,34 @@ Gather from the user:
 
 One comprehensive research call to understand what will make this video effective for this audience.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "When you're watching videos about [topic], what makes you stop scrolling and actually watch in the first 3-5 seconds?",
-    "For videos about [topic], do you prefer: A) Fast-paced, energetic style, or B) Slower, more detailed style? Why?",
-    "What tone do you prefer for videos about [topic]? A) Casual and conversational, B) Professional and informative, C) Entertaining and humorous?",
-    "When watching a video about [topic], how long should it be? Would you watch a 5-minute video, or do you prefer under 60 seconds?",
-    "What makes you keep watching a video about [topic] vs. clicking away or scrolling past? What keeps your attention?",
-    "What information or value would you expect from a video about [topic]? What should it teach or show you?",
-    "Do you prefer videos that: A) Tell a story, B) Give step-by-step instructions, C) Show quick tips, or D) Explain concepts?",
-    "When watching videos about [topic], do you prefer to see: A) A person talking to camera, B) Voiceover with visuals, C) Text on screen with music, or D) Doesn't matter?",
-    "What would make you comment on, share, or save a video about [topic]? What creates that reaction?",
-    "What turns you off in videos about [topic]? What makes you stop watching immediately?",
-    "For videos about [topic], would you rather: A) Get straight to the point, or B) Have some build-up or context first?",
-    "If a video about [topic] has a call-to-action at the end (subscribe, visit website, buy something), does that feel natural or pushy?"
+    "Tell me about the last video on [topic] that made you stop scrolling — what was happening in those first few seconds?",
+    "Tell me about a video on [topic] you watched all the way through — what was the pace like, and did that keep you or start to lose you?",
+    "Think of a [topic] video whose tone just clicked for you — how would you describe the way it talked to you? And one whose tone put you off?",
+    "Tell me about the last [topic] video you watched to the end, and the last one you clicked away from early — how long was each, and what made the difference?",
+    "Walk me through the last time you were watching a [topic] video and something made you keep going instead of clicking away — what held you there?",
+    "Tell me about a [topic] video that actually taught you something useful — what did you walk away with?",
+    "Think of a [topic] video that really worked for you — how was it put together, and why did that click?",
+    "When you picture the [topic] videos you actually finish, what's usually on screen — a person, visuals, text? Tell me about one that stuck with you.",
+    "Tell me about the last [topic] video you shared, saved, or commented on — what made you do it?",
+    "Tell me about the last [topic] video you bailed on within seconds — what made you nope out?",
+    "Think of a [topic] video that hooked you — did it get straight to the point or build up first, and how did that work for you?",
+    "Tell me about a time a video asked you to do something at the end — subscribe, buy, visit — that felt fine, and a time it felt pushy. What was the difference?"
   ]
 )
 ```

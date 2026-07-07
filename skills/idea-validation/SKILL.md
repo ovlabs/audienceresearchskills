@@ -1,5 +1,6 @@
 ---
 name: idea-validation
+version: 1.1.0
 description: "Use this skill to validate a business idea, product concept, or value proposition with real audience feedback before investing time or money. Triggers include: requests to validate a startup idea, test a product concept, check if an idea has legs, assess market demand, validate a value proposition, or get honest feedback on a new business concept. Uses OriginalVoices Digital Twins (ask_twins) to understand whether the problem is real, how painful it is, how people solve it today, and whether the proposed idea would genuinely change their behaviour — delivering a clear Go / Pivot / Kill verdict with evidence."
 ---
 
@@ -25,21 +26,39 @@ Collect from the user:
 
 Test the idea with the target audience using 10-12 questions that progress from problem validation through to purchase intent. This sequence is deliberate — it establishes whether the problem is real before introducing the solution.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Testing stimuli without bias.** When showing concepts, ads, taglines, or messaging options:
+- Capture the **unaided gut reaction first** ("what's your first impression?") before asking for reasons.
+- **Don't signal the hoped-for winner** — never reveal which option is the client's, and never ask "isn't this great?".
+- When comparing options, **counterbalance the order** (don't always show A first) and always allow "neither / none of them".
+- **Keep three questions separate:** comprehension ("what message do you take from this? who is it for?") → preference ("which do you prefer, and why?") → persuasion ("does it make you more or less likely to act?"). Never fuse them into one.
+
 ```
 ask_twins(
   audience: "[detailed target audience description]",
   questions: [
-    "When it comes to [problem area], what's the biggest challenge or frustration you deal with? How often does it come up?",
+    "When it comes to [problem area], walk me through the last time it got in your way — what happened, and how often does that come up?",
     "How do you currently handle [problem]? Walk me through what you do today.",
-    "What's the worst part about your current approach? What do you wish was different?",
-    "Have you ever looked for a better solution to [problem]? What did you find, and why did you stick with (or abandon) it?",
-    "On a scale of 1-10, how painful is this problem in your life right now? What makes it that level?",
-    "I'd like to get your reaction to an idea: [describe the idea clearly and concisely, in plain language]. What's your immediate gut reaction?",
-    "Does this idea solve a real problem for you, or is it more of a 'nice to have'? Be honest.",
+    "Thinking about how you handle it now — what works fine, and what do you wish was different?",
+    "Tell me about a time you went looking for a better way to deal with [problem] — what did you find, and why did you stick with it or drop it?",
+    "Compared with the other hassles in your week, where does [problem] rank — and what makes it that big or small a deal?",
+    "I'd like your honest first reaction to an idea: [describe the idea clearly and concisely, in plain language]. What goes through your mind?",
+    "If this existed, what — if anything — would it change in your day-to-day? And where might it fall short for you?",
     "What questions or concerns come to mind when you hear about this idea? What would hold you back from trying it?",
-    "If this existed today, what would it need to do to get you to switch from your current approach?",
-    "What would you expect to pay for something like this? What would feel like a fair price?",
-    "Would you recommend this to someone you know? Who would you tell about it and what would you say?",
+    "Tell me about the last time you switched from a way of doing something you were used to — what finally tipped you? What would it take here?",
+    "Think about what you already spend on [problem] today — in money, time, or workarounds. Against that, what would something like this be worth to you?",
+    "When did you last tell someone about a product you'd found — what made it worth mentioning? Who, if anyone, comes to mind for this one?",
     "If you could change one thing about this idea to make it perfect for you, what would it be?"
   ]
 )

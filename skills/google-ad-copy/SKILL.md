@@ -1,6 +1,6 @@
 ---
 name: google-ad-copy
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to generate Google ad copy grounded in real audience insight. Triggers include: requests to create Google Search or Display ad campaigns, write Responsive Search Ad (RSA) headlines and descriptions, refresh underperforming Google ad copy, or generate audience-informed ad variations for A/B testing. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates audience-informed RSA assets rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -27,16 +27,32 @@ Optional:
 
 Use `ask_twins` to understand the audience's world — their language, pain points, and search behavior. This informs ad copy that resonates.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Capturing the audience's own words.** This skill generates copy from what real people say, so the research must surface their *own language*, not abstract opinions — generic questions produce generic copy. Include at least two moment-anchored questions built to elicit verbatim phrasing (e.g. "The last time you looked for [X], what did you actually type or say?", "How would you describe [problem] in your own words, to a friend?"). When you later test copy, replace "would you click / stop scrolling?" (demand effect + inflated intent) with "what would you do next, if anything?" — and ask "what do you take this to be offering?" (comprehension) before whether they like it.
+
+The search-language question below (what did you actually type into Google) is the model verbatim question for this skill — it gives you the exact keywords to drop into headlines. Keep it grounded in a real, recalled search rather than a hypothetical.
+
 ```
 ask_twins(
   audience: "[detailed target audience description]",
   questions: [
-    "What's your biggest frustration when it comes to [problem/category]?",
-    "What matters most to you when choosing a [product category]?",
-    "If you were searching on Google for [solution], what exact words would you type?",
-    "What would make you click on an ad for [product type]? What would make you scroll past?",
-    "What concerns or doubts would you have before trying a new [product/solution]?",
-    "What would a headline need to say to grab your attention and feel relevant to you?"
+    "Walk me through the last time [problem/category] came up for you — what did you actually do about it, and how did it go?",
+    "Tell me about the last time you chose a [product category] — what tipped the decision, and what did you rule out?",
+    "The last time you went looking for [solution] online, what exact words did you type into Google? Give me the actual phrases, however rough.",
+    "Think about the last Google ad you actually clicked on — or one you deliberately skipped — what was it about, and what made you act?",
+    "When you think about trying a new [product/solution], what pulls you toward it — and what makes you hesitate?",
+    "How would you describe [problem/solution] in your own words — the way you'd say it to a friend?"
   ]
 )
 ```
@@ -108,8 +124,8 @@ Test 3-5 strongest headline + description combinations with the audience:
 ask_twins(
   audience: "[same target audience]",
   questions: [
-    "You're searching Google for '[search term]' and see this ad: Headline: '[H1]' Description: '[D1]'. Would you click? Why or why not?",
-    "Between these ads, which grabs you most? A: '[H2 + D2]' B: '[H5 + D3]' C: '[H8 + D1]'. Why?"
+    "You're searching Google for '[search term]' and this ad comes up: Headline: '[H1]' Description: '[D1]'. In your own words, what do you take it to be offering — and what would you do next, if anything?",
+    "Between these ads, which feels most like a match for what you searched? A: '[H2 + D2]' B: '[H5 + D3]' C: '[H8 + D1]'. What makes the other two miss?"
   ]
 )
 ```
@@ -150,7 +166,7 @@ Before delivering, verify:
 
 **Keyword Integration:**
 - Include keywords naturally, not stuffed
-- Use exact phrases from "what would you search for" responses
+- Use exact phrases from the "what did you actually type into Google" responses
 - Match search intent (don't promise what landing page doesn't deliver)
 
 ## Common Pitfalls to Avoid

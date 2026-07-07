@@ -1,6 +1,6 @@
 ---
 name: email-campaign-copy
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to generate email marketing copy grounded in real audience insight. Triggers include: requests to write email campaigns, create newsletter content, improve email open rates, write welcome sequences, launch announcement emails, or re-engagement campaigns. Uses OriginalVoices Digital Twins (ask_twins) to understand what makes the audience open emails, what messaging resonates, what triggers action, and what causes unsubscribes — then generates audience-informed email variations rooted in real subscriber perspectives."
 ---
 
@@ -26,22 +26,36 @@ Optional:
 
 ### Step 2: Research Audience Email Behavior & Preferences
 
-One comprehensive research call covering email behavior, topic relevance, subject line testing, and messaging preferences.
+One comprehensive research call covering email behaviour, what drives opens and unsubscribes, value perception, and messaging preferences. Keep the research phase open-ended — save subject-line and opening-line A/B picks for the copy-validation step (Step 5), where forced choice belongs.
+
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Capturing the audience's own words.** This skill generates copy from what real people say, so the research must surface their *own language*, not abstract opinions — generic questions produce generic copy. Include at least two moment-anchored questions built to elicit verbatim phrasing (e.g. "The last time you looked for [X], what did you actually type or say?", "How would you describe [problem] in your own words, to a friend?"). When you later test copy, replace "would you click / stop scrolling?" (demand effect + inflated intent) with "what would you do next, if anything?" — and ask "what do you take this to be offering?" (comprehension) before whether they like it.
 
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "When you open your inbox, what makes you decide to open a marketing email vs. delete it? What grabs your attention in a subject line?",
-    "What's your biggest frustration with marketing emails? What makes you unsubscribe?",
-    "If you received an email about [topic/offer], what would make it feel valuable vs. just more noise? What would you want to know immediately?",
-    "You see these subject lines in your inbox. Which would you most likely open? A: '[Subject A]' B: '[Subject B]' C: '[Subject C]'. Why?",
-    "Imagine opening an email that starts with: '[Opening line A]'. Would you keep reading? What about: '[Opening line B]'? Which grabs you more?",
-    "Would you prefer: A) A short, direct email (2-3 paragraphs) that gets to the point quickly, or B) A longer, story-driven email? Why?",
-    "What would make you actually click a CTA button in this email vs. just reading and closing it?",
-    "What concerns or hesitations would you have about [offer/product/concept being promoted]?",
-    "How do you feel about email frequency from [brands in this category]? How often is too often?",
-    "If an email subject line said '[test subject line]', would that feel like clickbait or would it make you curious? Be honest."
+    "Tell me about the last marketing email you actually opened and read — what was it, and what made you open it?",
+    "Tell me about the last marketing email you deleted straight away or unsubscribed from — what was it about it that put you off?",
+    "How would you describe [topic/offer] in your own words — the way you'd explain it to a friend?",
+    "Think about a marketing email you were glad you read — what did it give you that made it feel worth your time rather than just noise?",
+    "When you open a marketing email, what usually makes you keep reading past the first line — and what makes you close it?",
+    "Tell me about the last time an email actually got you to click through to something — what was it, and what made you act?",
+    "When you're weighing up whether something like [offer/product/concept] is worth it, what pulls you in — and what makes you hold back?",
+    "Think about a brand whose emails you've stayed subscribed to — how often do they email you, and what makes that feel about right rather than too much?",
+    "When you read an email that felt like it really got you, how was it written — the tone, the length, the way it talked to you?",
+    "What's a subject line or phrase from a marketing email that actually stuck with you — good or bad — and what was it about it?"
   ]
 )
 ```
@@ -94,16 +108,18 @@ Create 5-8 email variations, each built on different insights from research.
 
 ### Step 5: Validate Top Variants (Optional)
 
-Test 3-5 strongest emails back with the audience:
+Test 3-5 strongest emails back with the audience. This is where forced-choice A/B picks belong — the research phase stayed open-ended, so use this step to compare specific subject lines, openings, and emails head to head.
 
 ```
 ask_twins(
   audience: "[same audience]",
   questions: [
-    "You receive this email. Subject: '[Subject]'. Would you open it? If you opened it and saw: '[Opening]', would you keep reading?",
-    "Between these emails, which would you engage with? A: '[Email A summary]' B: '[Email B summary]'. Why?",
-    "Does this email feel valuable or like noise? What makes you say that?",
-    "Would you click this CTA: '[CTA copy]'? What would make you more likely to click?"
+    "You see these subject lines in your inbox: A: '[Subject A]' B: '[Subject B]' C: '[Subject C]'. Which would you open first, and what makes the other two easy to skip?",
+    "Here are two ways this email could open. A: '[Opening line A]' B: '[Opening line B]'. Which one keeps you reading, and where does the other lose you?",
+    "You open this email and read the first few lines: '[Opening]'. In your own words, what do you take it to be offering — and what would you do next, if anything?",
+    "Between these two emails, which feels more worth your time? A: '[Email A summary]' B: '[Email B summary]'. What makes the other one miss?",
+    "Does this email feel worth your time or like noise? What makes you say that?",
+    "Picture this CTA at the end of the email: '[CTA copy]'. What would you do when you reach it — and what, if anything, would make you more likely to act?"
   ]
 )
 ```

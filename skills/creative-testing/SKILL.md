@@ -1,6 +1,6 @@
 ---
 name: creative-testing
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to test and validate creative concepts — ads, copy, taglines, scripts, packaging — with real audience feedback before spending budget. Triggers include: requests to test ad concepts, validate marketing copy or taglines, compare creative directions, get audience reactions to campaign ideas, or pre-test scripts or email copy. Supports testing up to 10-12 concepts in a single session. Uses OriginalVoices Digital Twins (ask_twins) to gather honest gut reactions from target audiences."
 ---
 
@@ -21,6 +21,24 @@ Collect from the user:
 
 ### Step 2: Design the Testing Approach
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Testing stimuli without bias.** When showing concepts, ads, taglines, or messaging options:
+- Capture the **unaided gut reaction first** ("what's your first impression?") before asking for reasons.
+- **Don't signal the hoped-for winner** — never reveal which option is the client's, and never ask "isn't this great?".
+- When comparing options, **counterbalance the order** (don't always show A first) and always allow "neither / none of them".
+- **Keep three questions separate:** comprehension ("what message do you take from this? who is it for?") → preference ("which do you prefer, and why?") → persuasion ("does it make you more or less likely to act?"). Never fuse them into one.
+
 Choose the right approach based on the number of concepts:
 
 **Small batch (2-4 concepts)** — Direct comparison:
@@ -30,14 +48,14 @@ Present all concepts together and ask for direct comparison.
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "I'm going to show you [number] [ad concepts / taglines / etc.]. Give me your honest gut reaction to each one.",
-    "Concept A: '[full text of concept A]'. What's your immediate reaction? What do you think and feel?",
-    "Concept B: '[full text of concept B]'. What's your immediate reaction? What do you think and feel?",
-    "Concept C: '[full text of concept C]'. What's your immediate reaction? What do you think and feel?",
-    "Of all the concepts, which one grabs you most? Why? Which one would make you stop scrolling or take action?",
-    "Which concept feels most relevant to your life? Which one 'gets you'?",
-    "Is there anything in any of these that feels off, confusing, or would make you tune out?",
-    "If you could improve the winning concept, what would you change?"
+    "Here are [number] [concepts]. Reading each one cold, give me your gut first impression of each in a few words — before you think about why.",
+    "Concept A: '[full text of concept A]'. What's the main message you take from this, and who do you think it's meant for?",
+    "Concept B: '[full text of concept B]'. What's the main message you take from this, and who do you think it's meant for?",
+    "Concept C: '[full text of concept C]'. What's the main message you take from this, and who do you think it's meant for?",
+    "Which of these pulls you in most, and which leaves you cold? Walk me through why — and if none of them grab you, say so.",
+    "Thinking about the last time an ad actually got you to do something, does any of these come close — and does any make you less likely to bother? Which, and why?",
+    "Is there anything in any of these that feels off, confusing, or that you'd scroll past — and what exactly triggers that?",
+    "Take the one that landed best for you: what would you change to make it hit harder, and what should stay exactly as it is?"
   ]
 )
 ```
@@ -50,10 +68,10 @@ Break concepts into groups of 3-4, test each group with individual reaction prom
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "Concept A: '[full text]'. What's your immediate gut reaction? Would this grab your attention?",
-    "Concept B: '[full text]'. What's your immediate gut reaction? Would this grab your attention?",
-    "Concept C: '[full text]'. What's your immediate gut reaction? Would this grab your attention?",
-    "Of A, B, and C — which one resonates most and why?"
+    "Concept A: '[full text]'. Reading it cold, what message do you take from it, and how does it land with you?",
+    "Concept B: '[full text]'. Reading it cold, what message do you take from it, and how does it land with you?",
+    "Concept C: '[full text]'. Reading it cold, what message do you take from it, and how does it land with you?",
+    "Of A, B, and C, which pulls you in most and which leaves you flat? Walk me through why — and if none land, say so."
   ]
 )
 
@@ -61,10 +79,10 @@ ask_twins(
 ask_twins(
   audience: "[same audience]",
   questions: [
-    "Concept D: '[full text]'. What's your immediate gut reaction? Would this grab your attention?",
-    "Concept E: '[full text]'. What's your immediate gut reaction? Would this grab your attention?",
-    "Concept F: '[full text]'. What's your immediate gut reaction? Would this grab your attention?",
-    "Of D, E, and F — which one resonates most and why?"
+    "Concept D: '[full text]'. Reading it cold, what message do you take from it, and how does it land with you?",
+    "Concept E: '[full text]'. Reading it cold, what message do you take from it, and how does it land with you?",
+    "Concept F: '[full text]'. Reading it cold, what message do you take from it, and how does it land with you?",
+    "Of D, E, and F, which pulls you in most and which leaves you flat? Walk me through why — and if none land, say so."
   ]
 )
 
@@ -72,9 +90,9 @@ ask_twins(
 ask_twins(
   audience: "[same audience]",
   questions: [
-    "Here are the top concepts from our testing: [list finalists]. Which one would make you most likely to [desired action]? Why?",
-    "Which concept feels most authentic and relevant to someone like you?",
-    "What would make the winning concept even stronger?"
+    "Here are the top concepts from our testing: [list finalists]. Thinking about how you've actually acted on ads like this before, which comes closest to getting you to [desired action], and which wouldn't move you at all? Why?",
+    "Which of these feels like it actually gets someone like you — and which feels off or like it's trying too hard? What's the tell?",
+    "Take whichever one landed best for you: what would you change to make it stronger, and what should stay untouched?"
   ]
 )
 ```
