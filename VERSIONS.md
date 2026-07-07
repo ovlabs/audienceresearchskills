@@ -4,7 +4,7 @@ Current versions of all skills. Agents can compare against local versions to che
 
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
-| deep-customer-research | 1.0.0 | 2026-02-10 |
+| deep-customer-research | 1.1.0 | 2026-07-07 |
 | icp-discovery | 1.0.0 | 2026-02-10 |
 | creative-testing | 1.0.0 | 2026-02-10 |
 | facebook-ad-copy | 1.0.0 | 2026-02-10 |
@@ -16,6 +16,9 @@ Current versions of all skills. Agents can compare against local versions to che
 | content-generation-optimization | 1.0.0 | 2026-02-10 |
 
 ## Recent Changes
+
+### 2026-07-07
+- **deep-customer-research 1.1.0**: Strengthened question design to maximise the range of answers. Added an explicit, mandatory ruleset (specific-moment over definitional, open valence / no leading questions, one idea per question, no socially-correct answers) with banned phrasings; reworked the framework and sample questions to be open and experience-anchored; added a weak→strong check with Range + Neutrality gates.
 
 ### 2026-02-10
 - Initial release with 10 audience research skills powered by OriginalVoices Digital Twins
