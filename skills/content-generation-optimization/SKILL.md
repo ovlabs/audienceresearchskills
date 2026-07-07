@@ -1,6 +1,6 @@
 ---
 name: content-generation-optimization
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to generate SEO and AEO-optimized content (blog posts, articles, guides) informed by real audience insight. Triggers include: requests to write blog posts, create SEO content, generate articles, write guides, or create audience-aligned content. Uses OriginalVoices Digital Twins (ask_twins) to understand what the audience wants to know, what tone resonates, what questions they have, and what makes content engaging — then uses those insights to write content that ranks well, gets read, and drives results."
 ---
 
@@ -27,20 +27,34 @@ Gather from the user:
 
 One comprehensive research call to understand what will make this content valuable, engaging, and optimized for the audience.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Capturing the audience's own words.** This skill generates copy from what real people say, so the research must surface their *own language*, not abstract opinions — generic questions produce generic copy. Include at least two moment-anchored questions built to elicit verbatim phrasing (e.g. "The last time you looked for [X], what did you actually type or say?", "How would you describe [problem] in your own words, to a friend?"). When you later test copy, replace "would you click / stop scrolling?" (demand effect + inflated intent) with "what would you do next, if anything?" — and ask "what do you take this to be offering?" (comprehension) before whether they like it.
+
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
     "When you're looking for information about [topic], what are you trying to learn or accomplish? What's your main goal?",
     "What specific questions do you have about [topic] that you want answered?",
-    "What frustrates you about most articles or content on [topic]? What do they get wrong, miss, or over-explain?",
-    "When reading about [topic], do you prefer: A) Casual, conversational tone, or B) Professional, formal tone? Why?",
-    "How deep should content on [topic] go? Would you read a comprehensive 2,000-word guide, or do you prefer short, actionable advice?",
-    "What makes you trust that content about [topic] is credible and worth your time? (data, examples, author credentials, case studies, etc.)",
+    "Think about the last piece you read on [topic] — what did it do well, and where did it fall short or waste your time?",
+    "When something's written well on [topic], how would you describe the way it's written? And what kind of writing on this makes you click away?",
+    "Think about a piece on [topic] you actually read to the end — how long and how deep was it? When do you want the full deep-dive, and when do you just want the quick version?",
+    "The last time you trusted a piece on [topic] enough to act on it, what earned that trust? And what makes you distrust something on this subject?",
     "What would make you actually read an article about [topic] all the way through vs. just skimming?",
     "If you were searching for '[topic]' on Google, what would you type? What would you expect to find?",
-    "What examples, case studies, or real-world scenarios would make content about [topic] more useful to you?",
-    "What would make you bookmark or share an article about [topic] with someone else?",
+    "What kind of examples or real situations, if any, actually help you when you're reading about [topic] — and which feel like filler?",
+    "Think of the last article you saved or sent to someone — what was it about [topic] that made it worth passing on?",
     "Are there common mistakes or misconceptions about [topic] you see repeated that you wish someone would address?",
     "What's missing from most content on [topic]? What do you wish someone would explain better?"
   ]

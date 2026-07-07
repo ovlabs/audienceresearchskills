@@ -1,5 +1,6 @@
 ---
 name: creative-brief
+version: 1.1.0
 description: "Use this skill to generate a creative brief grounded in real audience insight. Triggers include: requests to write a creative brief, brief a creative team or agency, define a campaign brief, establish creative direction, or prepare a brief for designers, copywriters, or content creators. Uses OriginalVoices Digital Twins (ask_twins) to deeply understand the target audience's language, emotions, motivations, and preferences — then synthesises findings into a structured creative brief that gives creative teams a validated human foundation to build from, not assumptions."
 ---
 
@@ -27,22 +28,34 @@ Collect from the user:
 
 Conduct deep audience research to build the brief on validated insight, not guesswork. Ask 10-12 questions covering emotional drivers, language, pain points, aspirations, preferences, and what makes the audience act.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
 ```
 ask_twins(
   audience: "[detailed target audience description]",
   questions: [
-    "When you think about [product category], what matters most to you? What do you actually care about?",
-    "What frustrates you most about [product category / current solutions]? What do brands in this space get wrong?",
-    "How does [the problem this product solves] make you feel day-to-day? What emotions come up?",
-    "When you see ads or content about [category], what catches your attention? What makes you stop scrolling?",
-    "What kind of tone or voice feels right for a [category] brand talking to someone like you? What feels off?",
-    "Can you describe a moment when you realised you really needed a better [product/solution]? What was happening?",
-    "What would make you trust a new brand in this space enough to try it? What signals credibility to you?",
-    "If a product like [product] truly delivered, how would your life or routine be different? What would change?",
+    "Walk me through the last time you shopped for or used something in [product category] — what were you trying to get right, and what did you actually care about?",
+    "Thinking about your recent experiences with [product category], what has worked well for you and what has been more of a struggle?",
+    "Tell me about a time [the situation this product deals with] stirred up a real reaction for you — what was going on, and how did you feel?",
+    "Tell me about a recent ad or piece of content in [category] that actually made you stop — what was it, and what pulled you in?",
+    "What kind of tone or voice feels right for a [category] brand talking to someone like you — and what feels off?",
+    "Tell me about the last time you went looking for a [product/solution] in this space — what set it off, and how did it play out?",
+    "Has a brand in this space ever won or lost your trust? What did they do — and what would it take for a new one to earn a try?",
+    "When something in this category has actually worked well for you, what did it change about your day — and where does it still fall short?",
     "What words or phrases do you use when talking about [problem/category] with friends or family?",
-    "When you see [category] advertising, what turns you off immediately? What feels fake or irrelevant?",
-    "What would a brand need to say or show to make you feel like they genuinely understand people like you?",
-    "Who or what influences your decisions about [category]? Where do you go for recommendations?"
+    "When [category] advertising has caught your eye — or made you roll your eyes — what made the difference?",
+    "Tell me about a brand that made you feel genuinely understood — what did they say or show? And one that clearly didn't get you?",
+    "Tell me about the last time you took a recommendation on something in [category] — who or what pointed you to it?"
   ]
 )
 ```

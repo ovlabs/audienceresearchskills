@@ -1,6 +1,6 @@
 ---
 name: brand-messaging-validation
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to validate and refine brand messaging, positioning, and taglines using real audience insight. Triggers include: requests to test brand positioning, validate taglines or slogans, understand brand perception, refine mission statements, test brand voice, or differentiate from competitors. Uses OriginalVoices Digital Twins (ask_twins) to understand how target audiences interpret brand messaging, what resonates emotionally, what creates confusion, and what drives brand affinity — ensuring brand statements connect with real people, not just internal stakeholders."
 ---
 
@@ -28,29 +28,47 @@ Gather from the user:
 
 One comprehensive research call covering category values, positioning interpretation, tagline resonance, brand values authenticity, differentiation, and emotional connection.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Testing stimuli without bias.** When showing concepts, ads, taglines, or messaging options:
+- Capture the **unaided gut reaction first** ("what's your first impression?") before asking for reasons.
+- **Don't signal the hoped-for winner** — never reveal which option is the client's, and never ask "isn't this great?".
+- When comparing options, **counterbalance the order** (don't always show A first) and always allow "neither / none of them".
+- **Keep three questions separate:** comprehension ("what message do you take from this? who is it for?") → preference ("which do you prefer, and why?") → persuasion ("does it make you more or less likely to act?"). Never fuse them into one.
+
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "When you think about [product category / industry], what matters most to you? What do you look for in brands you trust?",
-    "What frustrates you about most brands in the [category] space? What do they get wrong?",
-    "Here's how a brand describes itself: '[positioning statement]'. What's your immediate reaction? What do you think this brand is about?",
-    "Based on that description, is it clear what this brand does and who it's for? What's confusing or unclear, if anything?",
-    "Does that description make this brand sound different from other [category] brands? What makes it stand out, or does it blend in?",
-    "[If testing tagline] When you read this tagline: '[tagline]', what does it make you think or feel? Does it feel memorable or forgettable?",
-    "This brand says it stands for: [list 3-4 brand values]. Do these values matter to you? Which ones resonate and why?",
-    "Do those values feel authentic for a [category] brand, or do they feel like generic corporate speak that every brand claims?",
-    "[If testing tone] Here are two ways this brand might communicate: A: '[Example A]' B: '[Example B]'. Which feels more right for what they do?",
-    "Compared to [competitor name] or other [category] brands you know, does this brand feel genuinely different? What makes you say that?",
-    "When you read this brand's messaging, how does it make you feel? Does it feel like it 'gets you' and understands people like you?",
-    "Based on how this brand presents itself, would you feel proud to use or recommend it? What would hold you back?",
-    "If you had to describe this brand to a friend in one sentence, what would you say? What would you remember about it?",
-    "[If testing alternatives] Between these positioning options: A: '[Option A]' B: '[Option B]', which appeals to you more and why?"
+    "Tell me about the last time you picked a [product category / industry] brand and felt good about the choice — what won you over?",
+    "Thinking about the [category] brands you've dealt with — what have some got right, and what have others got wrong?",
+    "Here's how a brand describes itself: '[positioning statement]'. What's your honest first impression?",
+    "In your own words, what does this brand actually do, and who is it for? What's fuzzy or unclear, if anything?",
+    "Set next to other [category] brands you know, how does this one come across — where does it stand out, and where does it blend in?",
+    "[If testing tagline] When you read this tagline: '[tagline]', what does it make you think or feel?",
+    "This brand says it stands for: [list 3-4 brand values]. Which of these would actually change how you see a [category] brand — and which are just table stakes?",
+    "For a [category] brand, which of those claims would you take at face value — and which would you take with a pinch of salt? What makes the difference?",
+    "[If testing tone — show the two examples in a random order, and allow 'neither'] Here are two ways this brand might talk: '[Example 1]' and '[Example 2]'. Which sounds more like a brand you'd trust — or does neither — and what is it about the wording?",
+    "Set against [competitor name] or other [category] brands you know, where does this one feel genuinely different, and where does it feel like more of the same?",
+    "When you read this brand's messaging, what feeling does it leave you with — and how close does it come to understanding people like you?",
+    "Tell me about a brand you've happily recommended to someone — what earned that? Where would this one land against it?",
+    "If you described this brand to a friend in one sentence, what would you say — and what would stick with you afterwards?",
+    "[If testing alternatives — show the options in a random order, and allow 'neither'] Here are two ways this brand could position itself: '[Option 1]' and '[Option 2]'. Which pulls you in more — or does neither — and what's doing the work?"
   ]
 )
 ```
 
-**Note:** Adjust questions based on what's being tested. If not testing a tagline, remove tagline questions. If not testing tone, remove tone questions. If testing alternatives, include comparison questions.
+**Note:** Adjust questions based on what's being tested. If not testing a tagline, remove tagline questions. If not testing tone, remove tone questions. If testing alternatives, include comparison questions. Whenever you show two options (tone or positioning), vary which one appears first across runs and always let respondents choose "neither".
 
 ### Step 3: Analyse Brand Messaging Insights
 

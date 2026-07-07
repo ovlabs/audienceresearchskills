@@ -1,6 +1,6 @@
 ---
 name: facebook-ad-copy
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to generate Facebook and Instagram ad copy grounded in real audience insight. Triggers include: requests to create Facebook or Meta ad campaigns, write primary text and headlines for Facebook ads, refresh stale social ad creative, build ad sets for different audience segments, or generate audience-tested ad variations. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates 10-15 audience-informed ad variations rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -25,18 +25,32 @@ Optional:
 
 ### Step 2: Audience Research
 
-This is the most important step. Use `ask_twins` to understand the audience's world — their language, what they care about, what frustrates them, what grabs their attention, and how they relate to the problem space. Ask broad questions about the general topic area, not just about the specific product.
+This is the most important step. Use `ask_twins` to understand the audience's world — their language, what they care about, what gets in their way, what grabs their attention, and how they relate to the problem space. Ask broad questions about the general topic area, not just about the specific product.
+
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Capturing the audience's own words.** This skill generates copy from what real people say, so the research must surface their *own language*, not abstract opinions — generic questions produce generic copy. Include at least two moment-anchored questions built to elicit verbatim phrasing (e.g. "The last time you looked for [X], what did you actually type or say?", "How would you describe [problem] in your own words, to a friend?"). When you later test copy, replace "would you click / stop scrolling?" (demand effect + inflated intent) with "what would you do next, if anything?" — and ask "what do you take this to be offering?" (comprehension) before whether they like it.
 
 ```
 ask_twins(
   audience: "[detailed target audience description]",
   questions: [
-    "What's your biggest frustration or challenge when it comes to [general topic area, e.g. skincare, fitness, cooking, managing finances]?",
-    "What matters most to you when choosing a [product category]? What do you look for?",
-    "Have you tried any [products/solutions in this space] before? What was your experience — what worked and what didn't?",
-    "What concerns or hesitations would you have about trying a new [product in this category]?",
-    "What would a brand need to say or show to earn your trust in this space?",
-    "How do you typically discover new [products in this category]? What influences your decisions?"
+    "Walk me through the last time [general topic area, e.g. skincare, fitness, cooking, managing finances] came up for you — what did you actually do, and how did it go?",
+    "How would you describe [the problem/topic] in your own words — the way you'd explain it to a friend who was dealing with it too?",
+    "Tell me about your most recent experience with a [product/solution in this space] — what worked well, and what didn't?",
+    "When you think about trying a new [product in this category], what pulls you toward it — and what holds you back?",
+    "Has a brand in this space ever earned or lost your trust? What did they do, and what would it take to earn it?",
+    "Think about the last time you discovered a [product in this category] you decided to try — how did you come across it, and what made you give it a go?"
   ]
 )
 ```
@@ -81,9 +95,9 @@ Test 3-5 of the strongest ads back with the audience.
 ask_twins(
   audience: "[same target audience]",
   questions: [
-    "Imagine you're scrolling through Facebook and you see this ad: '[primary text + headline]'. Would you stop scrolling? Would you click? Why or why not?",
-    "Which of these ad openings grabs you most? A: '[opening A]' B: '[opening B]' C: '[opening C]'. Tell me why.",
-    "Is there anything in these ads that feels off, unbelievable, or would make you keep scrolling?"
+    "You're scrolling Facebook and this ad goes past: '[primary text + headline]'. In your own words, what do you take it to be offering — and what would you do next, if anything?",
+    "Here are three ways an ad could open. A: '[opening A]' B: '[opening B]' C: '[opening C]'. Which one sounds most like it's meant for you, and what makes the other two miss?",
+    "Is there anything in these ads that doesn't ring true or feels off to you? What is it, and why?"
   ]
 )
 ```

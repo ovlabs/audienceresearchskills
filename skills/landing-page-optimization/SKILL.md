@@ -1,6 +1,6 @@
 ---
 name: landing-page-optimization
-version: 1.0.0
+version: 1.1.0
 description: "Use this skill to optimize landing page messaging, structure, and conversion elements using real audience insight. Triggers include: requests to improve conversion rates, test landing page copy, validate value propositions, optimize hero sections, test different messaging angles, or reduce bounce rates. Uses OriginalVoices Digital Twins (ask_twins) to understand what resonates with visitors, what creates confusion or doubt, and what drives action — then generates optimized landing page variants grounded in real user responses."
 ---
 
@@ -23,30 +23,50 @@ Collect from the user:
 
 One comprehensive research call covering current messaging evaluation, problem awareness, headline testing, trust signals, and CTA preferences.
 
+**Question quality — apply every rule to every question before sending.** The goal is the widest possible range of honest answers. A weak question is narrow, leading, or closed, so respondents converge on the same obvious reply and you learn nothing. Run each question through these rules:
+
+1. **Anchor in a specific moment or behaviour, not an abstract definition.** Ask "Walk me through the last time…" or "Tell me about a time…", never "How do you define / think about [concept]?".
+2. **Keep the valence open — never lead.** Don't presuppose the experience was good or bad. Banned phrasings: "what frustrates you most about…", "the time [X] annoyed you", "what do you love about this". Ask "how did it go?" or make it two-sided: "what worked well, and what didn't?".
+3. **One idea per question.** Split anything double-barrelled into separate questions.
+4. **Open-ended only — no yes/no, no multiple choice.** Every question invites How / What / Why / Walk me through / Tell me about. Never hand respondents a menu of options to pick from — let them supply their own.
+5. **No socially-correct answers.** If almost everyone would answer the same way ("Is quality important?" → yes), reframe with a trade-off ("when is quality *not* worth it?").
+6. **Ground intent in real behaviour.** Don't ask hypotheticals like "would you buy / click / switch?" — they inflate. Anchor in what they last actually did ("the last time you bought something like this, what tipped the decision?").
+7. **Build in room to diverge.** Prefer a fork, trade-off, or spectrum ("what would make you — and what would hold you back?") over a flat single-answer prompt.
+
+Before sending, check each question passes both gates — **Range:** could most people answer it the same way, or is there an obvious "right" answer? **Neutrality:** does it assume how they feel, or hand them the answer? If it fails either, rewrite it.
+
+**Capturing the audience's own words.** This skill generates copy from what real people say, so the research must surface their *own language*, not abstract opinions — generic questions produce generic copy. Include at least two moment-anchored questions built to elicit verbatim phrasing (e.g. "The last time you looked for [X], what did you actually type or say?", "How would you describe [problem] in your own words, to a friend?"). When you later test copy, replace "would you click / stop scrolling?" (demand effect + inflated intent) with "what would you do next, if anything?" — and ask "what do you take this to be offering?" (comprehension) before whether they like it.
+
+**Testing stimuli without bias.** When showing headlines, value props, or page variants:
+- Capture the **unaided gut reaction first** ("what's your first impression?") before asking for reasons.
+- **Don't signal the hoped-for winner** — don't ask "does this grab your attention?"; ask "what, if anything, would you do after landing here?".
+- When comparing options, **counterbalance the order** and always allow "neither".
+- **Keep three questions separate:** comprehension ("what do you think this page is offering, and who for?") → preference ("which version works better for you, and why?") → persuasion ("what would make you act, or hesitate?"). Never fuse them.
+
 ```
 ask_twins(
   audience: "[detailed target audience]",
   questions: [
-    "When you land on a website for a [product/service type], what do you look for first? What makes you stay vs. leave immediately?",
-    "What's the biggest challenge or frustration you face with [problem space]? When looking for a solution, what does success look like to you?",
-    "You land on a page with this headline: '[Test Headline A]'. Does this grab your attention? What about: '[Test Headline B]'? Which works better and why?",
-    "If a website opened with: '[Value prop angle 1]', would you keep reading or bounce? What's your immediate reaction?",
-    "What would be more compelling: A) '[Benefit-focused message]' or B) '[Problem-focused message]'? Why?",
-    "What concerns or hesitations do you typically have when considering a new [product category]? What would reduce those concerns?",
-    "What would make you trust this [product/service] enough to [take desired action]? What would you need to see?",
-    "How important are these elements: security badges, money-back guarantees, testimonials, customer logos, case studies? Which matter most?",
-    "Which call-to-action is more appealing: A) '[CTA option 1]' or B) '[CTA option 2]'? Why?",
-    "Would you rather: A) Start a free trial immediately or B) Book a demo first? What's your preference and why?",
-    "What would make you hesitate to click a '[primary CTA]' button? What would you be worried about?",
-    "If a form asked for [list of fields], would that feel like too much information upfront? What would you be comfortable sharing?"
+    "When you land on a website for a [product/service type], what do you look for first, and what makes you stay or leave?",
+    "Think about the last time you went looking for a [product/service type] — what set you off looking, and what were you hoping to find?",
+    "Here are two openings for a page like this — A: '[Test Headline A]' and B: '[Test Headline B]'. What's your first impression of each, and which — if either — makes you want to read on? Why?",
+    "A page opens with: '[Value prop angle 1]'. What's your first impression, and what would you do next, if anything?",
+    "Here are two ways of putting it — A: '[Benefit-focused message]' and B: '[Problem-focused message]'. What does each one say to you, and which lands better — or neither? Why?",
+    "Think about the last time you signed up for or bought a new [product category] — what made you hesitate, if anything, and what tipped you over the line?",
+    "Think of the last time a website earned enough of your trust to [take desired action] — what did it do, and where do most fall short?",
+    "When you're deciding whether to trust a [product/service] you've just found, what actually makes a difference to you — and what do you ignore or distrust?",
+    "Here are two buttons — A: '[CTA option 1]' and B: '[CTA option 2]'. What does each make you expect will happen if you click, and which — if either — feels more like something you'd do? Why?",
+    "Think about the last [product category] you were seriously considering — did you want to jump straight in and try it, talk to someone first, or something else? What drove that?",
+    "When you reach a '[primary CTA]' button, what's going through your mind in the moment before you click — or decide not to?",
+    "Think about the last sign-up form that made you give up on it — what did it ask for that was a step too far? How does being asked for [list of fields] compare?"
   ]
 )
 ```
 
 **If there's an existing landing page to audit, include these additional questions:**
 ```
-    "Imagine landing on a page with this headline: '[current headline]'. Does this grab your attention? Why or why not?",
-    "The page says '[current value proposition]'. Is it immediately clear what this does and who it's for?",
+    "Here's the headline the page opens with: '[current headline]'. What's your first impression, and what would you do next, if anything?",
+    "The page says '[current value proposition]'. In your own words, what do you take this to be offering, and who for? Where did you have to guess?",
     "What questions would you have after reading this page? What would you want to know more about?"
 ```
 
@@ -108,10 +128,10 @@ Test 2-3 strongest variants back with the audience:
 ask_twins(
   audience: "[same audience]",
   questions: [
-    "You land on a page with this headline: '[Variant A headline]' and description: '[Variant A subheadline]'. What's your immediate reaction? Would you keep reading?",
-    "Between these page openings, which would make you more likely to explore further? A: '[Variant A hero]' B: '[Variant B hero]'. Why?",
-    "On a scale of 1-10, how clear is it what this product does based on: '[Variant summary]'? What would make it clearer?",
-    "Would you feel ready to [take desired action] after reading this, or would you need more information? What's missing?"
+    "You land on a page opening with '[Variant A headline]' — '[Variant A subheadline]'. What's your first impression, and what would you do next, if anything?",
+    "Here are two openings — A: '[Variant A hero]' and B: '[Variant B hero]'. What does each say to you, and which — if either — pulls you in more? Why?",
+    "Based on '[Variant summary]', what do you take this product to do? Where, if anywhere, did it leave you guessing?",
+    "After reading this, what would you do next — and if you're not ready to [take desired action], what's holding you back?"
   ]
 )
 ```
