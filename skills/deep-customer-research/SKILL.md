@@ -1,14 +1,14 @@
 ---
 name: deep-customer-research
 version: 1.1.0
-description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
+description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions per audience in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
 ---
 
 # Deep Customer Research Skill
 
 ## Overview
 
-Deeply understand what your customers really think and feel about any topic. This workflow uses OriginalVoices Digital Twins to conduct comprehensive qualitative research in a single pass — asking 10-12 carefully designed questions that cover the full landscape of motivations, emotions, behaviours, and unmet needs.
+Deeply understand what your customers really think and feel about any topic. This workflow uses OriginalVoices Digital Twins to conduct comprehensive qualitative research in a single pass — asking 10-12 carefully designed questions per audience that cover the full landscape of motivations, emotions, behaviours, and unmet needs.
 
 ## Workflow Steps
 
@@ -20,7 +20,7 @@ Gather from the user:
 
 ### Step 2: Design the Question Set
 
-Craft 10-12 open-ended questions that cover the full research landscape in a single round. The questions should progress from broad context through to specific opinions and forward-looking needs.
+Craft 10-12 open-ended questions that cover the full research landscape in a single round. This count is PER AUDIENCE: when comparing segments (e.g. Gen Z vs Gen X), each cohort gets its own full set of 10-12 comparable questions — never split one question budget across cohorts. The questions should progress from broad context through to specific opinions and forward-looking needs.
 
 **The #1 quality goal: maximise the *range* of answers.** A good question surfaces spread, tension, and surprise across respondents. A weak question is *narrow* or *convergent* — it points everyone at the same obvious answer, so the twins echo each other and you learn nothing. Before finalising any question, ask: *"Could I predict most of the answers before asking? Would 15 different people answer this 15 different ways?"* If the answers would cluster, rewrite the question.
 
@@ -68,7 +68,7 @@ Each example below is framed to pull answers *apart* — anchored in a specific 
 
 ### Step 3: Ask All Questions in a Single Call
 
-Send all 10-12 questions to the Digital Twins in one `ask_twins` call.
+Send all 10-12 questions to the Digital Twins in one `ask_twins` call per audience (one call per cohort when comparing segments, each with the full question set).
 
 ```
 ask_twins(
