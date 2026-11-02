@@ -1,6 +1,6 @@
 ---
 name: video-script-generation
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to generate video scripts for creators or AI, informed by real audience insight. Triggers include: requests to write video scripts, create content for YouTube/TikTok/Instagram, generate video narration, write video copy, or create scripts for video ads. Uses OriginalVoices Digital Twins (ask_twins) to understand what hooks the audience, what tone resonates, what keeps them watching, and what drives engagement — then writes complete video scripts optimized for that audience."
 ---
 
@@ -139,7 +139,7 @@ Review audience responses and extract:
 
 ### Step 5: Deliver Video Script Package
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual scripts, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 **PRIMARY DELIVERABLE - Complete Video Script:**
 

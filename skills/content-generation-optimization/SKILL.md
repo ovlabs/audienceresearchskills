@@ -1,6 +1,6 @@
 ---
 name: content-generation-optimization
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to generate SEO and AEO-optimized content (blog posts, articles, guides) informed by real audience insight. Triggers include: requests to write blog posts, create SEO content, generate articles, write guides, or create audience-aligned content. Uses OriginalVoices Digital Twins (ask_twins) to understand what the audience wants to know, what tone resonates, what questions they have, and what makes content engaging — then uses those insights to write content that ranks well, gets read, and drives results."
 ---
 
@@ -130,7 +130,7 @@ Review audience responses and extract:
 
 ### Step 5: Deliver the Content
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 **PRIMARY DELIVERABLE — The Complete Written Blog Post/Article:**
 

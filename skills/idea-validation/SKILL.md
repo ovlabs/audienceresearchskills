@@ -1,6 +1,6 @@
 ---
 name: idea-validation
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to validate a business idea, product concept, or value proposition with real audience feedback before investing time or money. Triggers include: requests to validate a startup idea, test a product concept, check if an idea has legs, assess market demand, validate a value proposition, or get honest feedback on a new business concept. Uses OriginalVoices Digital Twins (ask_twins) to understand whether the problem is real, how painful it is, how people solve it today, and whether the proposed idea would genuinely change their behaviour — delivering a clear Go / Pivot / Kill verdict with evidence."
 ---
 
@@ -97,7 +97,7 @@ Analyse responses across five validation dimensions:
 
 ### Step 4: Deliver the Validation Verdict
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 

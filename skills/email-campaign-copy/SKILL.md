@@ -1,6 +1,6 @@
 ---
 name: email-campaign-copy
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to generate email marketing copy grounded in real audience insight. Triggers include: requests to write email campaigns, create newsletter content, improve email open rates, write welcome sequences, launch announcement emails, or re-engagement campaigns. Uses OriginalVoices Digital Twins (ask_twins) to understand what makes the audience open emails, what messaging resonates, what triggers action, and what causes unsubscribes — then generates audience-informed email variations rooted in real subscriber perspectives."
 ---
 
@@ -128,7 +128,7 @@ Update emails based on feedback before finalizing.
 
 ### Step 6: Deliver Email Campaign Set
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual emails, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 **1. Campaign Overview:**
 - Audience insights summary

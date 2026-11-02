@@ -1,6 +1,6 @@
 ---
 name: deep-customer-research
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions per audience in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
 ---
 
@@ -117,7 +117,7 @@ Review all Digital Twin responses and compile findings:
 
 ### Step 5: Deliver the Research Report
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual themes/subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
 
 ### Report sections:
 

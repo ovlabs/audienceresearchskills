@@ -1,6 +1,6 @@
 ---
 name: google-ad-copy
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to generate Google ad copy grounded in real audience insight. Triggers include: requests to create Google Search or Display ad campaigns, write Responsive Search Ad (RSA) headlines and descriptions, refresh underperforming Google ad copy, or generate audience-informed ad variations for A/B testing. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates audience-informed RSA assets rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -90,7 +90,7 @@ Create **15 headlines** and **4 descriptions** using the audience insights. Foll
 
 ### Step 5: Structure for Google Ads
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual ad variations, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 Deliver assets in this format:
 

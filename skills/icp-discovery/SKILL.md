@@ -1,6 +1,6 @@
 ---
 name: icp-discovery
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to discover the ideal customer profile (ICP) and target audience for a product, concept, or idea by testing it across multiple demographic segments. Triggers include: requests to find the best audience for a product, identify an ICP, discover who a product resonates with most, explore which demographic segments respond best to a concept, validate target market assumptions, find product-market fit, or uncover unexpected audience opportunities. Also use when a user doesn't know who to target, is entering a new market, launching a new product, or wants to compare audience receptivity across segments before committing budget. Uses OriginalVoices Digital Twins (ask_twins) to test the same product/concept across 5+ distinct demographic segments simultaneously, then ranks segments by fit and extracts messaging guidance for the top ICP."
 ---
 
@@ -131,7 +131,7 @@ For the #1 ranked segment, extract detailed messaging guidance:
 
 ### Step 7: Deliver the Full Report
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for individual segments/subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 

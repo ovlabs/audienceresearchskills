@@ -1,6 +1,6 @@
 ---
 name: creative-brief
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to generate a creative brief grounded in real audience insight. Triggers include: requests to write a creative brief, brief a creative team or agency, define a campaign brief, establish creative direction, or prepare a brief for designers, copywriters, or content creators. Uses OriginalVoices Digital Twins (ask_twins) to deeply understand the target audience's language, emotions, motivations, and preferences — then synthesises findings into a structured creative brief that gives creative teams a validated human foundation to build from, not assumptions."
 ---
 
@@ -75,7 +75,7 @@ From the research, identify the single most important human truth — the insigh
 
 ### Step 4: Deliver the Creative Brief
 
-Format the output using proper markdown headers: use `##` for the brief title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 Structure the brief as follows:
 
