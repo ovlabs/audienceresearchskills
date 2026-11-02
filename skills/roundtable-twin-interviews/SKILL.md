@@ -1,6 +1,6 @@
 ---
 name: roundtable-twin-interviews
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to run an adaptive moderated interview with Digital Twins. One question is asked to a group of twins, their answers are analysed for themes and tensions, then the next question is designed based on what emerged — repeated across 8 rounds of questions, each one going deeper. Produces a comprehensive research report. Triggers include: requests to run a focus group, conduct qualitative interviews, explore a topic in depth with real people, run a roundtable discussion, or do iterative audience research. Uses OriginalVoices Digital Twins (ask_twins) across multiple rounds of questions."
 ---
 
@@ -86,7 +86,7 @@ If the session is interrupted (e.g. response length limits), output what you hav
 
 Once all rounds are complete, output a comprehensive research report directly in the conversation.
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
 
 ### Report sections:
 

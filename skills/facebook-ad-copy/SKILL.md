@@ -1,6 +1,6 @@
 ---
 name: facebook-ad-copy
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to generate Facebook and Instagram ad copy grounded in real audience insight. Triggers include: requests to create Facebook or Meta ad campaigns, write primary text and headlines for Facebook ads, refresh stale social ad creative, build ad sets for different audience segments, or generate audience-tested ad variations. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates 10-15 audience-informed ad variations rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -104,7 +104,7 @@ ask_twins(
 
 ### Step 6: Deliver Final Ad Set
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections (e.g. by angle: Pain Point Ads, Benefit-First Ads), `####` for individual ad variations, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 Present the full set of ad variations with:
 - Each ad in full (primary text, headline, description, CTA)

@@ -1,6 +1,6 @@
 ---
 name: brand-messaging-validation
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to validate and refine brand messaging, positioning, and taglines using real audience insight. Triggers include: requests to test brand positioning, validate taglines or slogans, understand brand perception, refine mission statements, test brand voice, or differentiate from competitors. Uses OriginalVoices Digital Twins (ask_twins) to understand how target audiences interpret brand messaging, what resonates emotionally, what creates confusion, and what drives brand affinity — ensuring brand statements connect with real people, not just internal stakeholders."
 ---
 
@@ -99,7 +99,7 @@ Review responses and assess:
 
 ### Step 4: Deliver Brand Messaging Report
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
 
 ### Report sections:
 

@@ -1,6 +1,6 @@
 ---
 name: product-description-optimization
-version: 1.1.0
+version: 1.1.1
 description: "Use this skill to optimize existing product descriptions for ecommerce using real audience insight. Triggers include: requests to improve product descriptions, optimize ecommerce copy, increase conversion rates, refine product pages, make product descriptions resonate with target audiences, or test product messaging. Uses OriginalVoices Digital Twins (ask_twins) to understand what matters to buyers, what information they need, what language resonates, and what drives purchase decisions — then optimizes existing descriptions to convert better."
 ---
 
@@ -135,7 +135,7 @@ Review audience responses and extract specific insights about the existing descr
 
 ### Step 5: Deliver Optimization Package
 
-Format the output using proper markdown headers: use `##` for the report title, `###` for major sections, `####` for subsections, `>` blockquotes for Digital Twin quotes, and `---` horizontal rules between major sections. Never use plain text or bold-only text as section headers — always use proper markdown headers.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 **PRIMARY DELIVERABLE - Optimized Product Description:**
 
