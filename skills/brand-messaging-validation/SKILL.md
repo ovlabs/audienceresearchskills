@@ -1,6 +1,6 @@
 ---
 name: brand-messaging-validation
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to validate and refine brand messaging, positioning, and taglines using real audience insight. Triggers include: requests to test brand positioning, validate taglines or slogans, understand brand perception, refine mission statements, test brand voice, or differentiate from competitors. Uses OriginalVoices Digital Twins (ask_twins) to understand how target audiences interpret brand messaging, what resonates emotionally, what creates confusion, and what drives brand affinity — ensuring brand statements connect with real people, not just internal stakeholders."
 ---
 
@@ -99,18 +99,17 @@ Review responses and assess:
 
 ### Step 4: Deliver Brand Messaging Report
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
 
 ### Report sections:
 
 **1. Executive Summary:**
-- Overall verdict on current messaging
-- Top 3 strengths
-- Top 3 areas for improvement
+- The story in a short paragraph (4-6 sentences): how the audience actually read the messaging, what lands and what doesn't, and why
+- Top 3 strengths and top 3 areas for improvement
 - Recommended direction (Keep / Refine / Rethink)
 
 **2. Positioning Assessment:**
-- How audience interprets the positioning
+- How audience interprets the positioning, and why: a paragraph on the gap (or fit) between what the brand means to say and what the audience hears
 - What lands clearly vs. what's confusing
 - Emotional response and brand personality perception
 - Differentiation from competitors
@@ -144,7 +143,7 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 - Factors that build (or block) affinity
 
 **8. Audience Insights:**
-- What this audience cares about in the category
+- A paragraph of analysis on what this audience cares about in the category and why, and how it explains their reactions to the messaging above
 - What builds trust and loyalty
 - What turns them off
 - Key emotional drivers

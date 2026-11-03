@@ -1,6 +1,6 @@
 ---
 name: idea-validation
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to validate a business idea, product concept, or value proposition with real audience feedback before investing time or money. Triggers include: requests to validate a startup idea, test a product concept, check if an idea has legs, assess market demand, validate a value proposition, or get honest feedback on a new business concept. Uses OriginalVoices Digital Twins (ask_twins) to understand whether the problem is real, how painful it is, how people solve it today, and whether the proposed idea would genuinely change their behaviour — delivering a clear Go / Pivot / Kill verdict with evidence."
 ---
 
@@ -97,11 +97,13 @@ Analyse responses across five validation dimensions:
 
 ### Step 4: Deliver the Validation Verdict
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 
 **1. Verdict: Go / Pivot / Kill**
+
+The verdict, then a short paragraph (4-6 sentences) on why it holds: how the audience experiences the problem, how they reacted to the idea, and the signal that decided it.
 
 | Verdict | When to use |
 |---------|------------|
@@ -111,7 +113,7 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 
 **2. Evidence Summary**
 
-Include a chart showing signal strength across validation dimensions.
+A paragraph that reads across the dimensions below: where the signals agree, where they conflict, and what that says about demand. Include a chart showing signal strength across validation dimensions.
 
 | Dimension | Signal | Strength (Strong / Mixed / Weak) |
 |-----------|--------|----------------------------------|
@@ -123,11 +125,11 @@ Include a chart showing signal strength across validation dimensions.
 | Would recommend | [Word of mouth signals] | [Rating] |
 
 **3. Strongest Signals**
-- What resonated most (with supporting quotes)
+- What resonated most and why it matters to them, each with a paragraph of analysis and 2-3 supporting quotes
 - The clearest signs of demand or excitement
 
 **4. Biggest Risks**
-- What concerned the audience most
+- What concerned the audience most and why, each with a paragraph of analysis and supporting quotes
 - Barriers to adoption they raised
 - Gaps between the idea and what they actually need
 
