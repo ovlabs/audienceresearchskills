@@ -1,6 +1,6 @@
 ---
 name: feature-concept-testing
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to test and validate new feature concepts before building them. Triggers include: requests to validate feature ideas, test product concepts, understand if users would use a feature, gauge interest in new functionality, or reduce risk of building unwanted features. Uses OriginalVoices Digital Twins (ask_twins) to understand whether a feature solves a real problem, how users would actually use it, what concerns they have, and whether they'd pay for it — preventing wasted engineering effort on features nobody wants."
 ---
 
@@ -98,17 +98,17 @@ Review responses and assess:
 
 ### Step 4: Deliver Feature Validation Report
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Answer each section's questions with argued paragraphs and quotes, not one-liners. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 
 **1. Executive Recommendation:**
 - Build / Iterate / Don't Build
 - Confidence level (high, medium, low)
-- Key rationale (2-3 sentences)
+- The rationale in a short paragraph (4-6 sentences): the problem as users live it, whether this feature solves it for them, and what tips the decision
 
 **2. Problem Validation:**
-- Is the problem real? (supporting quotes)
+- Is the problem real? A paragraph on how users experience it today, with supporting quotes
 - How painful and frequent?
 - Current workarounds and costs
 
@@ -123,7 +123,7 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 - Willingness to pay (if tested)
 
 **5. Concerns & Objections:**
-- Top concerns (with quotes)
+- Top concerns, each with why it matters to users and 2-3 quotes
 - Adoption risks
 - Dealbreakers vs. acceptable limitations
 

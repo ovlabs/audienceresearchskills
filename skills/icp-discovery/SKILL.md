@@ -1,6 +1,6 @@
 ---
 name: icp-discovery
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to discover the ideal customer profile (ICP) and target audience for a product, concept, or idea by testing it across multiple demographic segments. Triggers include: requests to find the best audience for a product, identify an ICP, discover who a product resonates with most, explore which demographic segments respond best to a concept, validate target market assumptions, find product-market fit, or uncover unexpected audience opportunities. Also use when a user doesn't know who to target, is entering a new market, launching a new product, or wants to compare audience receptivity across segments before committing budget. Uses OriginalVoices Digital Twins (ask_twins) to test the same product/concept across 5+ distinct demographic segments simultaneously, then ranks segments by fit and extracts messaging guidance for the top ICP."
 ---
 
@@ -131,23 +131,23 @@ For the #1 ranked segment, extract detailed messaging guidance:
 
 ### Step 7: Deliver the Full Report
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
 
 ### Report sections:
 
 **1. Executive Summary**
-- The #1 target audience and why, in 2-3 sentences
-- The biggest surprise from the research
+The story of the research in a short paragraph (4-6 sentences): which segments were compared, the #1 target audience and why they beat the others, the biggest surprise, and what it means for go-to-market.
 
 **2. Segment Rankings**
 
 | Rank | Segment | Interest | Relevance | Intent | Key Insight |
 |------|---------|----------|-----------|--------|-------------|
-| 1 | [Top segment] | High | High | High | [One-line insight] |
+| 1 | [Top segment] | High | High | High | [The insight that decides its rank] |
 | 2 | [Second segment] | ... | ... | ... | ... |
 | ... | ... | ... | ... | ... | ... |
 
 **3. Top ICP Deep-Dive**
+- Who this audience is and why the product fits their life: a paragraph of analysis on their situation, the problem as they experience it, and what makes them more ready than the other segments — before any positioning
 - Detailed messaging guidance (from Step 6)
 - 3-5 direct quotes from Digital Twins that capture why this segment is the best fit
 - Recommended positioning statement
@@ -157,9 +157,8 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 **4. Segment-by-Segment Breakdown**
 For each segment (including lower-ranked ones):
 - **Overall fit**: High / Medium / Low
-- **What resonated**: What they liked or responded to
-- **What didn't land**: Where the product/concept fell flat
-- **Key quote**: One representative quote
+- **Why**: A paragraph of analysis — what in their situation makes the product matter to them or not, what resonated, what fell flat and why
+- **Key quotes**: 2-3 representative quotes from different twins
 - **Verdict**: Should you target this segment? (Yes / Secondary / No — with reasoning)
 
 **5. Messaging Matrix**
@@ -172,7 +171,7 @@ For each segment (including lower-ranked ones):
 | ... | ... | ... | ... | ... |
 
 **6. Strategic Recommendations**
-- Primary ICP to target and the messaging angle to lead with
+- Primary ICP to target and the messaging angle to lead with, with the evidence that supports each
 - Secondary audiences worth testing with smaller budget
 - Segments to avoid and why
 - Suggested next steps (e.g. "Run the Google Ad Copy workflow targeting your primary ICP")

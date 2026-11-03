@@ -1,6 +1,6 @@
 ---
 name: roundtable-twin-interviews
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to run an adaptive moderated interview with Digital Twins. One question is asked to a group of twins, their answers are analysed for themes and tensions, then the next question is designed based on what emerged — repeated across 8 rounds of questions, each one going deeper. Produces a comprehensive research report. Triggers include: requests to run a focus group, conduct qualitative interviews, explore a topic in depth with real people, run a roundtable discussion, or do iterative audience research. Uses OriginalVoices Digital Twins (ask_twins) across multiple rounds of questions."
 ---
 
@@ -86,12 +86,12 @@ If the session is interrupted (e.g. response length limits), output what you hav
 
 Once all rounds are complete, output a comprehensive research report directly in the conversation.
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Each section opens with its conclusion in one sentence, then explains it; counts and shares are the evidence for the analysis, never a replacement for it. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
 
 ### Report sections:
 
 **1. Executive Summary**
-Top-line findings in 2-3 sentences. What is the single most important thing this research revealed?
+The story of the session in a short paragraph (4-6 sentences): the single most important thing this research revealed, the tension or surprise behind it, how the conversation got there, and what it means for the decision at hand.
 
 **2. Key Themes**
 3-5 most significant patterns that emerged across the session. For each theme:
@@ -128,9 +128,6 @@ Actionable insights for product, marketing, or strategy. What gaps exist? What d
 - What to do
 - Why the research supports it
 - What risk or opportunity it addresses
-
-**9. Methodology**
-This research was conducted using OriginalVoices Digital Twins — AI representations of real people, trained on data owned by the individuals they represent. [n] twins from the target audience participated across [n] rounds of questions. Each question was designed in response to themes emerging from the previous round's answers, creating an adaptive research arc that mirrors a moderated focus group.
 
 ## Tips for Best Results
 

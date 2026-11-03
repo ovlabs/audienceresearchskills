@@ -1,6 +1,6 @@
 ---
 name: landing-page-optimization
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to optimize landing page messaging, structure, and conversion elements using real audience insight. Triggers include: requests to improve conversion rates, test landing page copy, validate value propositions, optimize hero sections, test different messaging angles, or reduce bounce rates. Uses OriginalVoices Digital Twins (ask_twins) to understand what resonates with visitors, what creates confusion or doubt, and what drives action — then generates optimized landing page variants grounded in real user responses."
 ---
 
@@ -149,6 +149,9 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 - Key finding (most important insight from research)
 
 **2. Key Insights from Research:**
+
+Each insight opens with its conclusion in one sentence, then a paragraph explaining why the audience reacts that way, with supporting quotes. Counts are the evidence, never a replacement for the explanation.
+
 - What messaging resonates vs. what creates confusion
 - Top objections and concerns to address. Include a chart ranking objections by frequency.
 - Trust signals that matter most
