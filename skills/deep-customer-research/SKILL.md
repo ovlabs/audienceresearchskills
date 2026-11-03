@@ -1,6 +1,6 @@
 ---
 name: deep-customer-research
-version: 1.1.1
+version: 1.2.0
 description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions per audience in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
 ---
 
@@ -117,18 +117,18 @@ Review all Digital Twin responses and compile findings:
 
 ### Step 5: Deliver the Research Report
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
+This is a full research write-up, not a one-page summary: the reader should come away understanding the audience, not just the numbers. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins feel or act that way, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
 
 ### Report sections:
 
-1. **Executive Summary** — Top-line findings in 2-3 sentences
-2. **Key Themes** — 3-5 most significant patterns, with supporting quotes from Digital Twins. Include a chart showing theme prevalence.
-3. **Emotional Landscape** — What emotions drive behaviour in this space. Include a chart of dominant emotions.
-4. **Current Behaviour & Pain Points** — How the audience deals with the problem today and what's broken
-5. **Unmet Needs & Ideal Outcomes** — Gaps and what "great" looks like to the audience
-6. **Decision Drivers & Trust Signals** — What influences choice and earns confidence. Include a chart ranking decision factors.
-7. **Opportunities** — Actionable insights for product, marketing, or strategy
-8. **Recommendations** — Specific next steps based on the research
+1. **Executive Summary** — The story of the research in a short paragraph (4-6 sentences): who was asked, the single most important thing learned, the tension or surprise behind it, and what it means for the decision at hand.
+2. **Key Themes** — 3-5 most significant patterns. For each theme: a name, the finding in one sentence, a paragraph of analysis (what drives it, who it applies to and who it doesn't, how common it is), and 2-3 supporting quotes from different twins. Include a chart showing theme prevalence.
+3. **Emotional Landscape** — What emotions drive behaviour in this space, what triggers them, and how they shape what people do. Include a chart of dominant emotions.
+4. **Current Behaviour & Pain Points** — How the audience deals with the problem today, step by step, and where it breaks down — with the workarounds they've built.
+5. **Unmet Needs & Ideal Outcomes** — Gaps between what's available and what's wanted, and what "great" looks like in the audience's own words.
+6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence, in order of weight. Include a chart ranking decision factors.
+7. **Opportunities** — Actionable insights for product, marketing, or strategy, each tied to the theme or finding it comes from.
+8. **Recommendations** — Specific next steps based on the research, each with the evidence behind it and what would still need testing.
 
 ## Tips for Best Results
 
