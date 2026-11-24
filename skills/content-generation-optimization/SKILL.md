@@ -1,6 +1,6 @@
 ---
 name: content-generation-optimization
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate SEO and AEO-optimized content (blog posts, articles, guides) informed by real audience insight. Triggers include: requests to write blog posts, create SEO content, generate articles, write guides, or create audience-aligned content. Uses OriginalVoices Digital Twins (ask_twins) to understand what the audience wants to know, what tone resonates, what questions they have, and what makes content engaging — then uses those insights to write content that ranks well, gets read, and drives results."
 ---
 
@@ -63,6 +63,10 @@ ask_twins(
 
 ### Step 3: Analyse Insights & Plan Content Structure
 
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The content is the deliverable, so the research shows up in what you write and in a short rationale, not in a long report.
+
+Keep three things apart: what twins said (audience evidence, including how they say they search), what the user gave in the brief (target keywords, goals), and SEO facts (search volumes, rankings, sources). Don't present the user's keywords as audience research, and use SEO facts only when the user supplied them or you can cite them; never invent them.
+
 Review audience responses and extract:
 
 **Key Questions to Answer:**
@@ -117,8 +121,8 @@ Review audience responses and extract:
 - Structure answers clearly for featured snippets and AI answer engines
 
 **Examples/Evidence (throughout body):**
-- Include real-world scenarios or case studies that resonate with them
-- Add data or statistics that build credibility (if they value data)
+- Include real-world scenarios or case studies that resonate with them — case studies only when the user supplied them or you can cite them; an illustrative scenario must read as an example, not as something that happened
+- Add data or statistics that build credibility (if they value data) — only real ones the user supplied or you can cite; never invent a statistic, study or source
 - Use practical examples they can relate to their situation
 
 **Conclusion (2-3 paragraphs):**
@@ -153,13 +157,13 @@ Output the full, publish-ready blog post or article you wrote in Step 4, includi
 - **Secondary keywords**: Supporting terms
 
 **2. Key Insights Used:**
-- Top 3-5 audience insights that shaped the content
+- The audience insights that shaped the content, including any that matter to the topic but didn't make it into the piece
 - Questions answered (from research)
 - Pain points addressed
 - Credibility signals included
 - Engagement hooks used
 
-**3. SEO/AEO Optimization Summary:**
+**3. SEO/AEO Optimization Summary** (say which points come from the twins and which are SEO assumptions to verify):
 - **Target keywords**: Primary and secondary
 - **Search intent**: What audience is looking for
 - **Featured snippet opportunity**: How content is structured to capture it

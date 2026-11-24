@@ -1,6 +1,6 @@
 ---
 name: feature-concept-testing
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to test and validate new feature concepts before building them. Triggers include: requests to validate feature ideas, test product concepts, understand if users would use a feature, gauge interest in new functionality, or reduce risk of building unwanted features. Uses OriginalVoices Digital Twins (ask_twins) to understand whether a feature solves a real problem, how users would actually use it, what concerns they have, and whether they'd pay for it — preventing wasted engineering effort on features nobody wants."
 ---
 
@@ -19,6 +19,10 @@ Gather from the user:
 - **Feature description**: What does it do? (functionality, not technical implementation)
 - **Problem it solves**: What user problem or need does this address?
 - **Context**: Where does it fit? When would users encounter it?
+
+The test can cover one feature, variants of it, or several feature ideas. Test what was supplied, described the way the user described it.
+
+With several features or variants, run the Step 2 research call once for each, with the same audience and the same questions, each naming that one feature. Never put several features into one call: the questions refer to "this", so the answers would blend and couldn't be assessed feature by feature.
 
 ### Step 2: Validate Problem & Feature Concept
 
@@ -76,7 +80,15 @@ ask_twins(
 
 ### Step 3: Analyse Feature Validation Insights
 
+Read every individual twin answer to every question before drawing conclusions, and keep track of which question and feature each finding comes from.
+
+With one feature, the analysis below is the whole assessment. With several features or variants, assess each on its own first, then compare only what was tested in a comparable way. What twins say they would use or pay for is a signal to weigh, not proof of adoption.
+
 Review responses and assess:
+
+**Comprehension:**
+- What did twins think the feature would actually do?
+- Where does that differ from what was intended?
 
 **Problem-Solution Fit:**
 - Is the problem real and painful?
@@ -98,14 +110,16 @@ Review responses and assess:
 
 ### Step 4: Deliver Feature Validation Report
 
-This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Answer each section's questions with argued paragraphs and quotes, not one-liners. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. The sections below are the default structure, in this order: deliver each one that applies to what was actually tested, and merge or drop one only when it does not apply or the answers give it nothing to say. Length follows the evidence, and every material finding from every question must make it in. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Answer each section's questions with argued paragraphs and quotes, not one-liners. Where findings have clear quantitative patterns, a chart can show the distribution; never invent scores or percentages to fill one.
+
+With several features or variants, give each its own sections 2-5, then add a comparison of how they did against each other where they were tested in a comparable way.
 
 ### Report sections:
 
 **1. Executive Recommendation:**
-- Build / Iterate / Don't Build
-- Confidence level (high, medium, low)
-- The rationale in a short paragraph (4-6 sentences): the problem as users live it, whether this feature solves it for them, and what tips the decision
+- Build / Iterate / Don't Build, when the evidence supports a call. When it's mixed, say what the decision depends on rather than forcing one
+- How firm the call is (high, medium, low), as a judgement from the answers and not a calculated score: how many twins it holds for, how consistent they were, and how specific their reasons. Say what the twins' reactions can't tell you (they signal interest, they don't prove adoption)
+- The rationale in a short paragraph: the problem as users live it, whether this feature solves it for them, and what tips the decision
 
 **2. Problem Validation:**
 - Is the problem real? A paragraph on how users experience it today, with supporting quotes
@@ -119,11 +133,11 @@ This is a full write-up, not a one-page summary: the reader should come away und
 
 **4. Value Analysis:**
 - What value does it create?
-- Must-have vs. nice-to-have sentiment. Include a chart showing the distribution of must-have vs. nice-to-have vs. wouldn't-use responses.
+- Must-have vs. nice-to-have sentiment. A chart of the must-have vs. nice-to-have vs. wouldn't-use split when the answers can be counted that way.
 - Willingness to pay (if tested)
 
 **5. Concerns & Objections:**
-- Top concerns, each with why it matters to users and 2-3 quotes
+- Top concerns, each with why it matters to users and supporting quotes
 - Adoption risks
 - Dealbreakers vs. acceptable limitations
 

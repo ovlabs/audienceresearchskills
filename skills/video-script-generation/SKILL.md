@@ -1,6 +1,6 @@
 ---
 name: video-script-generation
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate video scripts for creators or AI, informed by real audience insight. Triggers include: requests to write video scripts, create content for YouTube/TikTok/Instagram, generate video narration, write video copy, or create scripts for video ads. Uses OriginalVoices Digital Twins (ask_twins) to understand what hooks the audience, what tone resonates, what keeps them watching, and what drives engagement — then writes complete video scripts optimized for that audience."
 ---
 
@@ -60,6 +60,8 @@ ask_twins(
 ```
 
 ### Step 3: Analyse Video Content Insights
+
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The script is the deliverable, so the research shows up in the hook, structure and CTA you choose and in a short rationale, not in a long report.
 
 Review audience responses and extract:
 
@@ -134,6 +136,8 @@ Review audience responses and extract:
 - Include [VISUAL NOTES] in brackets if helpful for context, but focus on the script
 - Write exactly what should be said/shown on screen
 - Make it ready to record or input into AI video tools
+- Use only the claims, results and proof the user supplied: don't invent testimonials or statistics. Proposed shots and AI-generated visuals are fine as [VISUAL NOTES]; never write as if footage that wasn't supplied (a customer clip, a demo recording) already exists
+- Write one script unless the user asked for variations; match the platform, format and length they gave
 
 **Output the complete script now** - from hook through CTA, ready to use.
 
@@ -153,7 +157,7 @@ Output the full, production-ready video script including:
 - [Visual notes] where helpful
 - Ready to record or use in AI video generation tools
 
-**THEN provide supporting materials:**
+**THEN provide supporting materials**, scaled to the request. For a short or simple script, sections 1 and 2 are enough; add the rest when they are useful for the brief:
 
 **1. Script Overview:**
 - **Target length**: Estimated final video duration

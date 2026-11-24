@@ -1,6 +1,6 @@
 ---
 name: brand-messaging-validation
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to validate and refine brand messaging, positioning, and taglines using real audience insight. Triggers include: requests to test brand positioning, validate taglines or slogans, understand brand perception, refine mission statements, test brand voice, or differentiate from competitors. Uses OriginalVoices Digital Twins (ask_twins) to understand how target audiences interpret brand messaging, what resonates emotionally, what creates confusion, and what drives brand affinity — ensuring brand statements connect with real people, not just internal stakeholders."
 ---
 
@@ -23,6 +23,8 @@ Gather from the user:
   - Key brand values or pillars
   - Tone of voice examples (if testing)
 - **Category context**: What space does the brand operate in? Who are main competitors?
+
+Test what was supplied — a single headline, tagline or positioning statement, or a whole messaging system. Don't add brand values, tone options or alternative messages the user didn't give.
 
 ### Step 2: Comprehensive Brand Messaging Validation
 
@@ -56,8 +58,8 @@ ask_twins(
     "In your own words, what does this brand actually do, and who is it for? What's fuzzy or unclear, if anything?",
     "Set next to other [category] brands you know, how does this one come across — where does it stand out, and where does it blend in?",
     "[If testing tagline] When you read this tagline: '[tagline]', what does it make you think or feel?",
-    "This brand says it stands for: [list 3-4 brand values]. Which of these would actually change how you see a [category] brand — and which are just table stakes?",
-    "For a [category] brand, which of those claims would you take at face value — and which would you take with a pinch of salt? What makes the difference?",
+    "[If testing brand values] This brand says it stands for: [list 3-4 brand values]. Which of these would actually change how you see a [category] brand — and which are just table stakes?",
+    "[If testing brand values] For a [category] brand, which of those claims would you take at face value — and which would you take with a pinch of salt? What makes the difference?",
     "[If testing tone — show the two examples in a random order, and allow 'neither'] Here are two ways this brand might talk: '[Example 1]' and '[Example 2]'. Which sounds more like a brand you'd trust — or does neither — and what is it about the wording?",
     "Set against [competitor name] or other [category] brands you know, where does this one feel genuinely different, and where does it feel like more of the same?",
     "When you read this brand's messaging, what feeling does it leave you with — and how close does it come to understanding people like you?",
@@ -68,11 +70,19 @@ ask_twins(
 )
 ```
 
-**Note:** Adjust questions based on what's being tested. If not testing a tagline, remove tagline questions. If not testing tone, remove tone questions. If testing alternatives, include comparison questions. Whenever you show two options (tone or positioning), vary which one appears first across runs and always let respondents choose "neither".
+**Note:** Adjust questions based on what's being tested, and ask only about what the user supplied. If not testing a tagline, remove tagline questions. If the user gave no brand values, remove the values questions. If not testing tone, remove tone questions. If testing alternatives, include comparison questions. Whenever you show two options (tone or positioning), vary which one appears first across runs and always let respondents choose "neither".
 
 ### Step 3: Analyse Brand Messaging Insights
 
+Read every individual twin answer to every question before drawing conclusions, and keep track of which question and message each finding comes from.
+
+Assess each message on its own first. Where several messages were shown in a comparable way, then compare them; a ranked winner isn't required, and mixed reactions are a finding.
+
 Review responses and assess:
+
+**Intended vs. actual meaning:**
+- What did twins take the message to promise, in their own words?
+- Where does that differ from what the brand means to say?
 
 **Clarity:**
 - Do people understand what the brand does and who it's for?
@@ -99,14 +109,14 @@ Review responses and assess:
 
 ### Step 4: Deliver Brand Messaging Report
 
-This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. The sections below are the default structure, in this order: deliver each one that applies to what was actually tested, and merge or drop one only when it does not apply or the answers give it nothing to say. Length follows the evidence, and every material finding from every question must make it in. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), a chart can show the distribution; never invent scores or percentages to fill one.
 
 ### Report sections:
 
 **1. Executive Summary:**
-- The story in a short paragraph (4-6 sentences): how the audience actually read the messaging, what lands and what doesn't, and why
-- Top 3 strengths and top 3 areas for improvement
-- Recommended direction (Keep / Refine / Rethink)
+- The story in a short paragraph: how the audience actually read the messaging, what lands and what doesn't, and why
+- The main strengths and the main areas for improvement
+- Recommended direction (Keep / Refine / Rethink) when the evidence supports one. When reactions are mixed, say so and what would settle it rather than forcing a verdict
 
 **2. Positioning Assessment:**
 - How audience interprets the positioning, and why: a paragraph on the gap (or fit) between what the brand means to say and what the audience hears
@@ -121,8 +131,8 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Comparison with alternatives (if tested)
 - Refinement suggestions
 
-**4. Brand Values Validation:**
-- Which values resonate (ranked by importance). Include a chart ranking values by resonance.
+**4. Brand Values Validation** (if tested):
+- Which values resonate and which are table stakes. Rank them only when the answers allow it (how many twins named each as changing how they see the brand); otherwise describe the pattern without a rank. A chart ranking values by resonance where the counts support one.
 - Which feel authentic vs. generic
 - Values that drive affinity vs. values that don't matter
 - Supporting quotes
@@ -138,7 +148,7 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Meaningful differentiation vs. superficial claims
 
 **7. Emotional Connection:**
-- Primary feelings the messaging evokes. Include a chart of dominant emotional responses.
+- Primary feelings the messaging evokes. A chart of dominant emotional responses where the counts support one.
 - Whether brand feels relatable and "gets them"
 - Factors that build (or block) affinity
 
@@ -154,6 +164,7 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Brand value prioritization (which to lead with)
 - Tone adjustments
 - Messaging do's and don'ts
+- Ground every suggestion in what twins said, and label new wording as untested
 
 **10. Next Steps:**
 - If validated: Move forward with confidence

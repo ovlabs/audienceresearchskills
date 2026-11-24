@@ -1,6 +1,6 @@
 ---
 name: idea-validation
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to validate a business idea, product concept, or value proposition with real audience feedback before investing time or money. Triggers include: requests to validate a startup idea, test a product concept, check if an idea has legs, assess market demand, validate a value proposition, or get honest feedback on a new business concept. Uses OriginalVoices Digital Twins (ask_twins) to understand whether the problem is real, how painful it is, how people solve it today, and whether the proposed idea would genuinely change their behaviour — delivering a clear Go / Pivot / Kill verdict with evidence."
 ---
 
@@ -68,6 +68,10 @@ ask_twins(
 
 ### Step 3: Assess the Signals
 
+Read every individual twin answer to every question before drawing conclusions, and keep track of which question each finding comes from.
+
+Usually there is one idea. When the user brought several concepts or business models, run the Step 2 research call once for each, with the same audience and the same questions, each describing that one idea: one call can't carry several ideas, because its questions refer to "this idea". Then assess each on its own first, and compare only what was tested in a comparable way.
+
 Analyse responses across five validation dimensions:
 
 **Problem Validation**
@@ -97,23 +101,26 @@ Analyse responses across five validation dimensions:
 
 ### Step 4: Deliver the Validation Verdict
 
-This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. The sections below are the default structure, in this order: deliver each one that applies to what was actually tested, and merge or drop one only when it does not apply or the answers give it nothing to say. Length follows the evidence, and every material finding from every question must make it in. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns, a chart can show the distribution; never invent scores or percentages to fill one.
 
 ### Report sections:
 
-**1. Verdict: Go / Pivot / Kill**
+**1. Verdict: Go / Pivot / Kill / Inconclusive**
 
-The verdict, then a short paragraph (4-6 sentences) on why it holds: how the audience experiences the problem, how they reacted to the idea, and the signal that decided it.
+The verdict, then a short paragraph on why it holds: how the audience experiences the problem, how they reacted to the idea, and the signal that decided it.
+
+The verdict is a reading of what the twins' answers suggest, not proof of market demand: say what it rests on and what it can't tell you. When the signals conflict too much to call, say "inconclusive", why, and what would settle it, rather than forcing one of the three.
 
 | Verdict | When to use |
 |---------|------------|
 | **Go** | Problem is real and painful, solution sparked genuine excitement, audience would pay and switch |
 | **Pivot** | Problem is real but the proposed solution missed the mark — the audience pointed to a better direction |
 | **Kill** | Problem isn't painful enough, audience is indifferent to the solution, or insurmountable barriers exist |
+| **Inconclusive** | The signals conflict or are too thin to call — say which ones, and what would settle it |
 
 **2. Evidence Summary**
 
-A paragraph that reads across the dimensions below: where the signals agree, where they conflict, and what that says about demand. Include a chart showing signal strength across validation dimensions.
+A paragraph that reads across the dimensions below: where the signals agree, where they conflict, and what that says about demand. The strength ratings are judgements from the answers, not scores; add a chart only for something the answers let you count.
 
 | Dimension | Signal | Strength (Strong / Mixed / Weak) |
 |-----------|--------|----------------------------------|
@@ -125,7 +132,7 @@ A paragraph that reads across the dimensions below: where the signals agree, whe
 | Would recommend | [Word of mouth signals] | [Rating] |
 
 **3. Strongest Signals**
-- What resonated most and why it matters to them, each with a paragraph of analysis and 2-3 supporting quotes
+- What resonated most and why it matters to them, each with a paragraph of analysis and supporting quotes
 - The clearest signs of demand or excitement
 
 **4. Biggest Risks**

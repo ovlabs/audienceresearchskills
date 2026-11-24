@@ -1,6 +1,6 @@
 ---
 name: facebook-ad-copy
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate Facebook and Instagram ad copy grounded in real audience insight. Triggers include: requests to create Facebook or Meta ad campaigns, write primary text and headlines for Facebook ads, refresh stale social ad creative, build ad sets for different audience segments, or generate audience-tested ad variations. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates 10-15 audience-informed ad variations rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -59,6 +59,8 @@ ask_twins(
 
 ### Step 3: Analyse Audience Insights
 
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The ads are the deliverable, so the research shows up in the choices you make and in a short rationale, not in a long report.
+
 Review all responses and extract:
 
 - **Pain points in their own words**: The exact language they use to describe frustrations
@@ -70,7 +72,7 @@ Review all responses and extract:
 
 ### Step 4: Generate Ad Variations
 
-Using the audience insights, generate 10-15 ad variations (or the number requested). Every ad should be directly traceable to something the audience actually said — a pain point, a preference, a phrase, an emotion.
+Using the audience insights, generate 10-15 ad variations (or the number requested — a single ad if that's what the user asked for). Every ad should be directly traceable to something the audience actually said — a pain point, a preference, a phrase, an emotion. Use only the offers, claims and proof the user supplied: don't invent promotions, guarantees, statistics or testimonials.
 
 **Facebook Ad Copy Structure:**
 - **Primary text**: Main body copy (125 chars visible before "See more"; full text up to 1,000+)
@@ -111,8 +113,10 @@ Present the full set of ad variations with:
 - The audience insight driving each ad clearly labelled
 - Ads grouped by angle (pain point, benefit, trust, experience, objection)
 - Validation results (if done)
-- Top 3-5 recommended ads to test first
+- Top 3-5 recommended ads to test first (with a smaller set, the ones to start with)
 - A/B testing suggestions (which ads to test against each other)
+
+Then a short audience rationale: the motivations, objections and language from the research that shaped the set, including any finding that matters to the campaign but didn't become an ad. Recommendations say which ads fit what the audience said, not how they will perform. If Step 5 was run, the copy of the ads shown there was tested, and nothing else (not creative, placements or results); if it wasn't, say the ads are untested.
 
 ## Facebook Ad Copy Guidelines
 

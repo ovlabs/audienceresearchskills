@@ -1,6 +1,6 @@
 ---
 name: deep-customer-research
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions per audience in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
 ---
 
@@ -104,31 +104,43 @@ Two tests before you send: (1) **Range** — could most respondents answer this 
 
 ### Step 4: Analyse & Synthesise
 
-Review all Digital Twin responses and compile findings:
+Read every individual Digital Twin answer to every question before you start writing, question by question and then across questions. Keep track of which question and audience each finding comes from, so that nothing material is lost when the findings are grouped into themes. The research stays single-pass: don't ask follow-up questions to deepen the report.
+
+What twins say they would pay, switch to or do is a signal of interest, not evidence of real-world demand or behaviour. Report it as what they said, and say what the research can't tell you.
+
+Compile findings:
 
 - **Key themes**: Patterns across respondents and across questions
 - **Emotional landscape**: Dominant feelings (frustration, anxiety, hope, guilt, indifference)
-- **Current behaviour map**: How the audience navigates this space today
+- **Current behaviour map**: How the audience navigates this space today, including the workarounds they've built
 - **Pain point ranking**: Most intense and most common frustrations
 - **Unmet needs**: Clearest gaps between what's available and what's wanted
+- **Priorities and trade-offs**: What they put first, what they give up for it, and when that shifts
 - **Decision drivers**: What influences choice and action
 - **Trust signals**: What builds or breaks confidence
+- **Differences and tensions**: Distinct perspectives within the audience, exceptions to the overall pattern, contradictory answers, and less common views that matter to the decision
+- **Cross-question connections**: Where behaviour, stated motives, unmet needs and decision criteria reinforce or contradict each other. Only link answers to the same twin when the responses identify them
 - **Surprising insights**: Anything unexpected or counterintuitive
+
+With one audience, bring out the range of views inside it; don't invent cohorts to compare. With several audiences, analyse each one fully before comparing them, and compare only on the questions they share.
 
 ### Step 5: Deliver the Research Report
 
-This is a full research write-up, not a one-page summary: the reader should come away understanding the audience, not just the numbers. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins feel or act that way, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
+This is a full research write-up, not a one-page summary: the reader should come away understanding the audience, not just the numbers. The sections below are the default structure, in this order: merge or drop one only when the answers give it nothing to say, and add one when a material finding fits none of them. Length follows the evidence — as long as it takes to do justice to what the twins said, with no padding and no repetition. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins feel or act that way, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), a chart can show the distribution; never chart numbers the answers don't support.
 
 ### Report sections:
 
-1. **Executive Summary** — The story of the research in a short paragraph (4-6 sentences): who was asked, the single most important thing learned, the tension or surprise behind it, and what it means for the decision at hand.
-2. **Key Themes** — 3-5 most significant patterns. For each theme: a name, the finding in one sentence, a paragraph of analysis (what drives it, who it applies to and who it doesn't, how common it is), and 2-3 supporting quotes from different twins. Include a chart showing theme prevalence.
-3. **Emotional Landscape** — What emotions drive behaviour in this space, what triggers them, and how they shape what people do. Include a chart of dominant emotions.
+1. **Executive Summary** — The story of the research in a short paragraph: who was asked, the most important things learned, the tension or surprise behind them, and what it means for the decision at hand.
+2. **Key Themes** — The significant patterns, as many as the answers support rather than a fixed number. For each theme: a name, the finding in one sentence, a paragraph of analysis (what drives it, who it applies to and who it doesn't, how common it is), and supporting quotes from different twins. A chart of theme prevalence where the counts support one.
+3. **Emotional Landscape** — What emotions drive behaviour in this space, what triggers them, and how they shape what people do. A chart of dominant emotions where the counts support one.
 4. **Current Behaviour & Pain Points** — How the audience deals with the problem today, step by step, and where it breaks down — with the workarounds they've built.
 5. **Unmet Needs & Ideal Outcomes** — Gaps between what's available and what's wanted, and what "great" looks like in the audience's own words.
-6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence, in order of weight. Include a chart ranking decision factors.
-7. **Opportunities** — Actionable insights for product, marketing, or strategy, each tied to the theme or finding it comes from.
-8. **Recommendations** — Specific next steps based on the research, each with the evidence behind it and what would still need testing.
+6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence. Put them in order of weight only when the answers show one (how many twins raised each, or how they traded them off); otherwise list them without a rank. A chart ranking decision factors where the counts support one.
+7. **Differences & Tensions** — Where twins diverge: contrasting needs, exceptions to the overall pattern, contradictory signals, and minority views that matter to the decision. With several audiences, how they differ and where they agree.
+8. **Opportunities** — Actionable insights for product, marketing, or strategy, each tied to the theme or finding it comes from.
+9. **Recommendations** — Specific next steps based on the research, each with the evidence behind it and what would still need testing.
+
+Before delivering, check the list of questions asked against the report: a material finding from every question should appear somewhere in it. If one is missing, work it in from the answers you already have.
 
 ## Tips for Best Results
 

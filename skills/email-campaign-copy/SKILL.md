@@ -1,6 +1,6 @@
 ---
 name: email-campaign-copy
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate email marketing copy grounded in real audience insight. Triggers include: requests to write email campaigns, create newsletter content, improve email open rates, write welcome sequences, launch announcement emails, or re-engagement campaigns. Uses OriginalVoices Digital Twins (ask_twins) to understand what makes the audience open emails, what messaging resonates, what triggers action, and what causes unsubscribes — then generates audience-informed email variations rooted in real subscriber perspectives."
 ---
 
@@ -62,6 +62,8 @@ ask_twins(
 
 ### Step 3: Extract Key Insights
 
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The emails are the deliverable, so the research shows up in the choices you make and in a short rationale, not in a long report.
+
 Analyze responses and identify:
 
 **Subject Line Drivers:**
@@ -85,7 +87,7 @@ Analyze responses and identify:
 
 ### Step 4: Generate Email Variations
 
-Create 5-8 email variations, each built on different insights from research.
+Create 5-8 email variations, each built on different insights from research. That is the default: if the user asked for one email, or for a sequence of a set length, write that instead. Don't invent an offer, a deadline or urgency the user didn't give.
 
 **For each email, deliver:**
 - **Subject line** (6-10 words, grounded in what drives opens)
@@ -108,7 +110,7 @@ Create 5-8 email variations, each built on different insights from research.
 
 ### Step 5: Validate Top Variants (Optional)
 
-Test 3-5 strongest emails back with the audience. This is where forced-choice A/B picks belong — the research phase stayed open-ended, so use this step to compare specific subject lines, openings, and emails head to head.
+Test 3-5 strongest emails back with the audience (with fewer emails, test the ones you have; with a single email, ask only the questions about that email and drop the A/B/C comparisons). This is where forced-choice A/B picks belong — the research phase stayed open-ended, so use this step to compare specific subject lines, openings, and emails head to head.
 
 ```
 ask_twins(
@@ -128,20 +130,20 @@ Update emails based on feedback before finalizing.
 
 ### Step 6: Deliver Email Campaign Set
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Scale the package to what was asked for: a single email needs sections 1, 2 and 5, and the subject line library and A/B plan only if they are useful for it.
 
-**1. Campaign Overview:**
-- Audience insights summary
-- Key findings (what resonates, what to avoid)
-- Recommended approach
-
-**2. Email Variations (5-8 complete emails):**
+**1. Emails (each one complete):**
 - Subject line + preview text
 - Full body copy + CTA
 - Insight driving each email
 - Best use case
 
-**3. Subject Line Library:** 10-15 tested subject lines ranked by predicted performance
+**2. Campaign Overview:**
+- Audience insights summary, kept short: the motivations, objections and tone that shaped the emails
+- Key findings (what resonates, what to avoid), including any that matter to the campaign but didn't become an email
+- Recommended approach
+
+**3. Subject Line Library** (for a campaign or sequence; optional for a single email): up to 10-15 subject lines. Rank only the ones twins actually compared in Step 5, by how they chose. List the rest unranked, as untested suggestions with the audience insight behind each
 
 **4. A/B Testing Plan:**
 - Which emails to test first

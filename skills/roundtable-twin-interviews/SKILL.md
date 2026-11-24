@@ -1,6 +1,6 @@
 ---
 name: roundtable-twin-interviews
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to run an adaptive moderated interview with Digital Twins. One question is asked to a group of twins, their answers are analysed for themes and tensions, then the next question is designed based on what emerged — repeated across 8 rounds of questions, each one going deeper. Produces a comprehensive research report. Triggers include: requests to run a focus group, conduct qualitative interviews, explore a topic in depth with real people, run a roundtable discussion, or do iterative audience research. Uses OriginalVoices Digital Twins (ask_twins) across multiple rounds of questions."
 ---
 
@@ -86,23 +86,30 @@ If the session is interrupted (e.g. response length limits), output what you hav
 
 Once all rounds are complete, output a comprehensive research report directly in the conversation.
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Each section opens with its conclusion in one sentence, then explains it; counts and shares are the evidence for the analysis, never a replacement for it. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), include a chart to visualise the distribution.
+Synthesise every round and every answer, and keep track of which round each finding comes from. Two things are specific to the Roundtable:
+
+- **The rounds are the research.** Run the rounds that were agreed, but don't add rounds beyond them to make the report richer.
+- **Each round may reach different twins.** Only say a person changed their mind when the same twin ID answered in both rounds. Otherwise describe it as a shift in what the group emphasised.
+
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Each section opens with its conclusion in one sentence, then explains it; counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), a chart can show the distribution; never invent scores or percentages to fill one.
+
+The sections below are the default structure. Merge or drop one when a short or sparse session gives it nothing to say (no clear emotional landscape, no real arc), rather than filling it with empty analysis.
 
 ### Report sections:
 
 **1. Executive Summary**
-The story of the session in a short paragraph (4-6 sentences): the single most important thing this research revealed, the tension or surprise behind it, how the conversation got there, and what it means for the decision at hand.
+The story of the session in a short paragraph: the single most important thing this research revealed, the tension or surprise behind it, how the conversation got there, and what it means for the decision at hand.
 
 **2. Key Themes**
-3-5 most significant patterns that emerged across the session. For each theme:
+The significant patterns that emerged across the session — as many as the answers support, not a fixed number. For each theme:
 - What it is and why it matters
 - How it evolved across questions (did it deepen, shift, or get complicated?)
 - How prevalent it was (e.g. "mentioned by 15 out of 20 twins")
 - Supporting quotes from Digital Twins
-- Include a chart showing theme prevalence
+- Optionally, a chart of theme prevalence when the counts support one and it makes the pattern clearer
 
 **3. Emotional Landscape**
-What emotions drive behaviour and opinion in this space? Map the dominant feelings that came through — frustration, anxiety, hope, excitement, indifference, guilt, pride. Include a chart of dominant emotions and supporting quotes that show the emotional texture behind the data.
+What emotions drive behaviour and opinion in this space? Map the dominant feelings that came through — frustration, anxiety, hope, excitement, indifference, guilt, pride. Include supporting quotes that show the emotional texture behind the data and, optionally, a chart of dominant emotions when the counts support one and it makes the pattern clearer.
 
 **4. Tensions & Disagreements**
 What divided the group. For each tension:
@@ -115,7 +122,7 @@ What divided the group. For each tension:
 How the discussion evolved from Question 1 to the final question. What shifted? What deepened? What emerged late that wasn't visible early on? This section is unique to the Roundtable format — it captures insight that single-pass research misses.
 
 **6. Standout Quotes**
-8-12 of the most powerful, surprising, or representative quotes from across the session. Group by theme or tension where it helps tell the story.
+The most powerful, surprising, or representative quotes from across the session (around 8-12 for a full 8-round session; fewer for a shorter one). Group by theme or tension where it helps tell the story.
 
 > "[quote]"
 > — Twin [ID], Question [n]
@@ -124,7 +131,7 @@ How the discussion evolved from Question 1 to the final question. What shifted? 
 Actionable insights for product, marketing, or strategy. What gaps exist? What do people want that they're not getting? What would change their behaviour?
 
 **8. Strategic Implications & Recommendations**
-5-7 specific recommendations based on the research. Each should include:
+Specific recommendations based on the research, as many as the evidence supports. Each should include:
 - What to do
 - Why the research supports it
 - What risk or opportunity it addresses

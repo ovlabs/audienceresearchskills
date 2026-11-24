@@ -1,6 +1,6 @@
 ---
 name: google-ad-copy
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate Google ad copy grounded in real audience insight. Triggers include: requests to create Google Search or Display ad campaigns, write Responsive Search Ad (RSA) headlines and descriptions, refresh underperforming Google ad copy, or generate audience-informed ad variations for A/B testing. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates audience-informed RSA assets rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -59,6 +59,8 @@ ask_twins(
 
 ### Step 3: Extract Key Insights
 
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The RSA assets are the deliverable, so the research shows up in the choices you make and in a short rationale, not in a long report.
+
 Analyze responses and identify:
 - **Search language**: Exact phrases they'd type into Google (use these in headlines)
 - **Pain points**: Their top frustrations (lead with these)
@@ -68,7 +70,7 @@ Analyze responses and identify:
 
 ### Step 4: Generate RSA Assets
 
-Create **15 headlines** and **4 descriptions** using the audience insights. Follow Google RSA format strictly.
+Create **15 headlines** and **4 descriptions** using the audience insights. Follow Google RSA format strictly. That is one full asset set; if the user gave several ad groups or campaigns, write a set for each, and if they asked for fewer assets, write what they asked for. Use only the offers, claims and proof the user supplied: don't invent promotions, guarantees or statistics.
 
 **Headlines (30 characters max each):**
 - Include primary keyword in at least 3 headlines (for relevance)
@@ -80,7 +82,7 @@ Create **15 headlines** and **4 descriptions** using the audience insights. Foll
 **Descriptions (90 characters max each):**
 - Description 1: Lead benefit + CTA
 - Description 2: Address objection + unique value
-- Description 3: Social proof + CTA
+- Description 3: Social proof + CTA (only with proof the user supplied; otherwise a second benefit + CTA)
 - Description 4: Alternative angle (pain point or different benefit)
 
 **Format each asset with:**
@@ -94,7 +96,7 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 Deliver assets in this format:
 
-**HEADLINES (15 required)**
+**HEADLINES (15 for a full set, or the number requested)**
 
 | # | Headline | Chars | Insight | Strategy |
 |---|----------|-------|---------|----------|
@@ -102,7 +104,7 @@ Deliver assets in this format:
 | H2 | [headline text] | 22 | [insight] | Pain point |
 | ... | ... | ... | ... | ... |
 
-**DESCRIPTIONS (4 required)**
+**DESCRIPTIONS (4 for a full set, or the number requested)**
 
 | # | Description | Chars | Insight | Strategy |
 |---|-------------|-------|---------|----------|
@@ -182,14 +184,15 @@ Before delivering, verify:
 ## Output Checklist
 
 Final deliverable includes:
-1. 15 unique headlines (all ≤30 chars)
-2. 4 unique descriptions (all ≤90 chars)
+1. 15 unique headlines for a full set, or the number requested (all ≤30 chars)
+2. 4 unique descriptions for a full set, or the number requested (all ≤90 chars)
 3. Character count verified for every asset
 4. Table format ready to copy into Google Ads
 5. Insight source documented for each asset
 6. Pinning recommendations (if any)
 7. Quality Score checklist completed
-8. Top 3-5 predicted best-performing combinations highlighted
+8. With a full set, the 3-5 combinations to test first highlighted, each with the audience insight behind it (a suggestion from the research, not a performance forecast). With only a few assets, skip this
+9. A short audience rationale: the search language, motivations and objections that shaped the assets, including any finding that matters to the campaign but didn't become an asset
 
 ## Related Skills
 

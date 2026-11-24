@@ -1,6 +1,6 @@
 ---
 name: landing-page-optimization
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to optimize landing page messaging, structure, and conversion elements using real audience insight. Triggers include: requests to improve conversion rates, test landing page copy, validate value propositions, optimize hero sections, test different messaging angles, or reduce bounce rates. Uses OriginalVoices Digital Twins (ask_twins) to understand what resonates with visitors, what creates confusion or doubt, and what drives action — then generates optimized landing page variants grounded in real user responses."
 ---
 
@@ -72,6 +72,10 @@ ask_twins(
 
 ### Step 3: Extract Key Insights
 
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything, and keep track of which question each finding comes from.
+
+The research shows how twins read the copy and structure they were given, not how the page converts. Treat anything about the page you weren't shown (design, images, sections) as unknown, not as missing.
+
 Analyze responses and identify:
 
 **Hero Section Insights:**
@@ -97,7 +101,7 @@ Analyze responses and identify:
 
 ### Step 4: Generate Optimized Landing Page Variants
 
-Create 3-5 landing page variants, each grounded in different insights from research.
+Create 3-5 landing page variants, each grounded in different insights from research. That is the default: if the user asked for one revised page, or for specific improvements only, deliver that instead.
 
 **For each variant, deliver:**
 - **Headline** — Hook that grabs attention (based on what resonated)
@@ -122,7 +126,7 @@ Create 3-5 landing page variants, each grounded in different insights from resea
 
 ### Step 5: Validate Top Variants (Optional)
 
-Test 2-3 strongest variants back with the audience:
+Test 2-3 strongest variants back with the audience. With a single revised page, test that page alone and leave out the A-versus-B question:
 
 ```
 ask_twins(
@@ -140,12 +144,15 @@ Update variants based on feedback before finalizing.
 
 ### Step 6: Deliver Optimization Report
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, include a chart to visualize the distribution.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, a chart can show the distribution; never invent scores or percentages to fill one.
+
+Scale the report to what was asked. With one revised page or specific improvements only, deliver the summary, the key insights, the revised copy or improvements, and the quick wins; leave out the variant comparison and the A/B testing plan.
 
 ### Report sections:
 
 **1. Executive Summary:**
-- Top recommended variant and expected impact
+- The recommended variant and why, from what the audience said. Call it the winner only if variants were tested back with the audience in Step 5; otherwise it's the one to test first
+- What it should improve (clarity, trust, answered objections), without predicting a conversion lift
 - Key finding (most important insight from research)
 
 **2. Key Insights from Research:**
@@ -153,11 +160,11 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 Each insight opens with its conclusion in one sentence, then a paragraph explaining why the audience reacts that way, with supporting quotes. Counts are the evidence, never a replacement for the explanation.
 
 - What messaging resonates vs. what creates confusion
-- Top objections and concerns to address. Include a chart ranking objections by frequency.
+- Top objections and concerns to address. A chart ranking objections by frequency where the counts support one.
 - Trust signals that matter most
 - Optimal CTA and offer structure
 
-**3. Landing Page Variants (3-5 full variants):**
+**3. Landing Page Variants (each one in full):**
 - Complete copy for each (headline, subheadline, value props, CTA, etc.)
 - Insight driving each variant
 - When to use each (audience segment, traffic source, etc.)

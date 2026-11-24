@@ -1,6 +1,6 @@
 ---
 name: creative-brief
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate a creative brief grounded in real audience insight. Triggers include: requests to write a creative brief, brief a creative team or agency, define a campaign brief, establish creative direction, or prepare a brief for designers, copywriters, or content creators. Uses OriginalVoices Digital Twins (ask_twins) to deeply understand the target audience's language, emotions, motivations, and preferences — then synthesises findings into a structured creative brief that gives creative teams a validated human foundation to build from, not assumptions."
 ---
 
@@ -64,6 +64,10 @@ ask_twins(
 
 ### Step 3: Identify the Key Insight
 
+Read every individual twin answer to every question, including the neutral and negative ones, before choosing an insight. The brief is the deliverable, and it should stay a brief, not turn into a research report.
+
+Anchoring the brief on one insight doesn't make the rest of the research disappear. The other material findings — tensions, barriers, language, what turns the audience off — belong in the audience profile, the tone guidance, and the do's and don'ts.
+
 From the research, identify the single most important human truth — the insight that should anchor the entire brief. A strong insight:
 
 - Reveals a tension, desire, or unmet need the audience feels deeply
@@ -86,7 +90,7 @@ Structure the brief as follows:
 
 **2. Objective**
 - What must this creative achieve?
-- Primary KPI or success metric
+- Primary KPI or success metric, as the user gave it (if they gave none, leave it for them to fill in rather than inventing one)
 
 **3. Target Audience Profile**
 - Demographics and psychographics
@@ -98,13 +102,14 @@ Structure the brief as follows:
 **4. Key Insight**
 - The single human truth that anchors this brief
 - Supporting evidence from audience responses
+- Where the research surfaced competing findings or tensions, a line or two on what this insight was chosen over, and why. Where it didn't, say the answers pointed one way
 
 **5. Single-Minded Message**
 - The one thing the audience should think, feel, or do after seeing this creative
 - Must flow directly from the insight
 
 **6. Support Points**
-- 3-4 reasons to believe
+- Reasons to believe (usually 3-4), drawn only from product truths and proof the user supplied. If they supplied none, say that support points are missing and list what the audience said would convince them, for the user to fill in
 - Product truths that validate the message
 - Proof points or credibility signals the audience said matter to them
 
@@ -123,7 +128,7 @@ Structure the brief as follows:
 
 **9. Mandatories & Guardrails**
 - Brand guidelines to follow
-- Legal or compliance requirements
+- Legal or compliance requirements, as supplied (don't invent them)
 - Channel-specific constraints
 
 **10. Deliverables & Format**
