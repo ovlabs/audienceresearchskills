@@ -136,7 +136,7 @@ Review audience responses and extract:
 - Include [VISUAL NOTES] in brackets if helpful for context, but focus on the script
 - Write exactly what should be said/shown on screen
 - Make it ready to record or input into AI video tools
-- Use only the claims, results and proof the user supplied: don't invent testimonials, statistics or footage that doesn't exist
+- Use only the claims, results and proof the user supplied: don't invent testimonials or statistics. Proposed shots and AI-generated visuals are fine as [VISUAL NOTES]; never write as if footage that wasn't supplied (a customer clip, a demo recording) already exists
 - Write one script unless the user asked for variations; match the platform, format and length they gave
 
 **Output the complete script now** - from hook through CTA, ready to use.
@@ -157,7 +157,7 @@ Output the full, production-ready video script including:
 - [Visual notes] where helpful
 - Ready to record or use in AI video generation tools
 
-**THEN provide supporting materials:**
+**THEN provide supporting materials**, scaled to the request. For a short or simple script, sections 1 and 2 are enough; add the rest when they are useful for the brief:
 
 **1. Script Overview:**
 - **Target length**: Estimated final video duration

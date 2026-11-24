@@ -106,6 +106,8 @@ Two tests before you send: (1) **Range** — could most respondents answer this 
 
 Read every individual Digital Twin answer to every question before you start writing, question by question and then across questions. Keep track of which question and audience each finding comes from, so that nothing material is lost when the findings are grouped into themes. The research stays single-pass: don't ask follow-up questions to deepen the report.
 
+What twins say they would pay, switch to or do is a signal of interest, not evidence of real-world demand or behaviour. Report it as what they said, and say what the research can't tell you.
+
 Compile findings:
 
 - **Key themes**: Patterns across respondents and across questions
@@ -133,7 +135,7 @@ This is a full research write-up, not a one-page summary: the reader should come
 3. **Emotional Landscape** — What emotions drive behaviour in this space, what triggers them, and how they shape what people do. A chart of dominant emotions where the counts support one.
 4. **Current Behaviour & Pain Points** — How the audience deals with the problem today, step by step, and where it breaks down — with the workarounds they've built.
 5. **Unmet Needs & Ideal Outcomes** — Gaps between what's available and what's wanted, and what "great" looks like in the audience's own words.
-6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence, in order of weight. A chart ranking decision factors where the counts support one.
+6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence. Put them in order of weight only when the answers show one (how many twins raised each, or how they traded them off); otherwise list them without a rank. A chart ranking decision factors where the counts support one.
 7. **Differences & Tensions** — Where twins diverge: contrasting needs, exceptions to the overall pattern, contradictory signals, and minority views that matter to the decision. With several audiences, how they differ and where they agree.
 8. **Opportunities** — Actionable insights for product, marketing, or strategy, each tied to the theme or finding it comes from.
 9. **Recommendations** — Specific next steps based on the research, each with the evidence behind it and what would still need testing.

@@ -110,7 +110,7 @@ Create 5-8 email variations, each built on different insights from research. Tha
 
 ### Step 5: Validate Top Variants (Optional)
 
-Test 3-5 strongest emails back with the audience. This is where forced-choice A/B picks belong — the research phase stayed open-ended, so use this step to compare specific subject lines, openings, and emails head to head.
+Test 3-5 strongest emails back with the audience (with fewer emails, test the ones you have; with a single email, ask only the questions about that email and drop the A/B/C comparisons). This is where forced-choice A/B picks belong — the research phase stayed open-ended, so use this step to compare specific subject lines, openings, and emails head to head.
 
 ```
 ask_twins(
@@ -130,7 +130,7 @@ Update emails based on feedback before finalizing.
 
 ### Step 6: Deliver Email Campaign Set
 
-Present it in clear sections, with Digital Twin quotes verbatim and attributed.
+Present it in clear sections, with Digital Twin quotes verbatim and attributed. Scale the package to what was asked for: a single email needs sections 1, 2 and 5, and the subject line library and A/B plan only if they are useful for it.
 
 **1. Emails (each one complete):**
 - Subject line + preview text
@@ -143,7 +143,7 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 - Key findings (what resonates, what to avoid), including any that matter to the campaign but didn't become an email
 - Recommended approach
 
-**3. Subject Line Library:** 10-15 subject lines, ordered by how well they fit what the audience said drives opens. Mark the ones twins actually saw in Step 5; the rest are untested suggestions, not performance predictions
+**3. Subject Line Library** (for a campaign or sequence; optional for a single email): up to 10-15 subject lines. Rank only the ones twins actually compared in Step 5, by how they chose. List the rest unranked, as untested suggestions with the audience insight behind each
 
 **4. A/B Testing Plan:**
 - Which emails to test first

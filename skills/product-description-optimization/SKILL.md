@@ -63,7 +63,7 @@ ask_twins(
 
 ### Step 3: Analyse Description Feedback
 
-Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The optimized description is the deliverable, so the research shows up in the changes you make and in a short rationale, not in a long report. With several products, analyse the feedback on each description separately; don't compare products that weren't shown side by side.
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The optimized description is the deliverable, so the research shows up in the changes you make and in a short rationale, not in a long report. With several products, run Step 2 once for each description (same audience, same questions) so each has its own feedback, and analyse them separately; don't compare products that weren't shown side by side.
 
 Review audience responses and extract specific insights about the existing description:
 
@@ -132,7 +132,7 @@ Review audience responses and extract specific insights about the existing descr
 - Keep the original format unless feedback suggests changing it
 - Focus on filling gaps, not complete rewrites
 - Maintain the brand voice while improving clarity
-- Use only the product facts supplied: never add features, materials, prices, availability, guarantees or reviews. Where twins asked for a detail you don't have, list it as something for the user to supply
+- Use only the product facts supplied: never add features, materials, prices, availability, guarantees or reviews. Where twins asked for a detail you don't have, leave it out of the description (no placeholders in the publish-ready text) and list it under Additional Recommendations as something for the user to supply
 
 **Output the optimized description now** - with changes clearly integrated into the original structure.
 
@@ -152,7 +152,7 @@ Output the complete, optimized product description ready to use, including:
 **1. Optimization Summary:**
 - **What changed**: Key changes made and why
 - **Key insights applied**: The audience insights that shaped the optimization
-- **What it should improve**: Clarity, trust, answered questions — as the audience described them, not a predicted sales lift
+- **What it should improve**: How the changes serve the optimization goal the user gave (conversion, clarity, trust, differentiation, SEO), as far as the audience feedback supports it — not a predicted sales lift
 
 **2. Before vs. After Comparison:**
 - **Original**: [excerpt of key changes from original]

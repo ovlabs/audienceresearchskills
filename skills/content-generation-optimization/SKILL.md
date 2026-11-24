@@ -65,7 +65,7 @@ ask_twins(
 
 Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. The content is the deliverable, so the research shows up in what you write and in a short rationale, not in a long report.
 
-Keep what twins said apart from SEO facts. How twins say they search and the keywords the user gave are evidence; search volumes, rankings and sources are not, so don't invent them.
+Keep three things apart: what twins said (audience evidence, including how they say they search), what the user gave in the brief (target keywords, goals), and SEO facts (search volumes, rankings, sources). Don't present the user's keywords as audience research, and use SEO facts only when the user supplied them or you can cite them; never invent them.
 
 Review audience responses and extract:
 
@@ -121,7 +121,7 @@ Review audience responses and extract:
 - Structure answers clearly for featured snippets and AI answer engines
 
 **Examples/Evidence (throughout body):**
-- Include real-world scenarios or case studies that resonate with them
+- Include real-world scenarios or case studies that resonate with them — case studies only when the user supplied them or you can cite them; an illustrative scenario must read as an example, not as something that happened
 - Add data or statistics that build credibility (if they value data) — only real ones the user supplied or you can cite; never invent a statistic, study or source
 - Use practical examples they can relate to their situation
 

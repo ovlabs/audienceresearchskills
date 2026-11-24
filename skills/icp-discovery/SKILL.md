@@ -1,7 +1,7 @@
 ---
 name: icp-discovery
 version: 2.0.0
-description: "Use this skill to discover the ideal customer profile (ICP) and target audience for a product, concept, or idea by testing it across multiple demographic segments. Triggers include: requests to find the best audience for a product, identify an ICP, discover who a product resonates with most, explore which demographic segments respond best to a concept, validate target market assumptions, find product-market fit, or uncover unexpected audience opportunities. Also use when a user doesn't know who to target, is entering a new market, launching a new product, or wants to compare audience receptivity across segments before committing budget. Uses OriginalVoices Digital Twins (ask_twins) to test the same product/concept across 5+ distinct demographic segments simultaneously, then ranks segments by fit and extracts messaging guidance for the top ICP."
+description: "Use this skill to discover the ideal customer profile (ICP) and target audience for a product, concept, or idea by testing it across multiple demographic segments. Triggers include: requests to find the best audience for a product, identify an ICP, discover who a product resonates with most, explore which demographic segments respond best to a concept, validate target market assumptions, find product-market fit, or uncover unexpected audience opportunities. Also use when a user doesn't know who to target, is entering a new market, launching a new product, or wants to compare audience receptivity across segments before committing budget. Uses OriginalVoices Digital Twins (ask_twins) to test the same product/concept across 5+ distinct demographic segments simultaneously, then ranks segments by fit and extracts messaging guidance for the top ICP. When the user already has one audience in mind, it profiles how well the product fits that audience instead."
 ---
 
 # ICP & Target Audience Discovery Skill
@@ -28,7 +28,7 @@ Start from what the user actually asked for. 5-7 is the default when they want c
 
 **Segment design principles:**
 - Vary by age, gender, life stage, interests, income, and lifestyle
-- Include at least one "unexpected" segment the user might not have considered
+- When you are proposing the candidates, include at least one "unexpected" segment the user might not have considered (never add one to segments or a single audience the user specified)
 - Ensure segments don't overlap heavily
 
 **Example segment set for a meal planning app:**
@@ -144,9 +144,15 @@ For the #1 ranked segment, extract detailed messaging guidance:
 
 This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. The sections below are the default structure, in this order: deliver each one that applies to what was actually tested, and merge or drop one only when it does not apply or the answers give it nothing to say. Length follows the evidence, and every material finding from every question must make it in. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns, a chart can show the distribution; never invent scores or percentages to fill one.
 
-With a single audience, leave out the rankings and the messaging matrix (sections 2 and 5): the report is the summary, the deep-dive on that audience, and the recommendations.
+**With a single audience** there is nothing to compare, so deliver a fit profile instead of the sections below:
 
-### Report sections:
+1. **Summary** — How well the product fits this audience and why, the biggest surprise, and what it means for go-to-market.
+2. **Fit Profile** — Each Step 5 dimension rated High / Medium / Low and explained: how real the problem is for them, how the product landed, what holds them back, with direct quotes.
+3. **Range Inside the Audience** — Who within it the product lands with and who it doesn't, and what separates them. Describe the split you see in the answers; don't invent sub-segments.
+4. **Messaging Guidance** — The Step 6 items for this audience.
+5. **Recommendations** — Whether to target them, the angle to lead with, and what to test next (including other audiences worth comparing them with).
+
+### Report sections (several segments):
 
 **1. Executive Summary**
 The story of the research in a short paragraph: which segments were compared, the #1 target audience and why they beat the others (or that it's a tie or too close to call, and why), the biggest surprise, and what it means for go-to-market.
@@ -192,7 +198,7 @@ For each segment (including lower-ranked ones):
 ## Tips for Best Results
 
 - **Test 5 or more segments when discovering**: Fewer than 5 gives little contrast when you don't yet know who to target; 6-7 is ideal. Fewer is fine when the user already knows which audiences they're choosing between
-- **Include a wildcard segment**: Always test one audience you wouldn't obviously target — surprises happen
+- **Include a wildcard segment when discovering**: Test one audience you wouldn't obviously target — surprises happen
 - **Keep questions identical across segments**: Consistency is what makes comparison valid
 - **Don't oversell the product**: Describe it factually in 1-2 sentences. Let the audience's genuine reaction tell the story
 - **Watch for "polite interest" vs. real excitement**: Some audiences will say "sounds nice" without any real intent. Look for strong emotional language, specific use cases they imagine, and unprompted enthusiasm

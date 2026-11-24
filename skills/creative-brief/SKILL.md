@@ -102,14 +102,14 @@ Structure the brief as follows:
 **4. Key Insight**
 - The single human truth that anchors this brief
 - Supporting evidence from audience responses
-- In two or three lines, the tensions or competing findings it was chosen over, and why
+- Where the research surfaced competing findings or tensions, a line or two on what this insight was chosen over, and why. Where it didn't, say the answers pointed one way
 
 **5. Single-Minded Message**
 - The one thing the audience should think, feel, or do after seeing this creative
 - Must flow directly from the insight
 
 **6. Support Points**
-- 3-4 reasons to believe, drawn only from product truths and proof the user supplied
+- Reasons to believe (usually 3-4), drawn only from product truths and proof the user supplied. If they supplied none, say that support points are missing and list what the audience said would convince them, for the user to fill in
 - Product truths that validate the message
 - Proof points or credibility signals the audience said matter to them
 

@@ -93,6 +93,8 @@ Synthesise every round and every answer, and keep track of which round each find
 
 Present it in clear sections, with Digital Twin quotes verbatim and attributed. Each section opens with its conclusion in one sentence, then explains it; counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Where findings have clear quantitative patterns (e.g. "14 out of 20 twins expressed concern about X"), a chart can show the distribution; never invent scores or percentages to fill one.
 
+The sections below are the default structure. Merge or drop one when a short or sparse session gives it nothing to say (no clear emotional landscape, no real arc), rather than filling it with empty analysis.
+
 ### Report sections:
 
 **1. Executive Summary**
@@ -104,10 +106,10 @@ The significant patterns that emerged across the session — as many as the answ
 - How it evolved across questions (did it deepen, shift, or get complicated?)
 - How prevalent it was (e.g. "mentioned by 15 out of 20 twins")
 - Supporting quotes from Digital Twins
-- A chart of theme prevalence where the counts support one
+- Optionally, a chart of theme prevalence when the counts support one and it makes the pattern clearer
 
 **3. Emotional Landscape**
-What emotions drive behaviour and opinion in this space? Map the dominant feelings that came through — frustration, anxiety, hope, excitement, indifference, guilt, pride. Include supporting quotes that show the emotional texture behind the data, and a chart of dominant emotions where the counts support one.
+What emotions drive behaviour and opinion in this space? Map the dominant feelings that came through — frustration, anxiety, hope, excitement, indifference, guilt, pride. Include supporting quotes that show the emotional texture behind the data and, optionally, a chart of dominant emotions when the counts support one and it makes the pattern clearer.
 
 **4. Tensions & Disagreements**
 What divided the group. For each tension:

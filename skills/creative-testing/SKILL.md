@@ -55,7 +55,7 @@ ask_twins(
     "Which parts of it connect with your own life, and which don't? What makes the difference?",
     "Which specific words, images, or ideas in it stand out to you — for better or worse — and why?",
     "What in it do you take at face value, and what would you need convincing of?",
-    "Thinking about the last time an ad actually got you to do something, how does this one compare — what would you do next, if anything?",
+    "Think about the last time an ad actually got you to do something — what was it about that ad, and how does this one compare?",
     "Is there anything in it that feels off, confusing, or that you'd scroll past — and what exactly triggers that?",
     "What would you change to make it hit harder, and what should stay exactly as it is?"
   ]
@@ -156,18 +156,20 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed. 
 ### Report sections:
 
 **1. Overall Assessment**
-- **One concept**: how it landed and why, in a short paragraph, with the audience quote that captures it
-- **Several concepts**: the top-performing concept and why, with the audience quote that captures why it wins. If the evidence shows no clear winner, a tie, or different winners for different goals, say that instead of forcing one
+- **One concept**: how it landed and why, in a short paragraph, with an audience quote that captures it
+- **Several concepts**: the top-performing concept and why, with an audience quote that captures why it wins. If the evidence shows no clear winner, a tie, or different winners for different goals, say that instead of forcing one
+
+Quotes are always a twin's own words. Where no answer gives a usable one, say so rather than paraphrasing into quotation marks.
 
 **2. Concept-by-Concept Breakdown**
 
 For each concept tested (with one concept, this is the full assessment):
-- **How it landed**: Strong / Moderate / Weak, with the reason. With several concepts, mark a Winner only when one clearly led
+- **How it landed**: Strong, Moderate or Weak when the reactions clearly point one way, with the reason; Mixed when they split, with what divides them; Inconclusive when the answers are too thin to say. With several concepts, mark a Winner only when one clearly led
 - **Message understood**: What twins took it to say, and who they thought it was for
 - **Strengths**: What worked (with audience quotes)
 - **Weaknesses**: What didn't land
 - **Emotional response**: What feelings it triggered
-- **Audience quote**: A representative reaction, plus a dissenting one where views split
+- **Audience quote**: A representative reaction where there is one, plus a dissenting one where views split
 
 With several concepts, add a chart ranking them by audience preference when the counts support one.
 

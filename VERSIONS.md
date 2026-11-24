@@ -29,7 +29,7 @@ Current versions of all skills. Agents can compare against local versions to che
   - **No quotas.** The 3-5 theme ceiling, fixed quote counts, fixed sentence counts and compulsory charts are gone. Report sections are the default structure; charts appear only where answers can be counted; numeric fit scores need a stated method.
   - **Content skills deliver the asset first** (ads, emails, scripts, descriptions, briefs), then a short audience rationale. Variation counts are defaults that give way to what the user asked for. No invented offers, claims, statistics or performance forecasts.
   - **No research calls added to improve a report.** Optional validation steps and the Roundtable's rounds are unchanged.
-- Research design is unchanged: question-quality rules, question sets and `ask_twins` calls are as in 1.2.0, apart from the new single-concept set in creative-testing.
+- Research design is otherwise unchanged from the previous skill files (1.2.0 for the analysis skills, 1.1.1 for the rest; 1.2.0 was never recorded in this table). The changes: a new single-concept question set in creative-testing; brand-messaging-validation asks its values questions only when values were supplied; several features, ideas or product descriptions are researched one call each.
 
 ### 2026-11-02
 - **All 15 skills → 1.1.1: output formatting is left to the host.** Each skill's delivery step no longer prescribes markdown (`##`/`###` headers, `>` blockquotes, `---` rules); it says to present the deliverable in clear sections with Digital Twin quotes verbatim and attributed. What to deliver (sections, contents, charts to include) is unchanged. Agents and apps render it in their own format: markdown in Claude Code or Cursor, native components elsewhere.

@@ -116,7 +116,7 @@ Present the full set of ad variations with:
 - Top 3-5 recommended ads to test first (with a smaller set, the ones to start with)
 - A/B testing suggestions (which ads to test against each other)
 
-Then a short audience rationale: the motivations, objections and language from the research that shaped the set, including any finding that matters to the campaign but didn't become an ad. Recommendations say which ads fit what the audience said, not how they will perform: only the copy was tested, not creative, placements or results.
+Then a short audience rationale: the motivations, objections and language from the research that shaped the set, including any finding that matters to the campaign but didn't become an ad. Recommendations say which ads fit what the audience said, not how they will perform. If Step 5 was run, the copy of the ads shown there was tested, and nothing else (not creative, placements or results); if it wasn't, say the ads are untested.
 
 ## Facebook Ad Copy Guidelines
 

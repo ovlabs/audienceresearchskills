@@ -82,7 +82,7 @@ Create **15 headlines** and **4 descriptions** using the audience insights. Foll
 **Descriptions (90 characters max each):**
 - Description 1: Lead benefit + CTA
 - Description 2: Address objection + unique value
-- Description 3: Social proof + CTA
+- Description 3: Social proof + CTA (only with proof the user supplied; otherwise a second benefit + CTA)
 - Description 4: Alternative angle (pain point or different benefit)
 
 **Format each asset with:**
@@ -96,7 +96,7 @@ Present it in clear sections, with Digital Twin quotes verbatim and attributed.
 
 Deliver assets in this format:
 
-**HEADLINES (15 required)**
+**HEADLINES (15 for a full set, or the number requested)**
 
 | # | Headline | Chars | Insight | Strategy |
 |---|----------|-------|---------|----------|
@@ -104,7 +104,7 @@ Deliver assets in this format:
 | H2 | [headline text] | 22 | [insight] | Pain point |
 | ... | ... | ... | ... | ... |
 
-**DESCRIPTIONS (4 required)**
+**DESCRIPTIONS (4 for a full set, or the number requested)**
 
 | # | Description | Chars | Insight | Strategy |
 |---|-------------|-------|---------|----------|
@@ -184,14 +184,14 @@ Before delivering, verify:
 ## Output Checklist
 
 Final deliverable includes:
-1. 15 unique headlines (all ≤30 chars)
-2. 4 unique descriptions (all ≤90 chars)
+1. 15 unique headlines for a full set, or the number requested (all ≤30 chars)
+2. 4 unique descriptions for a full set, or the number requested (all ≤90 chars)
 3. Character count verified for every asset
 4. Table format ready to copy into Google Ads
 5. Insight source documented for each asset
 6. Pinning recommendations (if any)
 7. Quality Score checklist completed
-8. The 3-5 combinations to test first highlighted, each with the audience insight behind it (a suggestion from the research, not a performance forecast)
+8. With a full set, the 3-5 combinations to test first highlighted, each with the audience insight behind it (a suggestion from the research, not a performance forecast). With only a few assets, skip this
 9. A short audience rationale: the search language, motivations and objections that shaped the assets, including any finding that matters to the campaign but didn't become an asset
 
 ## Related Skills

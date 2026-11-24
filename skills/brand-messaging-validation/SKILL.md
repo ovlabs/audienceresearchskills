@@ -58,8 +58,8 @@ ask_twins(
     "In your own words, what does this brand actually do, and who is it for? What's fuzzy or unclear, if anything?",
     "Set next to other [category] brands you know, how does this one come across — where does it stand out, and where does it blend in?",
     "[If testing tagline] When you read this tagline: '[tagline]', what does it make you think or feel?",
-    "This brand says it stands for: [list 3-4 brand values]. Which of these would actually change how you see a [category] brand — and which are just table stakes?",
-    "For a [category] brand, which of those claims would you take at face value — and which would you take with a pinch of salt? What makes the difference?",
+    "[If testing brand values] This brand says it stands for: [list 3-4 brand values]. Which of these would actually change how you see a [category] brand — and which are just table stakes?",
+    "[If testing brand values] For a [category] brand, which of those claims would you take at face value — and which would you take with a pinch of salt? What makes the difference?",
     "[If testing tone — show the two examples in a random order, and allow 'neither'] Here are two ways this brand might talk: '[Example 1]' and '[Example 2]'. Which sounds more like a brand you'd trust — or does neither — and what is it about the wording?",
     "Set against [competitor name] or other [category] brands you know, where does this one feel genuinely different, and where does it feel like more of the same?",
     "When you read this brand's messaging, what feeling does it leave you with — and how close does it come to understanding people like you?",
@@ -70,7 +70,7 @@ ask_twins(
 )
 ```
 
-**Note:** Adjust questions based on what's being tested. If not testing a tagline, remove tagline questions. If not testing tone, remove tone questions. If testing alternatives, include comparison questions. Whenever you show two options (tone or positioning), vary which one appears first across runs and always let respondents choose "neither".
+**Note:** Adjust questions based on what's being tested, and ask only about what the user supplied. If not testing a tagline, remove tagline questions. If the user gave no brand values, remove the values questions. If not testing tone, remove tone questions. If testing alternatives, include comparison questions. Whenever you show two options (tone or positioning), vary which one appears first across runs and always let respondents choose "neither".
 
 ### Step 3: Analyse Brand Messaging Insights
 
@@ -132,7 +132,7 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Refinement suggestions
 
 **4. Brand Values Validation** (if tested):
-- Which values resonate (ranked by importance). A chart ranking values by resonance where the counts support one.
+- Which values resonate and which are table stakes. Rank them only when the answers allow it (how many twins named each as changing how they see the brand); otherwise describe the pattern without a rank. A chart ranking values by resonance where the counts support one.
 - Which feel authentic vs. generic
 - Values that drive affinity vs. values that don't matter
 - Supporting quotes

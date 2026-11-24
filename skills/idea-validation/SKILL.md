@@ -70,7 +70,7 @@ ask_twins(
 
 Read every individual twin answer to every question before drawing conclusions, and keep track of which question each finding comes from.
 
-Usually there is one idea. When the user brought several concepts or business models, assess each on its own first, then compare only what was tested in a comparable way.
+Usually there is one idea. When the user brought several concepts or business models, run the Step 2 research call once for each, with the same audience and the same questions, each describing that one idea: one call can't carry several ideas, because its questions refer to "this idea". Then assess each on its own first, and compare only what was tested in a comparable way.
 
 Analyse responses across five validation dimensions:
 
@@ -105,7 +105,7 @@ This is a full write-up, not a one-page summary: the reader should come away und
 
 ### Report sections:
 
-**1. Verdict: Go / Pivot / Kill**
+**1. Verdict: Go / Pivot / Kill / Inconclusive**
 
 The verdict, then a short paragraph on why it holds: how the audience experiences the problem, how they reacted to the idea, and the signal that decided it.
 
@@ -116,6 +116,7 @@ The verdict is a reading of what the twins' answers suggest, not proof of market
 | **Go** | Problem is real and painful, solution sparked genuine excitement, audience would pay and switch |
 | **Pivot** | Problem is real but the proposed solution missed the mark — the audience pointed to a better direction |
 | **Kill** | Problem isn't painful enough, audience is indifferent to the solution, or insurmountable barriers exist |
+| **Inconclusive** | The signals conflict or are too thin to call — say which ones, and what would settle it |
 
 **2. Evidence Summary**
 

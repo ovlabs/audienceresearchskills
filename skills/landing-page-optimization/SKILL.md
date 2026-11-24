@@ -126,7 +126,7 @@ Create 3-5 landing page variants, each grounded in different insights from resea
 
 ### Step 5: Validate Top Variants (Optional)
 
-Test 2-3 strongest variants back with the audience:
+Test 2-3 strongest variants back with the audience. With a single revised page, test that page alone and leave out the A-versus-B question:
 
 ```
 ask_twins(
@@ -145,6 +145,8 @@ Update variants based on feedback before finalizing.
 ### Step 6: Deliver Optimization Report
 
 Present it in clear sections, with Digital Twin quotes verbatim and attributed. Where findings have clear quantitative patterns, a chart can show the distribution; never invent scores or percentages to fill one.
+
+Scale the report to what was asked. With one revised page or specific improvements only, deliver the summary, the key insights, the revised copy or improvements, and the quick wins; leave out the variant comparison and the A/B testing plan.
 
 ### Report sections:
 

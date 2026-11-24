@@ -22,6 +22,8 @@ Gather from the user:
 
 The test can cover one feature, variants of it, or several feature ideas. Test what was supplied, described the way the user described it.
 
+With several features or variants, run the Step 2 research call once for each, with the same audience and the same questions, each naming that one feature. Never put several features into one call: the questions refer to "this", so the answers would blend and couldn't be assessed feature by feature.
+
 ### Step 2: Validate Problem & Feature Concept
 
 One comprehensive research call covering problem validation, feature appeal, usage scenarios, value perception, and concerns.
@@ -116,7 +118,7 @@ With several features or variants, give each its own sections 2-5, then add a co
 
 **1. Executive Recommendation:**
 - Build / Iterate / Don't Build, when the evidence supports a call. When it's mixed, say what the decision depends on rather than forcing one
-- Confidence level (high, medium, low), and what the twins' reactions can't tell you (they signal interest, they don't prove adoption)
+- How firm the call is (high, medium, low), as a judgement from the answers and not a calculated score: how many twins it holds for, how consistent they were, and how specific their reasons. Say what the twins' reactions can't tell you (they signal interest, they don't prove adoption)
 - The rationale in a short paragraph: the problem as users live it, whether this feature solves it for them, and what tips the decision
 
 **2. Problem Validation:**
