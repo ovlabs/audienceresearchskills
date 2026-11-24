@@ -20,8 +20,11 @@ audienceresearchskills/
 ├── skills/                # Agent Skills
 │   └── skill-name/
 │       └── SKILL.md       # Required skill file
+├── shared/
+│   └── reporting-standard.md        # Source of the standard every skill ends with
 ├── tools/
-│   └── REGISTRY.md        # Tool registry (OriginalVoices)
+│   ├── REGISTRY.md                  # Tool registry (OriginalVoices)
+│   └── sync-reporting-standard.sh   # Copies the standard into every SKILL.md
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
@@ -29,7 +32,15 @@ audienceresearchskills/
 
 ## Build / Lint / Test Commands
 
-**Not applicable** — This is a content-only repository with no executable code.
+**Not applicable** — This is a content-only repository. The one script is `tools/sync-reporting-standard.sh`.
+
+### Shared reporting standard
+
+Every `SKILL.md` ends with a copy of `shared/reporting-standard.md` (how to analyse twin answers and report on them). Each skill must stay one self-contained file, because the OriginalVoices platform, the docs site and single-file hosts read only `SKILL.md`.
+
+- Never edit the copy inside a `SKILL.md`. Edit `shared/reporting-standard.md`, then run `tools/sync-reporting-standard.sh`.
+- A new skill needs the standard's heading as its last H2 (`## OriginalVoices — Shared Research Analysis, Adaptive Workflow & Reporting Standard`); the script fills in the rest.
+- Skill-specific analysis and delivery steps refine the standard, they don't repeat or override it.
 
 Verify manually:
 - YAML frontmatter is valid

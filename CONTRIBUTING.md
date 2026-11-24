@@ -55,6 +55,7 @@ skills/your-skill-name/
 - Include step-by-step workflow instructions
 - Add examples of `ask_twins` calls
 - Cover common edge cases
+- End the skill with the shared reporting standard: add its heading as the last H2 and run `tools/sync-reporting-standard.sh` (see `AGENTS.md`)
 
 ## Improving Existing Skills
 

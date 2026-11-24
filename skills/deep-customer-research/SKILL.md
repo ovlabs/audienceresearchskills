@@ -1,6 +1,6 @@
 ---
 name: deep-customer-research
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to conduct deep qualitative customer research on any topic. Triggers include: requests to understand customer pain points, unmet needs, motivations, or emotions around a product, category, brand, or market. Also use when validating product-market fit, exploring how an audience feels about a trend, or gathering insights to inform product strategy, positioning, or roadmap decisions. Uses OriginalVoices Digital Twins (ask_twins) to ask 10-12 comprehensive questions per audience in a single pass covering behaviour, pain points, emotions, priorities, decision-making, unmet needs, trust signals, and willingness to pay."
 ---
 
@@ -104,31 +104,41 @@ Two tests before you send: (1) **Range** — could most respondents answer this 
 
 ### Step 4: Analyse & Synthesise
 
-Review all Digital Twin responses and compile findings:
+Read every individual Digital Twin answer to every question before you start writing, question by question and then across questions. Keep track of which question and audience each finding comes from, so that nothing material is lost when the findings are grouped into themes. Apply the shared reporting standard at the end of this skill throughout this step and the next. The research stays single-pass: don't ask follow-up questions to deepen the report.
+
+Compile findings:
 
 - **Key themes**: Patterns across respondents and across questions
 - **Emotional landscape**: Dominant feelings (frustration, anxiety, hope, guilt, indifference)
-- **Current behaviour map**: How the audience navigates this space today
+- **Current behaviour map**: How the audience navigates this space today, including the workarounds they've built
 - **Pain point ranking**: Most intense and most common frustrations
 - **Unmet needs**: Clearest gaps between what's available and what's wanted
+- **Priorities and trade-offs**: What they put first, what they give up for it, and when that shifts
 - **Decision drivers**: What influences choice and action
 - **Trust signals**: What builds or breaks confidence
+- **Differences and tensions**: Distinct perspectives within the audience, exceptions to the overall pattern, contradictory answers, and less common views that matter to the decision
+- **Cross-question connections**: Where behaviour, stated motives, unmet needs and decision criteria reinforce or contradict each other. Only link answers to the same twin when the responses identify them
 - **Surprising insights**: Anything unexpected or counterintuitive
+
+With one audience, bring out the range of views inside it; don't invent cohorts to compare. With several audiences, analyse each one fully before comparing them, and compare only on the questions they share.
 
 ### Step 5: Deliver the Research Report
 
-This is a full research write-up, not a one-page summary: the reader should come away understanding the audience, not just the numbers. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins feel or act that way, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), include a chart to visualize the distribution.
+This is a full research write-up, not a one-page summary: the reader should come away understanding the audience, not just the numbers. The sections below are the default structure, in this order: merge or drop one only when the answers give it nothing to say, and add one when a material finding fits none of them. Length follows the evidence — as long as it takes to do justice to what the twins said, with no padding and no repetition. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins feel or act that way, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "7 out of 15 twins mentioned cost"), a chart can show the distribution; never chart numbers the answers don't support.
 
 ### Report sections:
 
-1. **Executive Summary** — The story of the research in a short paragraph (4-6 sentences): who was asked, the single most important thing learned, the tension or surprise behind it, and what it means for the decision at hand.
-2. **Key Themes** — 3-5 most significant patterns. For each theme: a name, the finding in one sentence, a paragraph of analysis (what drives it, who it applies to and who it doesn't, how common it is), and 2-3 supporting quotes from different twins. Include a chart showing theme prevalence.
-3. **Emotional Landscape** — What emotions drive behaviour in this space, what triggers them, and how they shape what people do. Include a chart of dominant emotions.
+1. **Executive Summary** — The story of the research in a short paragraph: who was asked, the most important things learned, the tension or surprise behind them, and what it means for the decision at hand.
+2. **Key Themes** — The significant patterns, as many as the answers support rather than a fixed number. For each theme: a name, the finding in one sentence, a paragraph of analysis (what drives it, who it applies to and who it doesn't, how common it is), and supporting quotes from different twins. A chart of theme prevalence where the counts support one.
+3. **Emotional Landscape** — What emotions drive behaviour in this space, what triggers them, and how they shape what people do. A chart of dominant emotions where the counts support one.
 4. **Current Behaviour & Pain Points** — How the audience deals with the problem today, step by step, and where it breaks down — with the workarounds they've built.
 5. **Unmet Needs & Ideal Outcomes** — Gaps between what's available and what's wanted, and what "great" looks like in the audience's own words.
-6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence, in order of weight. Include a chart ranking decision factors.
-7. **Opportunities** — Actionable insights for product, marketing, or strategy, each tied to the theme or finding it comes from.
-8. **Recommendations** — Specific next steps based on the research, each with the evidence behind it and what would still need testing.
+6. **Decision Drivers & Trust Signals** — What influences choice and earns or breaks confidence, in order of weight. A chart ranking decision factors where the counts support one.
+7. **Differences & Tensions** — Where twins diverge: contrasting needs, exceptions to the overall pattern, contradictory signals, and minority views that matter to the decision. With several audiences, how they differ and where they agree.
+8. **Opportunities** — Actionable insights for product, marketing, or strategy, each tied to the theme or finding it comes from.
+9. **Recommendations** — Specific next steps based on the research, each with the evidence behind it and what would still need testing.
+
+Before delivering, check the list of questions asked against the report: a material finding from every question should appear somewhere in it. If one is missing, work it in from the answers you already have.
 
 ## Tips for Best Results
 
@@ -148,3 +158,56 @@ This is a full research write-up, not a one-page summary: the reader should come
 - **feature-concept-testing**: If you want to validate a specific feature idea
 - **brand-messaging-validation**: If you want to test how your brand resonates
 - **creative-testing**: If you want to test specific creative concepts
+
+## OriginalVoices — Shared Research Analysis, Adaptive Workflow & Reporting Standard
+
+**Version:** 2.0 | **Applies to:** every OriginalVoices research or research-informed content skill.
+
+### Non-negotiable principle
+
+**Every available Twin answer must be considered in the analysis. Every material finding must be reflected in the final output. Be as concise as possible, but as comprehensive as necessary to communicate faithfully what the research revealed.**
+
+### 1. Adapt to the actual brief
+
+- Evaluate exactly the supplied scope. A workflow may have **one** creative, feature, idea, message, product, content asset, or audience — or many. Never assume there are multiple items.
+- For **one item**, deliver a substantive standalone assessment. Do not introduce a fictional comparator, winner, league table, or cross-creative section.
+- For **several items**, assess **each** independently first; then compare meaningful strengths, weaknesses, interpretation, trade-offs and relevant audience differences **if evidence is comparable**. No clear winner, a tie, or distinct winners for different objectives are valid findings.
+- For **one audience**, explore within-audience diversity and caveats. For **multiple audiences**, assess each fully before comparing, using comparable questions and honest disclosure of differences in sample/exposure.
+- Tailor questioning and reporting dimensions to what the user actually provides. Do not assume videos, images, price points, variants, brand values, rankings, or KPIs were tested when they were not.
+- Question counts, example questions and report sections are **defaults**, not mandatory quotas. Preserve the intended purpose and established tool-call workflow, but use judgement based on scope. Do not initiate follow-up research **solely to make reporting deeper**.
+
+### 2. Analyse all evidence before drafting
+
+1. Inspect **every available individual Twin answer to every question**. Track internally which question, response, item, and audience supports each material finding. If data are incomplete or truncated, say what was missing.
+2. For **each question**, capture concrete behaviours, experiences, interpretations, preferences, motives, obstacles, trade-offs, exceptions, relevant respondent language and important negative/neutral reactions. Avoid premature compression into only a few themes.
+3. Then synthesize **across questions**, identifying meaningful relationships, areas of reinforcement, contradictory answers, nuances, and distinct respondent perspectives. Only claim within-respondent patterns where response IDs allow linking the same Twin.
+4. Separate **what respondents stated**, **analyst interpretation**, and **recommendation**. Do not equate Twin-simulated interest with demonstrated real-world adoption, conversion, purchasing or representative population estimates.
+5. A small but decision-relevant minority view deserves inclusion. Do not fabricate segmentation or pretend everyone agrees.
+
+### 3. Evidence and claims
+
+- Ground each significant conclusion in the supplied responses; quote exact Twin language selectively, without invented verbatims. Do not reveal identifying information.
+- For quantitative claims use defensible coding, the relevant question's actual responding-Twin denominator, and **unique respondents**, not repeated mentions. Disclose missing answers and unequal sample/exposure where relevant.
+- Never invent percentages, numeric fit scores, emotional scores, sample sizes, statistical significance, charts, rankings or confidence measures.
+- Compare or rank only if the items/segments were exposed and measured in a sufficiently comparable manner; otherwise offer a qualified qualitative assessment and clearly describe the limitation.
+- Don't treat an agent-generated synthesis as equivalent to the full underlying response set. If only aggregated responses are available, explicitly limit claims.
+
+### 4. Adaptive, proportionate reporting
+
+- Deliver an answer suitable to the **decision**, not a rigid template. Begin with the main conclusion or succinct executive overview, then explain the substantive findings, evidence, differences, contradictions, uncertainties and implications.
+- Make the level of detail proportional to number of questions, available responses, research complexity, and decision relevance. A short, straightforward test can be concise; an extensive study may need a substantial synthesis. **No 3–5-theme ceiling, mandatory 15-page report, fixed quote quota or compulsory chart.**
+- Group related questions into a coherent narrative where useful, but check that **material findings from every question** survive into the final report. Don't dump every raw answer unless asked.
+- Only include sections applicable to the actual study. Don't force a creative comparison for one creative, persona ranking for one audience, conversion claims for simulated intent, or fictional product proof points.
+- For **content-production** skills, provide the requested usable content as the main output; follow with a concise but meaningful explanation of the audience research and how it shaped the asset. An extensive research report should be supplied only if requested or necessary to the brief.
+- Charts, tables and representative quotes are tools for clarity, not obligations.
+
+### 5. Quality gate — check before delivering
+
+- Were **all available answers to all questions** considered, including neutral and negative responses?
+- Are **all material findings** captured, including meaningful minority perspectives?
+- Has the response adapted correctly to **one vs multiple items/audiences**?
+- Is every comparison, count, quote, verdict and recommendation traceable and appropriately qualified?
+- Is the result sufficiently detailed to explain what was learned, without needless repetition?
+- Have you avoided **extra research calls** that were not part of the requested workflow?
+
+If a check fails, improve the analysis **using existing collected answers**. Do not add questions merely to improve the report.

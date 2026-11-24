@@ -1,6 +1,6 @@
 ---
 name: google-ad-copy
-version: 1.1.1
+version: 2.0.0
 description: "Use this skill to generate Google ad copy grounded in real audience insight. Triggers include: requests to create Google Search or Display ad campaigns, write Responsive Search Ad (RSA) headlines and descriptions, refresh underperforming Google ad copy, or generate audience-informed ad variations for A/B testing. Uses OriginalVoices Digital Twins (ask_twins) to deeply research the target audience's language, preferences, concerns, and experiences, then generates audience-informed RSA assets rooted in what real people actually said — not AI guesswork."
 ---
 
@@ -59,6 +59,8 @@ ask_twins(
 
 ### Step 3: Extract Key Insights
 
+Read every individual twin answer to every question, including the neutral and negative ones, before extracting anything. Apply the shared reporting standard at the end of this skill: the RSA assets are the deliverable, so the research shows up in the choices you make and in a short rationale, not in a long report.
+
 Analyze responses and identify:
 - **Search language**: Exact phrases they'd type into Google (use these in headlines)
 - **Pain points**: Their top frustrations (lead with these)
@@ -68,7 +70,7 @@ Analyze responses and identify:
 
 ### Step 4: Generate RSA Assets
 
-Create **15 headlines** and **4 descriptions** using the audience insights. Follow Google RSA format strictly.
+Create **15 headlines** and **4 descriptions** using the audience insights. Follow Google RSA format strictly. That is one full asset set; if the user gave several ad groups or campaigns, write a set for each, and if they asked for fewer assets, write what they asked for. Use only the offers, claims and proof the user supplied: don't invent promotions, guarantees or statistics.
 
 **Headlines (30 characters max each):**
 - Include primary keyword in at least 3 headlines (for relevance)
@@ -189,7 +191,8 @@ Final deliverable includes:
 5. Insight source documented for each asset
 6. Pinning recommendations (if any)
 7. Quality Score checklist completed
-8. Top 3-5 predicted best-performing combinations highlighted
+8. The 3-5 combinations to test first highlighted, each with the audience insight behind it (a suggestion from the research, not a performance forecast)
+9. A short audience rationale: the search language, motivations and objections that shaped the assets, including any finding that matters to the campaign but didn't become an asset
 
 ## Related Skills
 
@@ -197,3 +200,56 @@ Final deliverable includes:
 - **creative-testing**: To test ad concepts before writing full copy
 - **icp-discovery**: To find the right audience before writing ads
 - **landing-page-optimization**: To optimise the page ads drive traffic to
+
+## OriginalVoices — Shared Research Analysis, Adaptive Workflow & Reporting Standard
+
+**Version:** 2.0 | **Applies to:** every OriginalVoices research or research-informed content skill.
+
+### Non-negotiable principle
+
+**Every available Twin answer must be considered in the analysis. Every material finding must be reflected in the final output. Be as concise as possible, but as comprehensive as necessary to communicate faithfully what the research revealed.**
+
+### 1. Adapt to the actual brief
+
+- Evaluate exactly the supplied scope. A workflow may have **one** creative, feature, idea, message, product, content asset, or audience — or many. Never assume there are multiple items.
+- For **one item**, deliver a substantive standalone assessment. Do not introduce a fictional comparator, winner, league table, or cross-creative section.
+- For **several items**, assess **each** independently first; then compare meaningful strengths, weaknesses, interpretation, trade-offs and relevant audience differences **if evidence is comparable**. No clear winner, a tie, or distinct winners for different objectives are valid findings.
+- For **one audience**, explore within-audience diversity and caveats. For **multiple audiences**, assess each fully before comparing, using comparable questions and honest disclosure of differences in sample/exposure.
+- Tailor questioning and reporting dimensions to what the user actually provides. Do not assume videos, images, price points, variants, brand values, rankings, or KPIs were tested when they were not.
+- Question counts, example questions and report sections are **defaults**, not mandatory quotas. Preserve the intended purpose and established tool-call workflow, but use judgement based on scope. Do not initiate follow-up research **solely to make reporting deeper**.
+
+### 2. Analyse all evidence before drafting
+
+1. Inspect **every available individual Twin answer to every question**. Track internally which question, response, item, and audience supports each material finding. If data are incomplete or truncated, say what was missing.
+2. For **each question**, capture concrete behaviours, experiences, interpretations, preferences, motives, obstacles, trade-offs, exceptions, relevant respondent language and important negative/neutral reactions. Avoid premature compression into only a few themes.
+3. Then synthesize **across questions**, identifying meaningful relationships, areas of reinforcement, contradictory answers, nuances, and distinct respondent perspectives. Only claim within-respondent patterns where response IDs allow linking the same Twin.
+4. Separate **what respondents stated**, **analyst interpretation**, and **recommendation**. Do not equate Twin-simulated interest with demonstrated real-world adoption, conversion, purchasing or representative population estimates.
+5. A small but decision-relevant minority view deserves inclusion. Do not fabricate segmentation or pretend everyone agrees.
+
+### 3. Evidence and claims
+
+- Ground each significant conclusion in the supplied responses; quote exact Twin language selectively, without invented verbatims. Do not reveal identifying information.
+- For quantitative claims use defensible coding, the relevant question's actual responding-Twin denominator, and **unique respondents**, not repeated mentions. Disclose missing answers and unequal sample/exposure where relevant.
+- Never invent percentages, numeric fit scores, emotional scores, sample sizes, statistical significance, charts, rankings or confidence measures.
+- Compare or rank only if the items/segments were exposed and measured in a sufficiently comparable manner; otherwise offer a qualified qualitative assessment and clearly describe the limitation.
+- Don't treat an agent-generated synthesis as equivalent to the full underlying response set. If only aggregated responses are available, explicitly limit claims.
+
+### 4. Adaptive, proportionate reporting
+
+- Deliver an answer suitable to the **decision**, not a rigid template. Begin with the main conclusion or succinct executive overview, then explain the substantive findings, evidence, differences, contradictions, uncertainties and implications.
+- Make the level of detail proportional to number of questions, available responses, research complexity, and decision relevance. A short, straightforward test can be concise; an extensive study may need a substantial synthesis. **No 3–5-theme ceiling, mandatory 15-page report, fixed quote quota or compulsory chart.**
+- Group related questions into a coherent narrative where useful, but check that **material findings from every question** survive into the final report. Don't dump every raw answer unless asked.
+- Only include sections applicable to the actual study. Don't force a creative comparison for one creative, persona ranking for one audience, conversion claims for simulated intent, or fictional product proof points.
+- For **content-production** skills, provide the requested usable content as the main output; follow with a concise but meaningful explanation of the audience research and how it shaped the asset. An extensive research report should be supplied only if requested or necessary to the brief.
+- Charts, tables and representative quotes are tools for clarity, not obligations.
+
+### 5. Quality gate — check before delivering
+
+- Were **all available answers to all questions** considered, including neutral and negative responses?
+- Are **all material findings** captured, including meaningful minority perspectives?
+- Has the response adapted correctly to **one vs multiple items/audiences**?
+- Is every comparison, count, quote, verdict and recommendation traceable and appropriately qualified?
+- Is the result sufficiently detailed to explain what was learned, without needless repetition?
+- Have you avoided **extra research calls** that were not part of the requested workflow?
+
+If a check fails, improve the analysis **using existing collected answers**. Do not add questions merely to improve the report.

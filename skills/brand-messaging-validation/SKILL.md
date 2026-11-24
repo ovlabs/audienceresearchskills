@@ -1,6 +1,6 @@
 ---
 name: brand-messaging-validation
-version: 1.2.0
+version: 2.0.0
 description: "Use this skill to validate and refine brand messaging, positioning, and taglines using real audience insight. Triggers include: requests to test brand positioning, validate taglines or slogans, understand brand perception, refine mission statements, test brand voice, or differentiate from competitors. Uses OriginalVoices Digital Twins (ask_twins) to understand how target audiences interpret brand messaging, what resonates emotionally, what creates confusion, and what drives brand affinity — ensuring brand statements connect with real people, not just internal stakeholders."
 ---
 
@@ -23,6 +23,8 @@ Gather from the user:
   - Key brand values or pillars
   - Tone of voice examples (if testing)
 - **Category context**: What space does the brand operate in? Who are main competitors?
+
+Test what was supplied — a single headline, tagline or positioning statement, or a whole messaging system. Don't add brand values, tone options or alternative messages the user didn't give.
 
 ### Step 2: Comprehensive Brand Messaging Validation
 
@@ -72,7 +74,15 @@ ask_twins(
 
 ### Step 3: Analyse Brand Messaging Insights
 
+Read every individual twin answer to every question before drawing conclusions, and keep track of which question and message each finding comes from. Apply the shared reporting standard at the end of this skill throughout this step and the next.
+
+Assess each message on its own first. Where several messages were shown in a comparable way, then compare them; a ranked winner isn't required, and mixed reactions are a finding.
+
 Review responses and assess:
+
+**Intended vs. actual meaning:**
+- What did twins take the message to promise, in their own words?
+- Where does that differ from what the brand means to say?
 
 **Clarity:**
 - Do people understand what the brand does and who it's for?
@@ -99,14 +109,14 @@ Review responses and assess:
 
 ### Step 4: Deliver Brand Messaging Report
 
-This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. Deliver every section below, in this order. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), include a chart to visualize the distribution.
+This is a full write-up, not a one-page summary: the reader should come away understanding why, not just what. The sections below are the default structure, in this order: deliver each one that applies to what was actually tested, and merge or drop one only when it does not apply or the answers give it nothing to say. Length follows the evidence, and every material finding from every question must make it in. Each section opens with its conclusion in one sentence, then explains it: what is going on, why the twins think or act that way, who it applies to and who it doesn't, and how it connects to the other findings. Counts and shares are the evidence for the analysis, never a replacement for it; count unique twins out of those who answered that question. Quote Digital Twins verbatim and attributed. Where findings have clear quantitative patterns (e.g. "8 out of 12 twins found the positioning unclear"), a chart can show the distribution; never invent scores or percentages to fill one.
 
 ### Report sections:
 
 **1. Executive Summary:**
-- The story in a short paragraph (4-6 sentences): how the audience actually read the messaging, what lands and what doesn't, and why
-- Top 3 strengths and top 3 areas for improvement
-- Recommended direction (Keep / Refine / Rethink)
+- The story in a short paragraph: how the audience actually read the messaging, what lands and what doesn't, and why
+- The main strengths and the main areas for improvement
+- Recommended direction (Keep / Refine / Rethink) when the evidence supports one. When reactions are mixed, say so and what would settle it rather than forcing a verdict
 
 **2. Positioning Assessment:**
 - How audience interprets the positioning, and why: a paragraph on the gap (or fit) between what the brand means to say and what the audience hears
@@ -121,8 +131,8 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Comparison with alternatives (if tested)
 - Refinement suggestions
 
-**4. Brand Values Validation:**
-- Which values resonate (ranked by importance). Include a chart ranking values by resonance.
+**4. Brand Values Validation** (if tested):
+- Which values resonate (ranked by importance). A chart ranking values by resonance where the counts support one.
 - Which feel authentic vs. generic
 - Values that drive affinity vs. values that don't matter
 - Supporting quotes
@@ -138,7 +148,7 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Meaningful differentiation vs. superficial claims
 
 **7. Emotional Connection:**
-- Primary feelings the messaging evokes. Include a chart of dominant emotional responses.
+- Primary feelings the messaging evokes. A chart of dominant emotional responses where the counts support one.
 - Whether brand feels relatable and "gets them"
 - Factors that build (or block) affinity
 
@@ -154,6 +164,7 @@ This is a full write-up, not a one-page summary: the reader should come away und
 - Brand value prioritization (which to lead with)
 - Tone adjustments
 - Messaging do's and don'ts
+- Ground every suggestion in what twins said, and label new wording as untested
 
 **10. Next Steps:**
 - If validated: Move forward with confidence
@@ -211,3 +222,56 @@ If your messaging doesn't clearly answer these, use the research to refine until
 - **creative-testing**: To test specific creative executions of your brand
 - **icp-discovery**: To find the right audience for your brand
 - **landing-page-optimization**: To apply validated messaging to your landing page
+
+## OriginalVoices — Shared Research Analysis, Adaptive Workflow & Reporting Standard
+
+**Version:** 2.0 | **Applies to:** every OriginalVoices research or research-informed content skill.
+
+### Non-negotiable principle
+
+**Every available Twin answer must be considered in the analysis. Every material finding must be reflected in the final output. Be as concise as possible, but as comprehensive as necessary to communicate faithfully what the research revealed.**
+
+### 1. Adapt to the actual brief
+
+- Evaluate exactly the supplied scope. A workflow may have **one** creative, feature, idea, message, product, content asset, or audience — or many. Never assume there are multiple items.
+- For **one item**, deliver a substantive standalone assessment. Do not introduce a fictional comparator, winner, league table, or cross-creative section.
+- For **several items**, assess **each** independently first; then compare meaningful strengths, weaknesses, interpretation, trade-offs and relevant audience differences **if evidence is comparable**. No clear winner, a tie, or distinct winners for different objectives are valid findings.
+- For **one audience**, explore within-audience diversity and caveats. For **multiple audiences**, assess each fully before comparing, using comparable questions and honest disclosure of differences in sample/exposure.
+- Tailor questioning and reporting dimensions to what the user actually provides. Do not assume videos, images, price points, variants, brand values, rankings, or KPIs were tested when they were not.
+- Question counts, example questions and report sections are **defaults**, not mandatory quotas. Preserve the intended purpose and established tool-call workflow, but use judgement based on scope. Do not initiate follow-up research **solely to make reporting deeper**.
+
+### 2. Analyse all evidence before drafting
+
+1. Inspect **every available individual Twin answer to every question**. Track internally which question, response, item, and audience supports each material finding. If data are incomplete or truncated, say what was missing.
+2. For **each question**, capture concrete behaviours, experiences, interpretations, preferences, motives, obstacles, trade-offs, exceptions, relevant respondent language and important negative/neutral reactions. Avoid premature compression into only a few themes.
+3. Then synthesize **across questions**, identifying meaningful relationships, areas of reinforcement, contradictory answers, nuances, and distinct respondent perspectives. Only claim within-respondent patterns where response IDs allow linking the same Twin.
+4. Separate **what respondents stated**, **analyst interpretation**, and **recommendation**. Do not equate Twin-simulated interest with demonstrated real-world adoption, conversion, purchasing or representative population estimates.
+5. A small but decision-relevant minority view deserves inclusion. Do not fabricate segmentation or pretend everyone agrees.
+
+### 3. Evidence and claims
+
+- Ground each significant conclusion in the supplied responses; quote exact Twin language selectively, without invented verbatims. Do not reveal identifying information.
+- For quantitative claims use defensible coding, the relevant question's actual responding-Twin denominator, and **unique respondents**, not repeated mentions. Disclose missing answers and unequal sample/exposure where relevant.
+- Never invent percentages, numeric fit scores, emotional scores, sample sizes, statistical significance, charts, rankings or confidence measures.
+- Compare or rank only if the items/segments were exposed and measured in a sufficiently comparable manner; otherwise offer a qualified qualitative assessment and clearly describe the limitation.
+- Don't treat an agent-generated synthesis as equivalent to the full underlying response set. If only aggregated responses are available, explicitly limit claims.
+
+### 4. Adaptive, proportionate reporting
+
+- Deliver an answer suitable to the **decision**, not a rigid template. Begin with the main conclusion or succinct executive overview, then explain the substantive findings, evidence, differences, contradictions, uncertainties and implications.
+- Make the level of detail proportional to number of questions, available responses, research complexity, and decision relevance. A short, straightforward test can be concise; an extensive study may need a substantial synthesis. **No 3–5-theme ceiling, mandatory 15-page report, fixed quote quota or compulsory chart.**
+- Group related questions into a coherent narrative where useful, but check that **material findings from every question** survive into the final report. Don't dump every raw answer unless asked.
+- Only include sections applicable to the actual study. Don't force a creative comparison for one creative, persona ranking for one audience, conversion claims for simulated intent, or fictional product proof points.
+- For **content-production** skills, provide the requested usable content as the main output; follow with a concise but meaningful explanation of the audience research and how it shaped the asset. An extensive research report should be supplied only if requested or necessary to the brief.
+- Charts, tables and representative quotes are tools for clarity, not obligations.
+
+### 5. Quality gate — check before delivering
+
+- Were **all available answers to all questions** considered, including neutral and negative responses?
+- Are **all material findings** captured, including meaningful minority perspectives?
+- Has the response adapted correctly to **one vs multiple items/audiences**?
+- Is every comparison, count, quote, verdict and recommendation traceable and appropriately qualified?
+- Is the result sufficiently detailed to explain what was learned, without needless repetition?
+- Have you avoided **extra research calls** that were not part of the requested workflow?
+
+If a check fails, improve the analysis **using existing collected answers**. Do not add questions merely to improve the report.
